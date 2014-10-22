@@ -190,7 +190,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Arco.ABB.Common\Arco.ABB.Common.vbproj">
+    <ProjectReference Include="..\..\..\Arco.ABB.Common\Arco.ABB.Common.vbproj">
       <Project>{99F2ABDE-6E38-4107-944A-52F0FA07C7AD}</Project>
       <Name>Arco.ABB.Common</Name>
     </ProjectReference>
