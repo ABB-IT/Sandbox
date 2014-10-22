@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Arco.ABB.AlgemeenToezicht", "Arco.ABB.AlgemeenToezicht\Arco.ABB.AlgemeenToezicht.vbproj", "{52BCDD1A-D527-4B31-981A-070102ABBAEB}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Arco.ABB.Common", "..\..\Arco.ABB.Common\Arco.ABB.Common.vbproj", "{99F2ABDE-6E38-4107-944A-52F0FA07C7AD}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Arco.ABB.IZB", "..\..\Arco.ABB.IBZ\Arco.ABB.IZB.vbproj", "{5A0282C8-F087-4356-BE5F-7784108B0740}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://arcobe03:8080/tfs/customerprojects
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Arco.ABB.AlgemeenToezicht\\Arco.ABB.AlgemeenToezicht.vbproj
+		SccProjectName1 = Arco.ABB.AlgemeenToezicht
+		SccLocalPath1 = Arco.ABB.AlgemeenToezicht
+		SccProjectUniqueName2 = ..\\..\\Arco.ABB.Common\\Arco.ABB.Common.vbproj
+		SccProjectName2 = ../../Arco.ABB.Common
+		SccLocalPath2 = ..\\..\\Arco.ABB.Common
+		SccProjectUniqueName3 = ..\\..\\Arco.ABB.IBZ\\Arco.ABB.IZB.vbproj
+		SccProjectName3 = ../../Arco.ABB.IBZ
+		SccLocalPath3 = ..\\..\\Arco.ABB.IBZ
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52BCDD1A-D527-4B31-981A-070102ABBAEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52BCDD1A-D527-4B31-981A-070102ABBAEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52BCDD1A-D527-4B31-981A-070102ABBAEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52BCDD1A-D527-4B31-981A-070102ABBAEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99F2ABDE-6E38-4107-944A-52F0FA07C7AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99F2ABDE-6E38-4107-944A-52F0FA07C7AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99F2ABDE-6E38-4107-944A-52F0FA07C7AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99F2ABDE-6E38-4107-944A-52F0FA07C7AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0282C8-F087-4356-BE5F-7784108B0740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0282C8-F087-4356-BE5F-7784108B0740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0282C8-F087-4356-BE5F-7784108B0740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0282C8-F087-4356-BE5F-7784108B0740}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
