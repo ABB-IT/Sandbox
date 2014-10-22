@@ -1,0 +1,43 @@
+INSERT INTO arcoinfo (application, customversion, category, parmname, parmvalue) VALUES ('docroom','docroom','table','DocDoma', 'drmdocdoma');
+INSERT INTO arcoinfo (application, customversion, category, parmname, parmvalue) VALUES ('docroom','docroom','table','ArchiveDoma', 'drmarchivedoma');
+INSERT INTO arcoinfo (application, customversion, category, parmname, parmvalue) VALUES ('docroom','docroom','table','TreeDoma', 'drmtreedoma');
+
+create table drmdocdoma (
+ doma_oldid     integer,
+ doma_id        integer,
+ doma_din       integer,
+ doma_date      date,
+ doma_err       varchar(500),
+ doma_sec       integer,
+ doma_sec_date  date,
+ doma_sec_err   varchar(500),
+ doma_file_txt  integer,
+ doma_file_img  integer,
+ doma_file_url  integer,
+ doma_file_date date,
+ doma_file_err  varchar(500));
+
+create table drmarchivedoma (
+ doma_oldid     integer,
+ doma_id        integer,
+ doma_din       integer,
+ doma_date      date,
+ doma_err       varchar(500),
+ doma_sec       integer,
+ doma_sec_date  date,
+ doma_sec_err   varchar(500),
+ doma_file_txt  integer,
+ doma_file_img  integer,
+ doma_file_url  integer,
+ doma_file_date date,
+ doma_file_err  varchar(500));
+
+create table drmtreedoma (
+ doma_oldid     integer,
+ doma_id        integer,
+ doma_din       integer,
+ doma_date      date,
+ doma_err       varchar(500),
+ doma_sec       integer,
+ doma_sec_date  date,
+ doma_sec_err   varchar(500));

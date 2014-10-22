@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MindFusion.Diagramming.WinForms.ShapeToolBar</name>
+    </assembly>
+    <members>
+        <member name="T:MindFusion.Diagramming.WinForms.ShapeToolBar">
+            <summary>
+            The ShapeToolBar control displays image buttons representing
+            selected shapes defined via the Shape class.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeToolBar.#ctor">
+            <summary>
+            Initializes a new instance of the ShapeToolBar class.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeToolBar.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseDown override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeToolBar.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseMove override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeToolBar.OnShapeAdded(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Shape.ShapeAdded event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeToolBar.OnButtonClick(System.Object,System.Windows.Forms.ToolBarButtonClickEventArgs)">
+            <summary>
+            Handles the ButtonClick event of this toolbar.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeToolBar.CreateButtons">
+            <summary>
+            Updates the toolbar buttons depending on the current document.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeToolBar.CreateButton(MindFusion.Diagramming.Shape,System.Int32)">
+            <summary>
+            Creates a new button.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeToolBar.CreateImages">
+            <summary>
+            Creates the image list with shape images using
+            the current control settings.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeToolBar.CreateImage(MindFusion.Diagramming.Shape,System.Drawing.Brush,MindFusion.Diagramming.Diagram)">
+            <summary>
+            Create an image for the given shape.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeToolBar.ToggleButtonText">
+            <summary>
+            Toggles button texts.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeToolBar.ToggleImageList">
+            <summary>
+            Toggles button images.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeToolBar.Rebuild">
+            <summary>
+            Recreates the toolbar buttons.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeToolBar.RecreateImages">
+            <summary>
+            Recreates the toolbar button images.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Diagramming.WinForms.ShapeToolBar.shapes">
+            <summary>
+            A collection of identifiers of the shapes to be used with
+            the toolbar.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeToolBar.Shapes">
+            <summary>
+            Gets or sets the identifiers of all shapes available in the toolbar.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeToolBar.Buttons">
+            <summary>
+            Hides the Buttons property from the public.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeToolBar.ImageList">
+            <summary>
+            Hides the ToolBar.ImageList property from the public.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeToolBar.ShowText">
+            <summary>
+            Gets or sets a value indicating whether to display shape identifiers
+            as toolbar button titles.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeToolBar.ShowImages">
+            <summary>
+            Gets or sets a value indicating whether to display shape icons in the
+            toolbar buttons.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeToolBar.AllowDrop">
+            <summary>
+            Hides the Control.AllowDrop property from the public.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeToolBar.AllowDrag">
+            <summary>
+            Gets or sets a value indicating whether dragging shapes from
+            the toolbar to a diagram is enabled.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeToolBar.DefaultNodeSize">
+            <summary>
+            Gets or sets the initial size of nodes created by dragging shapes
+            from the toolbar to the diagram canvas.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeToolBar.ButtonImageSize">
+            <summary>
+            Gets or sets the size of the icon images displayed inside
+            toolbar buttons.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeToolBar.ShapeFillColor">
+            <summary>
+            Gets or sets the color of toolbar button icons.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeToolBar.SelectedShape">
+            <summary>
+            Gets the Shape currently selected in the toolbar.
+            </summary>
+        </member>
+        <member name="E:MindFusion.Diagramming.WinForms.ShapeToolBar.DrawNode">
+            <summary>
+            Raised to perform custom drawing on a toolbar's shape image.
+            </summary>
+        </member>
+        <member name="E:MindFusion.Diagramming.WinForms.ShapeToolBar.ShapeClicked">
+            <summary>
+            Raised when the user clicks a shape button.
+            </summary>
+        </member>
+    </members>
+</doc>

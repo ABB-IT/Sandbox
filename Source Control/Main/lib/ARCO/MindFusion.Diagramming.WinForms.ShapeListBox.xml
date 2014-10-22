@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MindFusion.Diagramming.WinForms.ShapeListBox</name>
+    </assembly>
+    <members>
+        <member name="T:MindFusion.Diagramming.WinForms.ShapeListBox">
+            <summary>
+            Represents a list box with MindFusion.Diagramming.Shape objects.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.#ctor">
+            <summary>
+            Initializes a new instance of the ShapeListBox class.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.OnMeasureItem(System.Windows.Forms.MeasureItemEventArgs)">
+            <summary>
+            This member overrides ListBox.OnMeasureItem.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.OnDrawItem(System.Windows.Forms.DrawItemEventArgs)">
+            <summary>
+            This member overrides ListBox.OnDrawItem.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            This member overrides ListBox.OnKeyDown.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.AddShape(MindFusion.Diagramming.Shape)">
+            <summary>
+            Adds a new shape to the end of the list box.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.AddShapes(MindFusion.Diagramming.Shape[])">
+            <summary>
+            Adds the specified shapes to the end of the list box.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.AddShapes(MindFusion.Diagramming.ShapeCollection)">
+            <summary>
+            Adds the specified shapes to the end of the list box.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.InsertShape(System.Int32,MindFusion.Diagramming.Shape)">
+            <summary>
+            Inserts the specified shape at the specified position.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.GetShapeAt(System.Int32)">
+            <summary>
+            Gets the shape at the specified index in the list box.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.SetShapeAt(System.Int32,MindFusion.Diagramming.Shape)">
+            <summary>
+            Sets a new shape at the specified position.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.RemoveShapeAt(System.Int32)">
+            <summary>
+            Removes the shape at the specified position of this list box.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.ClearShapes">
+            <summary>
+            Removes all shapes from the list box,
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.ItemToShape(System.Object)">
+            <summary>
+            ListBox Items collection does not contain ShapeTemplates directly, but an 
+            opaque object. 
+            To access the Shape object use method ItemToShape
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.ShapeToItem(MindFusion.Diagramming.Shape)">
+            <summary>
+            The complement to ItemToShape. Could be used to insert a Shape
+            object to the Items collection at a specified index.
+            This does not search an existing item, but creates a new one without
+            adding it to the Items collection.
+            </summary>
+            <param name="shape"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.InvalidateShapeAt(System.Int32)">
+            <summary>
+            Invalidate the specified Shape causing it to be redrawn.
+            Call this when the shape changes
+            </summary>
+            <param name="i"></param>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.OnShapeSelected(MindFusion.Diagramming.ShapeEventArgs)">
+            <summary>
+            Invoked when the user selects a shape in this list box.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.OnShapeRenamed(MindFusion.Diagramming.ShapeEventArgs)">
+            <summary>
+            Invoked when the user changes a shape label in this list box.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.OnShapeRemoved(MindFusion.Diagramming.ShapeEventArgs)">
+            <summary>
+            Invoked when the user removes a shape from the list box.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.OnSelectedIndexChanged(System.EventArgs)">
+            <summary>
+            This member overrides ListBox.OnSelectedIndexChanged. 
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseDown override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseMove override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.ShapeListBox.StartInlineEdit">
+            <summary>
+            Initiate inline editing of the shape display name.
+            </summary>
+        </member>
+        <member name="E:MindFusion.Diagramming.WinForms.ShapeListBox.ShapeSelected">
+            <summary>
+            Raised when the user selects a Shape in the ListBox
+            </summary>
+        </member>
+        <member name="E:MindFusion.Diagramming.WinForms.ShapeListBox.ShapeRenamed">
+            <summary>
+            Raised when the user renames a Shape in the ListBox
+            </summary>
+        </member>
+        <member name="E:MindFusion.Diagramming.WinForms.ShapeListBox.ShapeRemoved">
+            <summary>
+            Raised when the user removes a Shape from the ListBox
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeListBox.DrawMode">
+            <summary>
+            This property is overridden. Get is unchanged, set is ignored.
+            Its value is always DrawMode.OwnerDrawVariable
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeListBox.IconMargin">
+            <summary>
+            Gets or sets the horizontal and vertical margins left around the shape icons.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeListBox.IconSize">
+            <summary>
+            Gets or sets the size of the shape icons.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeListBox.DefaultNodeSize">
+            <summary>
+            Gets or sets the size of the shapes that are created
+            by dragging list box items to the diagram.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeListBox.ShapeFillColor">
+            <summary>
+            Gets or sets the fill color of the shapes icons.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeListBox.ShapeFilter">
+            <summary>
+            Gets or sets the identifiers of all shapes available in the toolbar.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeListBox.Items">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeListBox.ShapeCount">
+            <summary>
+            Gets the number of shapes in the list box.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeListBox.Shapes">
+            <summary>
+            Gets or sets the shapes displayed in the list box.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeListBox.AllowRename">
+            <summary>
+            Allow inline renaming of listbox items by pressing F2. Currently listbox displays shape ids as names
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.ShapeListBox.AllowRemove">
+            <summary>
+            Allow deletion of listbox items by pressing Del.
+            Only listbox items are deleted - not the source of shapes.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,15 @@
+﻿Installing assembly 'D:\Arco\bin\Arco.ApplicationServer.ServiceX86.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arco\bin\Arco.ApplicationServer.ServiceX86.exe
+   i = 
+   logfile = D:\Arco\bin\Arco.ApplicationServer.ServiceX86.InstallLog
+Installing service Arco Application Server X86...
+Service Arco Application Server X86 has been successfully installed.
+Creating EventLog source Arco Application Server X86 in log Application...
+Committing assembly 'D:\Arco\bin\Arco.ApplicationServer.ServiceX86.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arco\bin\Arco.ApplicationServer.ServiceX86.exe
+   i = 
+   logfile = D:\Arco\bin\Arco.ApplicationServer.ServiceX86.InstallLog

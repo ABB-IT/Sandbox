@@ -1,0 +1,752 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Arco.Doma.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Arco.Doma.Client.RoutingCase">
+            <summary>
+            Class representing a workflow case instance
+            </summary>
+        </member>
+        <member name="T:Arco.Doma.Client.PropertyObject">
+            <summary>
+            Base class for all objects containing properties
+            </summary>
+        </member>
+        <member name="T:Arco.Doma.Client.ClientObject">
+            <summary>
+            Base class for all business objects in the client API
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.ClientBusinessObject.MarkOld">
+            <summary>
+            marks the object as old
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.ClientBusinessObject.MarkNew">
+            <summary>
+            marks the object as new
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.ClientBusinessObject.isNew">
+            <summary>
+            true if the object is new
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.PropertyObject.GetPropertyID(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.PropertyObject.GetProperty(System.String)">
+            <summary>
+            Gets the value of a property
+            </summary>
+            <param name="Name">Name of the property</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.PropertyObject.GetProperty(System.Int32)">
+            <summary>
+            Gets the value of a property
+            </summary>
+            <param name="PropID">ID of the property</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.PropertyObject.SetProperty(System.String,System.Object)">
+            <summary>
+            Sets a property
+            </summary>
+            <param name="Name">name of the property</param>
+            <param name="value">value of the property</param>
+        </member>
+        <member name="M:Arco.Doma.Client.PropertyObject.SetProperty(System.Int32,System.Object,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="PropID"></param>
+            <param name="value"></param>
+            <param name="RowID"></param>
+        </member>
+        <member name="M:Arco.Doma.Client.RoutingCase.GetCase(Arco.Doma.Client.Context,System.Int32)">
+            <summary>
+            Get a case using its tech id
+            </summary>
+            <param name="TechID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.RoutingCase.NewCase(Arco.Doma.Client.Context)">
+            <summary>
+            Create a new empty case object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.RoutingCase.Create">
+            <summary>
+            Create the case
+            </summary>
+            <returns>The created case</returns>
+        </member>
+        <member name="M:Arco.Doma.Client.RoutingCase.Save">
+            <summary>
+            Saves the case
+            </summary>
+            <returns>The saved case</returns>
+        </member>
+        <member name="M:Arco.Doma.Client.RoutingCase.Dispatch">
+            <summary>
+            Dispatch the case
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.RoutingCase.CurrentUserHasWork">
+            <summary>
+            returns true if the logged in user has work for the case
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.RoutingCase.AddFile(System.String,System.String,System.Boolean)">
+            <summary>
+            Adds a file to the targetobject
+            </summary>
+            <param name="sTitle">Name of the file</param>
+            <param name="sPath">Location of the file</param>
+            <param name="asAttachment">Set as attachment</param>
+        </member>
+        <member name="M:Arco.Doma.Client.RoutingCase.AddFile(System.String,System.Byte[],System.String,System.Boolean,System.Int32)">
+            <summary>
+            Adds a file to the targetobject
+            </summary>
+            <param name="sTitle">Name of the file</param>
+            <param name="sPath">Location of the file</param>
+            <param name="asAttachment">Set as attachment</param>
+        </member>
+        <member name="P:Arco.Doma.Client.RoutingCase.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.RoutingCase.Folder">
+            <summary>
+            Folder id
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.RoutingCase.Tech_ID">
+            <summary>
+            Tech ID
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.RoutingCase.Case_ID">
+            <summary>
+            Case ID
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.RoutingCase.Proc_ID">
+            <summary>
+            Procedure id
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.RoutingCase.Step_ID">
+            <summary>
+            Step ID
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.RoutingCase.isClosed">
+            <summary>
+            True if the case is no longer active
+            </summary>
+        </member>
+        <member name="F:Arco.Doma.Client.Forms.frmSelectSite.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.Forms.frmSelectSite.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Arco.Doma.Client.Forms.frmSelectSite.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Arco.Doma.Client.SiteConnectionInfo">
+            <summary>
+            Connection information class
+            </summary>
+        </member>
+        <member name="F:Arco.Doma.Client.SiteConnectionInfo.AutheniticationType.Integrated">
+            <summary>
+            Login using Windows UserName
+            </summary>
+        </member>
+        <member name="F:Arco.Doma.Client.SiteConnectionInfo.AutheniticationType.UserNamePassword">
+            <summary>
+            Login using Arco Username and Password
+            </summary>
+        </member>
+        <member name="F:Arco.Doma.Client.SiteConnectionInfo.AutheniticationType.Token">
+            <summary>
+            Log in using the supplied token
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.IniFile.ReadValue(System.String,System.String,System.String)">
+            <summary>
+            Read Data Value From the Ini File
+            </summary>
+            <PARAM name="Section"></PARAM>
+            <PARAM name="Key"></PARAM>
+            <PARAM name="Path"></PARAM>
+            <returns></returns>
+        </member>
+        <member name="T:Arco.Doma.Client.ServiceInterface">
+            <summary>
+            Class to interface the webservices
+            </summary>
+        </member>
+        <member name="F:Arco.Doma.Client.KeepConnectionAlive.sleepDuration">
+            <summary>
+            a <see cref="!:Server.MemoryCacheMaxSizeCleanup"/> object.
+            </summary>
+            <summary>
+            Defines duration while the thread is cleanung up the Cache.
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.KeepConnectionAlive.#ctor(Arco.Doma.Client.ServiceInterface)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MemoryCacheMaxSizeCleanup"/> class.
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.KeepConnectionAlive.Init">
+            <summary>
+            Inits this instance.
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.KeepConnectionAlive.Dispose">
+            <summary>
+            Disposes this instance.
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.KeepConnectionAlive.KeepAlive">
+            <summary>
+            This Job validate the size of the cache;
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.KeepConnectionAlive.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="F:Arco.Doma.Client.Forms.frmPleaseWait.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.Forms.frmPleaseWait.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Arco.Doma.Client.Forms.frmPleaseWait.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Arco.Doma.Client.DocroomObject">
+            <summary>
+            Base class for docroom objects, like folders and documents
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.DocroomObject.Delete">
+            <summary>
+            Deletes the object
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.Dossier.NewDossier(Arco.Doma.Client.Context)">
+            <summary>
+            Creates a new folder object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Dossier.GetDossier(Arco.Doma.Client.Context,System.Int32)">
+            <summary>
+            Returns the Dossier using its id
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Dossier.Save">
+            <summary>
+            Saves the current folder object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Dossier.Create">
+            <summary>
+            Creates the Dossier
+            </summary>
+            <returns></returns>       
+        </member>
+        <member name="M:Arco.Doma.Client.Dossier.Move(System.Int32)">
+            <summary>
+            Moves the folder to a new parent folder
+            </summary>
+            <param name="NewFolderID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Dossier.Move(Arco.Doma.Client.Dossier)">
+            <summary>
+            Moves the document to a new folder
+            </summary>
+            <param name="NewFolder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Dossier.Copy(Arco.Doma.Client.Dossier)">
+            <summary>
+            creates a copy of the current folder
+            </summary>
+            <param name="ToFolder">Folder in which to create the copy</param>
+            <returns></returns>
+        </member>
+        <member name="T:Arco.Doma.Client.LoginErrorCode">
+            <summary>
+            Errorcode returned by the Login method
+            </summary>
+        </member>
+        <member name="F:Arco.Doma.Client.LoginErrorCode.NoError">
+            <summary>
+            No error has occured
+            </summary>
+        </member>
+        <member name="F:Arco.Doma.Client.LoginErrorCode.UserCancelled">
+            <summary>
+            The user has cancelled the login
+            </summary>
+        </member>
+        <member name="F:Arco.Doma.Client.LoginErrorCode.ConnectionFailed">
+            <summary>
+            Unable to connect
+            </summary>
+        </member>
+        <member name="F:Arco.Doma.Client.LoginErrorCode.AuthenticationFailed">
+            <summary>
+            Authentication failed
+            </summary>
+        </member>
+        <member name="T:Arco.Doma.Client.Application">
+            <summary>
+            Class used to connect to the server
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.Application.Configure">
+            <summary>
+            Configure the sites
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.SearchResult.ID">
+            <summary>
+            Gets the ID.
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.SearchResult.Name">
+            <summary>
+            Gets the name.
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.SearchResult.FieldValues">
+            <summary>
+            Gets the field values.
+            </summary>
+        </member>
+        <member name="T:Arco.Doma.Client.Search">
+            <summary>
+            Doma Search engine
+            </summary>
+        </member>
+        <member name="F:Arco.Doma.Client.Forms.frmLogin.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.Forms.frmLogin.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Arco.Doma.Client.Forms.frmLogin.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Arco.Doma.Client.Forms.frmConfig.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.Forms.frmConfig.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Arco.Doma.Client.Forms.frmConfig.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Arco.Doma.Client.Folder">
+            <summary>
+            Class representing a Folder in Docroom
+            </summary>    
+        </member>
+        <member name="M:Arco.Doma.Client.Folder.NewFolder(Arco.Doma.Client.Context)">
+            <summary>
+            Creates a new folder object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Folder.GetMyDocumentsFolder(Arco.Doma.Client.Context)">
+            <summary>
+            Returns the My Documents folder
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Folder.CreateFolderStructure(Arco.Doma.Client.Context,System.String,System.Int32)">
+            <summary>
+            Creates the folder structure if it doesn't already exist
+            </summary>
+            <param name="folders">Folder name</param>
+            <param name="catid">category id of the folder to be created</param>
+            <returns>The created folder</returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Folder.FolderExists(Arco.Doma.Client.Context,System.String)">
+            <summary>
+            Returns true if the given folder structure exists
+            </summary>
+            <param name="folders"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Folder.GetFolder(Arco.Doma.Client.Context,System.Int32)">
+            <summary>
+            Returns the folder using its id
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Folder.GetFolder(Arco.Doma.Client.Context,System.String)">
+            <summary>
+            Returns the folder using its full path
+            </summary>
+            <param name="sFolders"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Folder.Save">
+            <summary>
+            Saves the current folder object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Folder.Move(System.Int32)">
+            <summary>
+            Moves the folder to a new parent folder
+            </summary>
+            <param name="NewFolderID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Folder.Move(Arco.Doma.Client.Folder)">
+            <summary>
+            Moves the document to a new folder
+            </summary>
+            <param name="NewFolder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Folder.Copy(Arco.Doma.Client.Folder)">
+            <summary>
+            creates a copy of the current folder
+            </summary>
+            <param name="ToFolder">Folder in which to create the copy</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.File.GetFile(Arco.Doma.Client.Context,System.Int32)">
+            <summary>
+            Gets the file, using the supplied id
+            </summary>
+            <param name="ID">The ID.</param>
+            <param name="IncludeContent">Set to true to load the binary content</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.File.AddFile(Arco.Doma.Client.Context,System.Int32,System.String,System.String,System.Boolean,System.Int32)">
+            <summary>
+            Adds a file to the document
+            </summary>
+            <param name="sTitle">Name of the file</param>
+            <param name="sPath">Location of the file</param>
+            <param name="asAttachment">Set as attachment</param>
+        </member>
+        <member name="M:Arco.Doma.Client.File.AddFile(Arco.Doma.Client.Context,System.Int32,System.String,System.String,System.Boolean,System.Int32,System.EventHandler{Arco.Doma.Client.File.UploadProgressChangedEventArgs})">
+            <summary>
+            Adds a file to the document
+            </summary>
+            <param name="sTitle">Name of the file</param>
+            <param name="sPath">Location of the file</param>
+            <param name="asAttachment">Set as attachment</param>
+        </member>
+        <member name="M:Arco.Doma.Client.File.AddFile(Arco.Doma.Client.Context,System.Int32,System.String,System.Byte[],System.String,System.Boolean,System.Int32)">
+            <summary>
+            Adds a file to an object
+            </summary>
+            <param name="sTitle">Name of the file</param>
+            <param name="sPath">Location of the file</param>
+            <param name="asAttachment">Set as attachment</param>        
+        </member>
+        <member name="M:Arco.Doma.Client.File.AddFile(Arco.Doma.Client.Context,System.Int32,System.String,System.Byte[],System.String,System.Boolean,System.Int32,System.EventHandler{Arco.Doma.Client.File.UploadProgressChangedEventArgs})">
+            <summary>
+            Adds a file to an object
+            </summary>
+            <param name="sTitle">Name of the file</param>
+            <param name="sPath">Location of the file</param>
+            <param name="asAttachment">Set as attachment</param>        
+        </member>
+        <member name="M:Arco.Doma.Client.File.CheckOut(System.String)">
+            <summary>
+            Checkout the File
+            </summary>
+            <param name="sComment">Checkout comment</param>
+            <returns>The checked out file</returns>
+        </member>
+        <member name="M:Arco.Doma.Client.File.CanCheckout">
+            <summary>
+            Returns true if the document can be checkedout
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.File.CheckIn(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Checks in the file
+            </summary>
+            <param name="sComment">Checkin comment</param>
+            <param name="bNewMajor">Create new major version</param>
+            <param name="bNewMinor">Create new minor version</param>
+            <returns>The checked in file</returns>
+        </member>
+        <member name="M:Arco.Doma.Client.File.CancelCheckout">
+            <summary>
+            Cancels the checkout on a file
+            </summary>
+            <returns>The original file</returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Context.Login(System.String)">
+            <summary>
+            Login to the application on the preconfigured site
+            </summary>
+            <param name="Site">Site name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Context.Login">
+            <summary>
+            Login to the application, using the default client settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Context.Logoff">
+            <summary>
+            Logoff from the connected site
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.Context.EncryptUrlSingleLogin">
+            <summary>
+            Gets or sets a value indicating whether encrypt url by default uses single login
+            </summary>
+            <value>
+            	<c>true</c> if [encrypt URL single login]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Arco.Doma.Client.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Arco.Doma.Client.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Arco.Doma.Client.RoutingCaseList">
+            <summary>
+            Class containing static methods to get case lists
+            </summary>
+        </member>
+        <member name="T:Arco.Doma.Client.Mail">
+            <summary>
+            class representing a mail in docroom
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.Mail.AddFile(System.String,System.String,System.Boolean)">
+            <summary>
+            Adds a file to the document
+            </summary>
+            <param name="sTitle">Name of the file</param>
+            <param name="sPath">Location of the file</param>
+            <param name="asAttachment">Set as attachment</param>
+        </member>
+        <member name="T:Arco.Doma.Client.Document">
+            <summary>
+            Class representing a document in Docroom
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.GetDocument(Arco.Doma.Client.Context,System.Int32)">
+            <summary>
+            Get a document, using the supplied ID
+            </summary>
+            <param name="ID">ID of the document</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.NewDocument(Arco.Doma.Client.Context)">
+            <summary>
+            Create a new document object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.AddFile(System.String,System.String,System.Boolean,System.Int32)">
+            <summary>
+            Adds a file to the document
+            </summary>
+            <param name="sTitle">Name of the file</param>
+            <param name="sPath">Location of the file</param>
+            <param name="asAttachment">Set as attachment</param>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.AddFile(System.String,System.Byte[],System.String,System.Boolean)">
+            <summary>
+            Adds a file to the document
+            </summary>
+            <param name="sTitle">Name of the file</param>
+            <param name="sPath">Location of the file</param>
+            <param name="asAttachment">Set as attachment</param>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.CheckOut(System.String)">
+            <summary>
+            Checkout the document
+            </summary>
+            <param name="sComment">Checkout comment</param>
+            <returns>The checked out document</returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.CanCheckout">
+            <summary>
+            Returns true if the document can be checkedout
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.CheckIn(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Checks in the document
+            </summary>
+            <param name="sComment">Checkin comment</param>
+            <param name="bNewMajor">Create new major version</param>
+            <param name="bNewMinor">Create new minor version</param>
+            <returns>The checked in document</returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.CancelCheckout">
+            <summary>
+            Cancels the checkout on a document
+            </summary>
+            <returns>The original document</returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.Save">
+            <summary>
+            Saves the document
+            </summary>
+            <returns>The saved document</returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.Create">
+            <summary>
+            Creates the document
+            </summary>
+            <returns>The newly created document</returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.Create(System.Boolean,System.Boolean)">
+            <summary>
+            Creates the document
+            </summary>
+            <param name="CompleteCreation">Set to complete the creation</param>
+            <returns>The created document</returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.Move(System.Int32)">
+            <summary>
+            Moves the document to a new folder
+            </summary>
+            <param name="NewFolderID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.Move(Arco.Doma.Client.Folder)">
+            <summary>
+            Moves the document to the new folder
+            </summary>
+            <param name="NewFolder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.Copy(Arco.Doma.Client.Folder)">
+            <summary>
+            creates a copy of the current document
+            </summary>
+            <param name="ToFolder">Folder in which to create the copy</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Document.CompleteCreation">
+            <summary>
+            Completes creation on a created document
+            </summary>
+            <returns>The completed document</returns>
+        </member>
+        <member name="T:Arco.Doma.Client.FolderList">
+            <summary>
+            Class containing static methods to get folder lists
+            </summary>
+        </member>
+        <member name="M:Arco.Doma.Client.FolderList.GetChildFolders(Arco.Doma.Client.Context,System.Int32,System.String)">
+            <summary>
+            Returns the direct children of the given folder
+            </summary>
+            <param name="ParentFolderId">Id of the folder</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.FolderList.GetChildFolders(Arco.Doma.Client.Context,System.Int32)">
+            <summary>
+            Returns the direct children of the given folder
+            </summary>
+            <param name="ParentFolderId">The parent folder id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.FolderList.GetChildFolders(Arco.Doma.Client.Context,System.Int32,System.String,System.String)">
+            <summary>
+             Returns the direct children of the given folder
+            </summary>
+            <param name="ParentFolderId">>Id of the folder</param>
+            <param name="FilterFile">Server side filter file</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arco.Doma.Client.Category.GetCategory(Arco.Doma.Client.Context,System.Int32)">
+            <summary>
+            Gets the category, using the supplied id
+            </summary>
+            <param name="ID">The ID.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

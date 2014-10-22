@@ -1,0 +1,2855 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Arco
+</name>
+</assembly>
+<members>
+<member name="P:Arco.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Arco.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Arco.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:Arco.Business.NameValueList.Clone">
+	<summary>
+ Creates a clone of the object.
+ </summary>
+	<returns>A new object containing the exact data of the original object.</returns>
+</member><member name="P:Arco.Business.NameValueList.Item(System.Int32)">
+	<summary>
+ Returns a value from the list.
+ </summary>
+	<param name="index">The positional index of the value in the collection.</param>
+	<returns>The specified value.</returns>
+</member><member name="P:Arco.Business.NameValueList.Item(System.String)">
+	<summary>
+ Returns a value from the list.
+ </summary>
+	<param name="Name">The name of the value.</param>
+	<returns>The specified value.</returns>
+</member><member name="M:Arco.Business.NameValueList.Add(System.String,System.String)">
+	<summary>
+ Adds a name/value pair to the list.
+ </summary>
+	<param name="Name">The name of the item.</param>
+	<param name="Value">The value to be added.</param>
+</member><member name="P:Arco.Business.NameValueList.Key(System.String)">
+	<summary>
+ Returns the first name found in the list with the specified
+ value.
+ </summary>
+	<remarks>
+ This method throws an exception if no matching value is found
+ in the list.
+ </remarks>
+	<param name="Item">The value to search for in the list.</param>
+	<returns>The name of the item found.</returns>
+</member><member name="M:Arco.Business.NameValueList.#ctor">
+	<summary>
+ Creates a new NameValueList.
+ </summary>
+</member><member name="M:Arco.Business.NameValueList.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+	<summary>
+ Creates a new NameValueList.
+ </summary>
+</member><member name="M:Arco.Business.NameValueList.DataPortal_Fetch(System.Object)">
+	<summary>
+ Override this method to allow retrieval of an existing business
+ object based on data in the database.
+ </summary>
+	<remarks>
+ In many cases you can call the SimpleFetch method to
+ retrieve simple name/value data from a single table in
+ a database. In more complex cases you may need to implement
+ your own data retrieval code using ADO.NET.
+ </remarks>
+	<param name="Criteria">An object containing criteria values to identify the object.</param>
+</member><member name="M:Arco.Business.NameValueList.DataPortal_OnDataPortalInvoke(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal prior to calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="M:Arco.Business.NameValueList.DataPortal_OnDataPortalInvokeComplete(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal after calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="M:Arco.Business.NameValueList.SimpleFetch(System.String,System.String,System.String)">
+	<summary>
+ Provides default/simple loading for lists. 
+ It is called to load data from the database
+ </summary>
+	<param name="TableName">The name of the table to read.</param>
+	<param name="NameColumn">The name of the column containing name or key values.</param>
+	<param name="ValueColumn">The name of the column containing data values.</param>
+</member><member name="P:Arco.Batch.BatchQueueService.Name">
+	<summary>
+ Returns the name of the batch queue server.
+ </summary>
+</member><member name="M:Arco.Batch.BatchQueueService.Start">
+	<summary>
+ Starts the batch queue.
+ </summary>
+	<remarks>
+ Call this as your Windows Service starts up to
+ start the batch queue itself. This will cause
+ the queue to start listening for user requests
+ via remoting and to the MSMQ for queued jobs.
+ </remarks>
+</member><member name="M:Arco.Batch.BatchQueueService.Stop">
+	<summary>
+ Stops the batch queue.
+ </summary>
+	<remarks>
+		<para>
+ Call this as your Windows Service is stopping. It
+ stops the batch queue, causing it to stop listening
+ for user requests via remoting and to stop looking for
+ jobs in the MSMQ queue.
+ </para><para>
+ NOTE that this method will not return until any
+ currently active (executing) batch jobs have completed.
+ </para>
+	</remarks>
+</member><member name="T:Arco.Batch.BatchQueueService">
+	<summary>
+ Implements the batch queue service.
+ </summary>
+	<remarks>
+ This class implements the server-side batch queue functionality.
+ It must be hosted within some process, typically a Windows Service.
+ It may also be hosted within a console application, which is
+ useful for testing and debugging.
+ </remarks>
+</member><member name="M:Arco.Server.ServicedDataPortal.Create(System.Object,Arco.Server.DataPortalContext)">
+	<summary>
+ Invokes the server-side DataPortal Create method within
+ a COM+ transaction.
+ </summary>
+</member><member name="M:Arco.Server.ServicedDataPortal.Fetch(System.Object,Arco.Server.DataPortalContext)">
+	<summary>
+ Invokes the server-side DataPortal Fetch method within
+ a COM+ transaction.
+ </summary>
+</member><member name="M:Arco.Server.ServicedDataPortal.Update(System.Object,Arco.Server.DataPortalContext)">
+	<summary>
+ Invokes the server-side DataPortal Update method within
+ a COM+ transaction.
+ </summary>
+</member><member name="M:Arco.Server.ServicedDataPortal.Delete(System.Object,Arco.Server.DataPortalContext)">
+	<summary>
+ Invokes the server-side DataPortal Delete method within
+ a COM+ transaction.
+ </summary>
+</member><member name="P:Arco.Security.BusinessPrincipal.Identity">
+	<summary>
+ Implements the Identity property defined by IPrincipal.
+ </summary>
+</member><member name="M:Arco.Security.BusinessPrincipal.IsInRole(System.String)">
+	<summary>
+ Implements the IsInRole property defined by IPrincipal.
+ </summary>
+</member><member name="P:Arco.Server.DataPortalException.Result">
+	<summary>
+ Returns the DataPortalResult object from the server.
+ </summary>
+</member><member name="T:Arco.Server.DataPortalException">
+	<summary>
+ This exception is returned from the 
+ server-side DataPortal and contains the exception
+ and context data from the server.
+ </summary>
+</member><member name="P:Arco.Server.DataProvider.Provider">
+	<summary>
+ Get or set the Provider Type
+</summary>
+</member><member name="M:Arco.Server.DataProvider.CreateConnection">
+	<summary>Returns an IDBConnection, based on the Provider property</summary>
+	<returns>An IDBConnection</returns>
+</member><member name="M:Arco.Server.DataProvider.CreateConnection(System.String)">
+	<summary>Returns an IDBConnection, based on the Provider property</summary>
+	<param name="ConnectionString">The database connection string</param>
+	<returns>An IDBConnection</returns>
+</member><member name="M:Arco.Server.DataProvider.CreateCommand">
+	<summary>Returns an IDBCommand, based on the Provider property</summary>
+	<returns>An IDBCommand</returns>
+</member><member name="M:Arco.Server.DataProvider.CreateCommand(System.String)">
+	<summary>Returns an IDBCommand, based on the Provider property</summary>
+	<param name="cmdText">The command text</param>
+	<returns>An IDBCommand</returns>
+</member><member name="M:Arco.Server.DataProvider.CreateCommand(System.String,System.Data.IDbConnection)">
+	<summary>Returns an IDBCommand, based on the Provider property</summary>
+	<param name="cmdText">The command text string</param>
+	<param name="Connection">The database connection</param>
+	<returns>An IDBCommand</returns>
+</member><member name="M:Arco.Server.DataProvider.CreateCommand(System.String,System.Data.IDbConnection,System.Data.IDbTransaction)">
+	<summary>Returns an IDBCommand, based on the Provider property</summary>
+	<param name="cmdText">The command text string</param>
+	<param name="Connection">The database connection</param>
+	<param name="Transaction">The current transaction</param>
+	<returns>An IDBCommand</returns>
+</member><member name="M:Arco.Server.DataProvider.CreateDataAdapter">
+	<summary>Returns an IDBDataAdapter, based on the Provider property</summary>
+	<returns>An IDBDataAdapter</returns>
+</member><member name="M:Arco.Server.DataProvider.CreateDataAdapter(System.Data.IDbCommand)">
+	<summary>Returns an IDBDataAdapter, based on the Provider property</summary>
+	<param name="SelectCommand">The Command Object</param>
+	<returns>An IDBDataAdapter</returns>
+</member><member name="M:Arco.Server.DataProvider.CreateDataAdapter(System.String,System.Data.IDbConnection)">
+	<summary>Returns an IDBDataAdapter, based on the Provider property</summary>
+	<param name="SelectCommandText">The Command text</param>
+	<param name="SelectConnection">The database connection</param>
+	<returns>An IDBDataAdapter</returns>
+</member><member name="M:Arco.Server.DataProvider.CreateDataAdapter(System.String,System.String)">
+	<summary>Returns an IDBDataAdapter, based on the Provider property</summary>
+	<param name="SelectCommandText">The Command text</param>
+	<param name="SelectConnectionString">The database connection string</param>
+	<returns>An IDBDataAdapter</returns>
+</member><member name="M:Arco.Server.DataProvider.CreateDataParameter">
+	<summary>Returns an IDbDataParameter, based on the Provider property</summary>
+	<returns>An IDbDataParameter</returns>
+</member><member name="M:Arco.Server.DataProvider.CreateDataParameter(System.String,System.Object)">
+	<summary>Returns an IDbDataParameter, based on the Provider property</summary>
+	<returns>An IDbDataParameter</returns>
+</member><member name="M:Arco.Server.DataProvider.CreateDataParameter(System.String,System.Data.DbType)">
+	<summary>Returns an IDbDataParameter, based on the Provider property</summary>
+	<returns>An IDbDataParameter</returns>
+</member><member name="M:Arco.Server.DataProvider.CreateDataParameter(System.String,System.Data.DbType,System.Int32)">
+	<summary>Returns an IDbDataParameter, based on the Provider property</summary>
+	<returns>An IDbDataParameter</returns>
+</member><member name="M:Arco.Server.DataProvider.DBSubstring(System.String,System.Int32)">
+	<summary>
+ Returns a substring of maxlength, but if quotes or other escape chars are found, the string will be shortened further
+ </summary>
+	<param name="vsString"></param>
+	<param name="vlMaxLength"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Arco.Server.DataQuery.CreateSQLServerFullTextIndex(System.String,System.String)">
+	<summary>
+ this will perform : ALTER FULLTEXT INDEX on vsTable ADD vsField
+ </summary>
+	<remarks>
+ Only works for tables that are already full text indexed
+ Only works for SQL Server 2005 and later
+ </remarks>
+</member><member name="M:Arco.Server.DataQuery.RemoveSQLServerFullTextIndex(System.String,System.String)">
+	<summary>
+ this will perform : ALTER FULLTEXT INDEX on vsTable DROP vsField
+ </summary>
+	<remarks>
+ Only works for SQL Server 2005 and later
+ </remarks>
+</member><member name="M:Arco.Server.DataQuery.AddNumPKWhere(System.String,System.Int32)">
+	<summary>
+ Adds a parameterized where clause to lookup a PK
+ </summary>
+	<param name="vsField"></param>
+	<param name="viValue"></param>
+	<remarks></remarks>
+</member><member name="M:Arco.Batch.IBatchEntry.Execute(System.Object)">
+	<summary>
+ This method should contain your worker code that
+ is to be run in the batch queue.
+ </summary>
+	<param name="State">An optional object containing extra state data from the client.</param>
+</member><member name="P:Arco.Server.ApplicationContext.ClientContext">
+	<summary>
+ Returns the application-specific context data provided
+ by the client.
+ </summary>
+	<remarks>
+		<para>
+ The return value is a HybridDictionary. If one does
+ not already exist, and empty one is created and returned.
+ </para><para>
+ Note that data in this context is transferred from
+ the client to the server. No data is transferred from
+ the server to the client.
+ </para>
+	</remarks>
+</member><member name="P:Arco.Server.ApplicationContext.GlobalContext">
+	<summary>
+ Returns the application-specific context data shared
+ on both client and server.
+ </summary>
+	<remarks>
+		<para>
+ The return value is a HybridDictionary. If one does
+ not already exist, and empty one is created and returned.
+ </para><para>
+ Note that data in this context is transferred to and from
+ the client and server. Any objects or data in this context
+ will be transferred bi-directionally across the network.
+ </para>
+	</remarks>
+</member><member name="T:Arco.Server.ApplicationContext">
+	<summary>
+ Provides consistent context information between the client
+ and server DataPortal objects. 
+ </summary>
+</member><member name="P:Arco.Batch.BatchEntries.Entry(System.Int32)">
+	<summary>
+ Returns a reference to an object with information about
+ a specific batch queue entry.
+ </summary>
+</member><member name="P:Arco.Batch.BatchEntries.Entry(System.Guid)">
+	<summary>
+ Returns a reference to an object with information about
+ a specific batch queue entry.
+ </summary>
+	<param name="ID">The ID value of the entry to return.</param>
+</member><member name="T:Arco.Batch.BatchEntries">
+	<summary>
+ Contains a list of holding, pending and active batch
+ queue entries.
+ </summary>
+</member><member name="M:Arco.Batch.BatchQueueServer.Submit(Arco.Batch.BatchEntry)">
+	<summary>
+ Submits a batch entry to the queue.
+ </summary>
+	<param name="Entry">A reference to the batch entry.</param>
+</member><member name="M:Arco.Batch.BatchQueueServer.Submit(Arco.Batch.BatchEntry,System.String)">
+	<summary>
+ Submits a batch entry to the queue.
+ </summary>
+	<param name="Entry">A reference to the batch entry.</param>
+</member><member name="M:Arco.Batch.BatchQueueServer.Remove(Arco.Batch.BatchEntryInfo)">
+	<summary>
+ Removes a holding or pending entry from the queue.
+ </summary>
+	<param name="Entry">A reference to the info object for the batch entry.</param>
+</member><member name="M:Arco.Batch.BatchQueueServer.GetEntries(System.Security.Principal.IPrincipal)">
+	<summary>
+ Gets a list of the entries currently in the
+ batch queue.
+ </summary>
+	<param name="Principal">The requesting user's security credentials.</param>
+</member><member name="T:Arco.Batch.BatchQueueServer">
+	<summary>
+ This is the entry point for all queue requests from
+ the client via Remoting.
+ </summary>
+</member><member name="M:Arco.Business.BusinessCollectionBase.Contains(Arco.Business.BusinessBase)">
+	<summary>
+ Used to see if the collection contains a specific child object.
+ </summary>
+	<remarks>
+ Only the 'active' list of child objects is checked. 
+ Business collections also contain deleted objects, which are
+ not checked by this call.
+ </remarks>
+	<param name="Item">A reference to the object.</param>
+	<returns>True if the collection contains the object.</returns>
+</member><member name="M:Arco.Business.BusinessCollectionBase.ContainsDeleted(Arco.Business.BusinessBase)">
+	<summary>
+ Used to see if the collection contains a reference to a
+ child object that is marked for deletion.
+ </summary>
+	<remarks>
+ This scans the list of child objects that have been marked
+ for deletion. If this object is in that list, the method
+ returns True.
+ </remarks>
+	<param name="Item">A reference to the object.</param>
+	<returns>True if the collection contains the object.</returns>
+</member><member name="P:Arco.Business.BusinessCollectionBase.IsDirty">
+	<summary>
+ Returns True if this object's data has been changed.
+ </summary>
+	<remarks>
+		<para>
+  This value is used to
+ optimize data updates, since an unchanged object does not need to be
+ updated into the database. All new objects are considered dirty. All objects
+ marked for deletion are considered dirty.
+ </para><para>
+ Once an object's data has been saved to the database (inserted or updated)
+ the dirty flag is cleared and the object is considered unchanged. Objects
+ newly loaded from the database are also considered unchanged.
+ </para>
+		<para>
+ If any child object within the collection is dirty then the collection
+ is considered to be dirty. If all child objects are unchanged, then the
+ collection is not dirty.
+ </para>
+	</remarks>
+	<returns>A value indicating if this object's data has been changed.</returns>
+</member><member name="P:Arco.Business.BusinessCollectionBase.IsValid">
+	<summary>
+ Returns True if the object is currently valid, False if the
+ object has broken rules or is otherwise invalid.
+ </summary>
+	<remarks>
+		<para>
+ By default this property relies on the underling <see cref="T:BrokenRules"/>
+ object to track whether any business rules are currently broken for this object.
+ </para><para>
+ You can override this property to provide more sophisticated
+ implementations of the behavior. For instance, you should always override
+ this method if your object has child objects, since the validity of this object
+ is affected by the validity of all child objects.
+ </para>
+		<para>
+ If any child object within the collection is invalid then the collection
+ is considered to be invalid. If all child objects are valid, then the
+ collection is valid.
+ </para>
+	</remarks>
+	<returns>A value indicating if the object is currently valid.</returns>
+</member><member name="M:Arco.Business.BusinessCollectionBase.BeginEdit">
+	<summary>
+ Starts a nested edit on the object.
+ </summary>
+	<remarks>
+		<para>
+ When this method is called the object takes a snapshot of
+ its current state (the values of its variables). This snapshot
+ can be restored by calling <see cref="M:BusinessBase.CancelEdit"/>
+ or committed by calling <see cref="M:BusinessBase.ApplyEdit"/>.
+ </para><para>
+ This is a nested operation. Each call to BeginEdit adds a new
+ snapshot of the object's state to a stack. You should ensure that 
+ for each call to BeginEdit there is a corresponding call to either 
+ CancelEdit or ApplyEdit to remove that snapshot from the stack.
+ </para><para>
+ See Chapters 2 and 4 for details on n-level undo and state stacking.
+ </para><para>
+ This method triggers the copying of all child object states.
+ </para>
+	</remarks>
+</member><member name="M:Arco.Business.BusinessCollectionBase.CancelEdit">
+	<summary>
+ Cancels the current edit process, restoring the object's state to
+ its previous values.
+ </summary>
+	<remarks>
+ Calling this method causes the most recently taken snapshot of the 
+ object's state to be restored. This resets the object's values
+ to the point of the last <see cref="M:BusinessCollectionBase.BeginEdit"/>
+ call.
+ <para>
+ This method triggers an undo in all child objects.
+ </para>
+	</remarks>
+</member><member name="M:Arco.Business.BusinessCollectionBase.ApplyEdit">
+	<summary>
+ Commits the current edit process.
+ </summary>
+	<remarks>
+ Calling this method causes the most recently taken snapshot of the 
+ object's state to be discarded, thus committing any changes made
+ to the object's state since the last 
+ <see cref="M:BusinessCollectionBase.BeginEdit"/> call.
+ <para>
+ This method triggers an ApplyEdit in all child objects.
+ </para>
+	</remarks>
+</member><member name="F:Arco.Business.BusinessCollectionBase.deletedList">
+	<summary>
+ A collection containing all child objects marked
+ for deletion.
+ </summary>
+</member><member name="M:Arco.Business.BusinessCollectionBase.DeletedCollection.Add(Arco.Business.BusinessBase)">
+	<summary>
+ Adds a child object to the collection.
+ </summary>
+	<param name="Child">The child object to be added.</param>
+</member><member name="M:Arco.Business.BusinessCollectionBase.DeletedCollection.Remove(Arco.Business.BusinessBase)">
+	<summary>
+ Removes a child object from the collection.
+ </summary>
+	<param name="Child">The child object to be removed.</param>
+</member><member name="P:Arco.Business.BusinessCollectionBase.DeletedCollection.Item(System.Int32)">
+	<summary>
+ Returns a reference to a child object in the collection.
+ </summary>
+	<param name="index">The positional index of the item in the collection.</param>
+	<returns>The specified child object.</returns>
+</member><member name="T:Arco.Business.BusinessCollectionBase.DeletedCollection">
+	<summary>
+ Defines a strongly-typed collection to store all
+ child objects marked for deletion.
+ </summary>
+</member><member name="M:Arco.Business.BusinessCollectionBase.RemoveChild(Arco.Business.BusinessBase)">
+	<summary>
+ This method is called by a child object when it
+ wants to be removed from the collection.
+ </summary>
+	<param name="child">The child object to remove.</param>
+</member><member name="M:Arco.Business.BusinessCollectionBase.OnInsert(System.Int32,System.Object)">
+	<summary>
+ Sets the edit level of the child object as it is added.
+ </summary>
+</member><member name="M:Arco.Business.BusinessCollectionBase.OnRemove(System.Int32,System.Object)">
+	<summary>
+ Marks the child object for deletion and moves it to
+ the collection of deleted objects.
+ </summary>
+</member><member name="M:Arco.Business.BusinessCollectionBase.OnClear">
+	<summary>
+ Marks all child objects for deletion and moves them
+ to the collection of deleted objects.
+ </summary>
+</member><member name="P:Arco.Business.BusinessCollectionBase.IsChild">
+	<summary>
+ Indicates whether this collection object is a child object.
+ </summary>
+	<returns>True if this is a child object.</returns>
+</member><member name="M:Arco.Business.BusinessCollectionBase.MarkAsChild">
+	<summary>
+ Marks the object as being a child object.
+ </summary>
+	<remarks>
+		<para>
+ By default all business objects are 'parent' objects. This means
+ that they can be directly retrieved and updated into the database.
+ </para><para>
+ We often also need child objects. These are objects which are contained
+ within other objects. For instance, a parent Invoice object will contain
+ child LineItem objects.
+ </para><para>
+ To create a child object, the MarkAsChild method must be called as the
+ object is created. Please see Chapter 7 for details on the use of the
+ MarkAsChild method.
+ </para>
+	</remarks>
+</member><member name="M:Arco.Business.BusinessCollectionBase.Clone">
+	<summary>
+ Creates a clone of the object.
+ </summary>
+	<returns>A new object containing the exact data of the original object.</returns>
+</member><member name="M:Arco.Business.BusinessCollectionBase.Save">
+	<summary>
+ Saves the object to the database.
+ </summary>
+	<remarks>
+		<para>
+ Calling this method starts the save operation, causing the all child
+ objects to be inserted, updated or deleted within the database based on the
+ each object's current state.
+ </para><para>
+ All this is contingent on <see cref="P:BusinessCollectionBase.IsDirty"/>. If
+ this value is False, no data operation occurs. It is also contingent on
+ <see cref="P:BusinessCollectionBase.IsValid"/>. If this value is False an
+ exception will be thrown to indicate that the UI attempted to save an
+ invalid object.
+ </para><para>
+ It is important to note that this method returns a new version of the
+ business collection that contains any data updated during the save operation.
+ You MUST update all object references to use this new version of the
+ business collection in order to have access to the correct object data.
+ </para><para>
+ You can override this method to add your own custom behaviors to the save
+ operation. For instance, you may add some security checks to make sure
+ the user can save the object. If all security checks pass, you would then
+ invoke the base Save method via <c>MyBase.Save()</c>.
+ </para>
+	</remarks>
+	<returns>A new object containing the saved values.</returns>
+</member><member name="M:Arco.Business.BusinessCollectionBase.DataPortal_Create(System.Object)">
+	<summary>
+ Override this method to load a new business object with default
+ values from the database.
+ </summary>
+	<param name="Criteria">An object containing criteria values.</param>
+</member><member name="M:Arco.Business.BusinessCollectionBase.DataPortal_Fetch(System.Object)">
+	<summary>
+ Override this method to allow retrieval of an existing business
+ object based on data in the database.
+ </summary>
+	<param name="Criteria">An object containing criteria values to identify the object.</param>
+</member><member name="M:Arco.Business.BusinessCollectionBase.DataPortal_Update">
+	<summary>
+ Override this method to allow insert, update or deletion of a business
+ object.
+ </summary>
+</member><member name="M:Arco.Business.BusinessCollectionBase.DataPortal_Delete(System.Object)">
+	<summary>
+ Override this method to allow immediate deletion of a business object.
+ </summary>
+	<param name="Criteria">An object containing criteria values to identify the object.</param>
+</member><member name="M:Arco.Business.BusinessCollectionBase.DataPortal_OnDataPortalInvoke(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal prior to calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="M:Arco.Business.BusinessCollectionBase.DataPortal_OnDataPortalInvokeComplete(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal after calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="M:Arco.Business.BusinessCollectionBase.DB">
+	<summary>
+ Returns the specified database connection string from the application
+ configuration file.
+ </summary>
+	<remarks/>
+	<returns>A database connection string.</returns>
+</member><member name="M:Arco.Business.BusinessCollectionBase.Deserialized">
+	<summary>
+ This method is called on a newly deserialized object
+ after deserialization is complete.
+ </summary>
+</member><member name="M:Arco.Business.BusinessCollectionBase.Serialized">
+	<summary>
+ This method is called on the original instance of the
+ object after it has been serialized.
+ </summary>
+</member><member name="M:Arco.Business.BusinessCollectionBase.Serializing">
+	<summary>
+ This method is called before an object is serialized.
+ </summary>
+</member><member name="T:Arco.Business.BusinessCollectionBase">
+	<summary>
+ This is the base class from which most business collection
+ objects will be derived.
+ </summary>
+	<remarks>
+		<para>
+ To create a collection of business objects, inherit from this 
+ class. The business objects contained in this collection must
+ inherit from <see cref="T:BusinessBase"/>, and the objects
+ must be marked as child objects.
+ </para><para>
+ Please refer to 'Expert One-on-One VB.NET Business Objects' for
+ full details on the use of this base class to create business
+ collections.
+ </para>
+	</remarks>
+</member><member name="P:Arco.Security.BusinessIdentity.IsAuthenticated">
+	<summary>
+ Implements the IsAuthenticated property defined by IIdentity.
+ </summary>
+</member><member name="P:Arco.Security.BusinessIdentity.AuthenticationType">
+	<summary>
+ Implements the AuthenticationType property defined by IIdentity.
+ </summary>
+</member><member name="P:Arco.Security.BusinessIdentity.Name">
+	<summary>
+ Implements the Name property defined by IIdentity.
+ </summary>
+</member><member name="T:Arco.Server.CallMethodException">
+	<summary>
+ This exception is returned from the 
+ CallMethod method in the server-side DataPortal
+ and contains the exception thrown by the
+ underlying business object method that was
+ being invoked.
+ </summary>
+</member><member name="M:Arco.Business.ReadOnlyBase.Clone">
+	<summary>
+ Creates a clone of the object.
+ </summary>
+	<returns>A new object containing the exact data of the original object.</returns>
+</member><member name="M:Arco.Business.ReadOnlyBase.DataPortal_Fetch(System.Object)">
+	<summary>
+ Override this method to allow retrieval of an existing business
+ object based on data in the database.
+ </summary>
+	<param name="Criteria">An object containing criteria values to identify the object.</param>
+</member><member name="M:Arco.Business.ReadOnlyBase.DataPortal_OnDataPortalInvoke(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal prior to calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="M:Arco.Business.ReadOnlyBase.DataPortal_OnDataPortalInvokeComplete(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal after calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="M:Arco.Business.ReadOnlyBase.DB">
+	<summary>
+ Returns the specified database connection string from the application
+ configuration file.
+ </summary>
+	<returns>A database connection string.</returns>
+</member><member name="M:Arco.Business.ReadOnlyBase.Deserialized">
+	<summary>
+ This method is called on a newly deserialized object
+ after deserialization is complete.
+ </summary>
+</member><member name="M:Arco.Business.ReadOnlyBase.Serialized">
+	<summary>
+ This method is called on the original instance of the
+ object after it has been serialized.
+ </summary>
+</member><member name="M:Arco.Business.ReadOnlyBase.Serializing">
+	<summary>
+ This method is called before an object is serialized.
+ </summary>
+</member><member name="T:Arco.Business.ReadOnlyBase">
+	<summary>
+ This is a base class from which readonly business classes
+ can be derived.
+ </summary>
+	<remarks>
+ This base class only supports data retrieve, not updating or
+ deleting. Any business classes derived from this base class
+ should only implement readonly properties.
+ </remarks>
+</member><member name="P:Arco.Business.SortableCollectionBase.ActivelySorting">
+	<summary>
+ Indicates whether the collection is in the process of
+ being sorted at this time.
+ </summary>
+</member><member name="P:Arco.Business.SortableCollectionBase.IBindingList_IsSorted">
+	<summary>
+ Returns a value indicating whether the collection is currently
+ sorted.
+ </summary>
+</member><member name="P:Arco.Business.SortableCollectionBase.IBindingList_SortProperty">
+	<summary>
+ Returns the property by which the collection is currently sorted.
+ </summary>
+	<remarks>
+ This method is invoked via the IBindingList interface and is not
+ intended for use by code in your business class.
+ </remarks>
+</member><member name="P:Arco.Business.SortableCollectionBase.IBindingList_SortDirection">
+	<summary>
+ Returns the current sort direction.
+ </summary>
+	<remarks>
+ This method is invoked via the IBindingList interface and is not
+ intended for use by code in your business class.
+ </remarks>
+</member><member name="T:Arco.Business.SortableCollectionBase.SortData">
+	<summary>
+ Structure to store temporary data for sorting.
+ </summary>
+</member><member name="T:Arco.Business.SortableCollectionBase.SortDataCaseSensitiveCompare">
+	<summary>
+ Contains code to compare SortData structures
+ </summary>
+	<remarks>
+ This performs a case sensitive comparison. If you want a case insensitive
+ comparison, change the code to use CaseInsensitiveComparer.Default instead.
+ </remarks>
+</member><member name="M:Arco.Business.SortableCollectionBase.IBindingList_ApplySort(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)">
+	<summary>
+ Applies a sort to the collection.
+ </summary>
+	<remarks>
+ This method is invoked via the IBindingList interface and is not
+ intended for use by code in your business class.
+ </remarks>
+</member><member name="M:Arco.Business.SortableCollectionBase.IBindingList_RemoveSort">
+	<summary>
+ Removes any sort from the collection.
+ </summary>
+	<remarks>
+ This method is invoked via the IBindingList interface and is not
+ intended for use by code in your business class.
+ </remarks>
+</member><member name="M:Arco.Business.SortableCollectionBase.OnInsertComplete(System.Int32,System.Object)">
+	<summary>
+ Ensures that any sort is maintained as a new item is inserted.
+ </summary>
+</member><member name="M:Arco.Business.SortableCollectionBase.OnClearComplete">
+	<summary>
+ Ensures that any sort is maintained as the list is cleared.
+ </summary>
+</member><member name="M:Arco.Business.SortableCollectionBase.OnRemoveComplete(System.Int32,System.Object)">
+	<summary>
+ Ensures that any sort is maintained as an item is removed.
+ </summary>
+</member><member name="M:Arco.Business.SortableCollectionBase.IBindingList_Find(System.ComponentModel.PropertyDescriptor,System.Object)">
+	<summary>
+ Implements search/find functionality for the collection.
+ </summary>
+</member><member name="T:Arco.Business.SortableCollectionBase">
+	<summary>
+ This class implements sorting functionality for collections.
+ </summary>
+	<remarks>
+		<para>
+ This class inhirits from Core.BindableCollectionBase and adds
+ sorting capability to collections. BusinessCollectionBase inherits
+ from this class, and business collections should inherit from
+ BusinessCollectionBase. Core.SortedCollectionBase is for internal
+ framework use only.
+ </para><para>
+ The Core.BindableCollectionBase class implements the IBindableList
+ interface. However, it doesn't actually implement sorting. Instead
+ it delegates the sorting functionality to a set of protected virtual 
+ methods. This class provides the actual sorting implementation
+ by overriding those methods.
+ </para>
+	</remarks>
+</member><member name="M:Arco.Server.ObjectAdapter.Fill(System.Data.DataSet,System.Object)">
+	<summary>
+ Fills the DataSet with data from an object or collection.
+ </summary>
+	<remarks>
+ The name of the DataTable being filled is will be the class name of
+ the object acting as the data source. The
+ DataTable will be inserted if it doesn't already exist in the DataSet.
+ </remarks>
+	<param name="ds">A reference to the DataSet to be filled.</param>
+	<param name="source">A reference to the object or collection acting as a data source.</param>
+</member><member name="M:Arco.Server.ObjectAdapter.Fill(System.Data.DataSet,System.String,System.Object)">
+	<summary>
+ Fills the DataSet with data from an object or collection.
+ </summary>
+	<remarks>
+ The name of the DataTable being filled is specified as a parameter. The
+ DataTable will be inserted if it doesn't already exist in the DataSet.
+ </remarks>
+	<param name="ds">A reference to the DataSet to be filled.</param>
+	<param name="TableName"></param>
+	<param name="source">A reference to the object or collection acting as a data source.</param>
+</member><member name="M:Arco.Server.ObjectAdapter.Fill(System.Data.DataTable,System.Object)">
+	<summary>
+ Fills a DataTable with data values from an object or collection.
+ </summary>
+	<param name="dt">A reference to the DataTable to be filled.</param>
+	<param name="source">A reference to the object or collection acting as a data source.</param>
+</member><member name="T:Arco.Server.ObjectAdapter">
+	<summary>
+ An ObjectAdapter is used to convert data in an object 
+ or collection into a DataTable.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.#ctor(System.Data.IDataReader)">
+	<summary>
+ Initializes the SafeDataReader object to use data from
+ the provided DataReader object.
+ </summary>
+	<param name="DataReader">The source DataReader object containing the data.</param>
+</member><member name="M:Arco.Server.SafeDataReader.GetString(System.Int32,System.Boolean)">
+	<summary>
+ Gets a string value from the datareader.
+ </summary>
+	<remarks>
+ Returns empty string for null.
+ </remarks>
+</member><member name="M:Arco.Server.SafeDataReader.GetString(System.String)">
+	<summary>
+ Gets a string value from the datareader.
+ </summary>
+	<remarks>
+ Returns "" for null.
+ </remarks>
+</member><member name="M:Arco.Server.SafeDataReader.GetValue(System.Int32)">
+	<summary>
+ Gets a value of type <see cref="T:System.Object"/> from the datareader.
+ </summary>
+	<remarks>
+ Returns Nothing for null.
+ </remarks>
+</member><member name="M:Arco.Server.SafeDataReader.GetValue(System.String)">
+	<summary>
+ Gets a value of type <see cref="T:System.Object"/> from the datareader.
+ </summary>
+	<remarks>
+ Returns Nothing for null.
+ </remarks>
+</member><member name="M:Arco.Server.SafeDataReader.GetInt32(System.Int32)">
+	<summary>
+ Gets an integer from the datareader.
+ </summary>
+	<remarks>
+ Returns 0 for null.
+ </remarks>
+</member><member name="M:Arco.Server.SafeDataReader.GetInt32(System.String)">
+	<summary>
+ Gets an integer from the datareader.
+ </summary>
+	<remarks>
+ Returns 0 for null.
+ </remarks>
+</member><member name="M:Arco.Server.SafeDataReader.GetDouble(System.Int32)">
+	<summary>
+ Gets a double from the datareader.
+ </summary>
+	<remarks>
+ Returns 0 for null.
+ </remarks>
+</member><member name="M:Arco.Server.SafeDataReader.GetDouble(System.String)">
+	<summary>
+ Gets a double from the datareader.
+ </summary>
+	<remarks>
+ Returns 0 for null.
+ </remarks>
+</member><member name="M:Arco.Server.SafeDataReader.GetSmartDate(System.Int32)">
+	<summary>
+ Gets a <see cref="T:SmartDate"/> from the datareader.
+ </summary>
+	<remarks>
+ A null is converted into the min possible date
+ </remarks>
+	<param name="i">The column number within the datareader.</param>
+</member><member name="M:Arco.Server.SafeDataReader.GetSmartDate(System.Int32,System.Boolean)">
+	<summary>
+ Gets a <see cref="T:SmartDate"/> from the datareader.
+ </summary>
+	<remarks>
+ A null is converted into either the min or max possible date
+ depending on the MinIsEmpty parameter. 
+ </remarks>
+	<param name="i">The column number within the datareader.</param>
+	<param name="MinIsEmpty">A flag indicating whether the min or max value of a data means an empty date.</param>
+</member><member name="M:Arco.Server.SafeDataReader.GetSmartDate(System.String)">
+	<summary>
+ Gets a <see cref="T:SmartDate"/> from the datareader.
+ </summary>
+	<remarks>
+ A null is converted into min possible date
+ </remarks>
+	<param name="Name">The column name within the datareader.</param>
+</member><member name="M:Arco.Server.SafeDataReader.GetSmartDate(System.String,System.Boolean)">
+	<summary>
+ Gets a <see cref="T:SmartDate"/> from the datareader.
+ </summary>
+	<remarks>
+ A null is converted into either the min or max possible date
+ depending on the MinIsEmpty parameter. 
+ </remarks>
+	<param name="Name">The column name within the datareader.</param>
+	<param name="MinIsEmpty">A flag indicating whether the min or max value of a data means an empty date.</param>
+</member><member name="M:Arco.Server.SafeDataReader.GetGuid(System.Int32)">
+	<summary>
+ Gets a Guid value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetGuid(System.String)">
+	<summary>
+ Gets a Guid value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.Read">
+	<summary>
+ Reads the next row of data from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.NextResult">
+	<summary>
+ Moves to the next result set in the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.Close">
+	<summary>
+ Closes the datareader.
+ </summary>
+</member><member name="P:Arco.Server.SafeDataReader.Depth">
+	<summary>
+ Returns the depth property value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.Dispose">
+	<summary>
+ Calls the Dispose method on the underlying datareader.
+ </summary>
+</member><member name="P:Arco.Server.SafeDataReader.FieldCount">
+	<summary>
+ Returns the FieldCount property from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetBooleanFromInt(System.Int32)">
+	<summary>
+ Gets true if the field contains 1, otherwise 0
+ </summary>
+	<param name="i"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Arco.Server.SafeDataReader.GetBoolean(System.Int32)">
+	<summary>
+ Gets a boolean value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetBoolean(System.String)">
+	<summary>
+ Gets a boolean value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetByte(System.Int32)">
+	<summary>
+ Gets a byte value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetByte(System.String)">
+	<summary>
+ Gets a byte value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+	<summary>
+ Invokes the GetBytes method of the underlying datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetBytes(System.String,System.Int64,System.Byte[],System.Int32,System.Int32)">
+	<summary>
+ Invokes the GetBytes method of the underlying datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetChar(System.Int32)">
+	<summary>
+ Gets a char value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetChar(System.String)">
+	<summary>
+ Gets a char value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+	<summary>
+ Invokes the GetChars method of the underlying datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetChars(System.String,System.Int64,System.Char[],System.Int32,System.Int32)">
+	<summary>
+ Invokes the GetChars method of the underlying datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetData(System.Int32)">
+	<summary>
+ Invokes the GetData method of the underlying datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetData(System.String)">
+	<summary>
+ Invokes the GetData method of the underlying datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetDataTypeName(System.Int32)">
+	<summary>
+ Invokes the GetDataTypeName method of the underlying datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetDataTypeName(System.String)">
+	<summary>
+ Invokes the GetDataTypeName method of the underlying datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetNullableDate(System.Int32)">
+	<summary>
+ Gets a date value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetNullableDateTime(System.Int32)">
+	<summary>
+ Gets a date value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetDateTime(System.String)">
+	<summary>
+ Gets a date value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetDecimal(System.Int32)">
+	<summary>
+ Gets a decimal value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetDecimal(System.String)">
+	<summary>
+ Gets a decimal value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetFieldType(System.Int32)">
+	<summary>
+ Invokes the GetFieldType method of the underlying datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetFieldType(System.String)">
+	<summary>
+ Invokes the GetFieldType method of the underlying datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetFloat(System.Int32)">
+	<summary>
+ Gets a Single value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetFloat(System.String)">
+	<summary>
+ Gets a Single value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetInt16(System.Int32)">
+	<summary>
+ Gets a Short value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetInt16(System.String)">
+	<summary>
+ Gets a Short value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetInt64(System.Int32)">
+	<summary>
+ Gets a Long value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetInt64(System.String)">
+	<summary>
+ Gets a Long value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetName(System.Int32)">
+	<summary>
+ Invokes the GetName method of the underlying datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetOrdinal(System.String)">
+	<summary>
+ Gets an ordinal value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetSchemaTable">
+	<summary>
+ Invokes the GetSchemaTable method of the underlying datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.GetValues(System.Object[])">
+	<summary>
+ Invokes the GetValues method of the underlying datareader.
+ </summary>
+</member><member name="P:Arco.Server.SafeDataReader.IsClosed">
+	<summary>
+ Returns the IsClosed property value from the datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.IsDBNull(System.Int32)">
+	<summary>
+ Invokes the IsDBNull method of the underlying datareader.
+ </summary>
+</member><member name="M:Arco.Server.SafeDataReader.IsDBNull(System.String)">
+	<summary>
+ Invokes the IsDBNull method of the underlying datareader.
+ </summary>
+</member><member name="P:Arco.Server.SafeDataReader.Item(System.String)">
+	<summary>
+ Returns a value from the datareader.
+ </summary>
+	<remarks>
+ Returns Nothing if the value is null.
+ </remarks>
+</member><member name="P:Arco.Server.SafeDataReader.Item(System.Int32)">
+	<summary>
+ Returns a value from the datareader.
+ </summary>
+	<remarks>
+ Returns Nothing if the value is null.
+ </remarks>
+</member><member name="P:Arco.Server.SafeDataReader.RecordsAffected">
+	<summary>
+ Returns the RecordsAffected property value from the underlying datareader.
+ </summary>
+</member><member name="T:Arco.Server.SafeDataReader">
+	<summary>
+ This is a DataReader that 'fixes' any null values before
+ they are returned to our business code.
+ </summary>
+</member><member name="F:Arco.Server.CriteriaBase.ObjectType">
+	<summary>
+ Type of the business object to be instantiated by
+ the server-side DataPortal. 
+ </summary>
+</member><member name="M:Arco.Server.CriteriaBase.#ctor(System.Type)">
+	<summary>
+ Initializes CriteriaBase with the type of
+ business object to be created by the DataPortal.
+ </summary>
+</member><member name="M:Arco.Business.CollectionBase`1.Clone">
+	<summary>
+ Creates a clone of the object.
+ </summary>
+	<returns>A new object containing the exact data of the original object.</returns>
+</member><member name="M:Arco.Business.CollectionBase`1.DataPortal_Fetch(System.Object)">
+	<summary>
+ Override this method to allow retrieval of an existing business
+ object based on data in the database.
+ </summary>
+	<param name="Criteria">An object containing criteria values to identify the object.</param>
+</member><member name="M:Arco.Business.CollectionBase`1.DataPortal_OnDataPortalInvoke(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal prior to calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="M:Arco.Business.CollectionBase`1.DataPortal_OnDataPortalInvokeComplete(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal after calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="M:Arco.Business.CollectionBase`1.DB(System.String)">
+	<summary>
+ Returns the specified database connection string from the application
+ configuration file.
+ </summary>
+	<remarks>
+ The database connection string must be in the <c>appSettings</c> section
+ of the application configuration file. The database name should be
+ prefixed with 'DB:'. For instance, <c>DB:mydatabase</c>.
+ </remarks>
+	<param name="DatabaseName">Name of the database.</param>
+	<returns>A database connection string.</returns>
+</member><member name="M:Arco.Business.CollectionBase`1.Deserialized">
+	<summary>
+ This method is called on a newly deserialized object
+ after deserialization is complete.
+ </summary>
+</member><member name="M:Arco.Business.CollectionBase`1.Serialized">
+	<summary>
+ This method is called on the original instance of the
+ object after it has been serialized.
+ </summary>
+</member><member name="M:Arco.Business.CollectionBase`1.Serializing">
+	<summary>
+ This method is called before an object is serialized.
+ </summary>
+</member><member name="M:Arco.Business.ReadOnlyCollectionBase.#ctor">
+	<summary>
+ Creates a new ReadOnlyCollectionBase object.
+ </summary>
+</member><member name="F:Arco.Business.ReadOnlyCollectionBase.Locked">
+	<summary>
+ Indicates that the collection is locked, so insert, remove
+ and change operations are disallowed.
+ </summary>
+</member><member name="M:Arco.Business.ReadOnlyCollectionBase.OnInsert(System.Int32,System.Object)">
+	<summary>
+ Prevents insertion of new items into the collection when the
+ collection is locked.
+ </summary>
+</member><member name="M:Arco.Business.ReadOnlyCollectionBase.OnRemove(System.Int32,System.Object)">
+	<summary>
+ Prevents removal of items from the collection when the
+ collection is locked.
+ </summary>
+</member><member name="M:Arco.Business.ReadOnlyCollectionBase.OnClear">
+	<summary>
+ Prevents clearing the collection when the
+ collection is locked.
+ </summary>
+</member><member name="M:Arco.Business.ReadOnlyCollectionBase.OnSet(System.Int32,System.Object,System.Object)">
+	<summary>
+ Prevents changing an item reference when the 
+ collection is locked.
+ </summary>
+</member><member name="M:Arco.Business.ReadOnlyCollectionBase.Clone">
+	<summary>
+ Creates a clone of the object.
+ </summary>
+	<returns>A new object containing the exact data of the original object.</returns>
+</member><member name="M:Arco.Business.ReadOnlyCollectionBase.DataPortal_Fetch(System.Object)">
+	<summary>
+ Override this method to allow retrieval of an existing business
+ object based on data in the database.
+ </summary>
+	<param name="Criteria">An object containing criteria values to identify the object.</param>
+</member><member name="M:Arco.Business.ReadOnlyCollectionBase.DataPortal_OnDataPortalInvoke(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal prior to calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="M:Arco.Business.ReadOnlyCollectionBase.DataPortal_OnDataPortalInvokeComplete(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal after calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="M:Arco.Business.ReadOnlyCollectionBase.DB(System.String)">
+	<summary>
+ Returns the specified database connection string from the application
+ configuration file.
+ </summary>
+	<remarks>
+ The database connection string must be in the <c>appSettings</c> section
+ of the application configuration file. The database name should be
+ prefixed with 'DB:'. For instance, <c>DB:mydatabase</c>.
+ </remarks>
+	<param name="DatabaseName">Name of the database.</param>
+	<returns>A database connection string.</returns>
+</member><member name="M:Arco.Business.ReadOnlyCollectionBase.Deserialized">
+	<summary>
+ This method is called on a newly deserialized object
+ after deserialization is complete.
+ </summary>
+</member><member name="M:Arco.Business.ReadOnlyCollectionBase.Serialized">
+	<summary>
+ This method is called on the original instance of the
+ object after it has been serialized.
+ </summary>
+</member><member name="M:Arco.Business.ReadOnlyCollectionBase.Serializing">
+	<summary>
+ This method is called before an object is serialized.
+ </summary>
+</member><member name="P:Arco.Business.UndoableBase.EditLevel">
+	<summary>
+ Returns the current edit level of the object.
+ </summary>
+</member><member name="M:Arco.Business.UndoableBase.CopyState">
+	<summary>
+ Copies the state of the object and places the copy
+ onto the state stack.
+ </summary>
+</member><member name="M:Arco.Business.UndoableBase.UndoChanges">
+	<summary>
+ Restores the object's state to the most recently
+ copied values from the state stack.
+ </summary>
+	<remarks>
+ Restores the state of the object to its
+ previous value by taking the data out of 
+ the stack and restoring it into the fields
+ of the object.
+ </remarks>
+</member><member name="M:Arco.Business.UndoableBase.AcceptChanges">
+	<summary>
+ Accepts any changes made to the object since the last
+ state copy was made.
+ </summary>
+	<remarks>
+ The most recent state copy is removed from the state
+ stack and discarded, thus committing any changes made
+ to the object's state.
+ </remarks>
+</member><member name="M:Arco.Business.UndoableBase.DumpState">
+	<summary>
+ Writes the object's field data into the debugger
+ output window in VS.NET.
+ </summary>
+</member><member name="T:Arco.Business.UndoableBase">
+	<summary>
+ Implements n-level undo capabilities.
+ </summary>
+	<remarks>
+ You should not directly derive from this class. Your
+ business classes should derive from
+ <see cref="T:Arco.Business.BusinessBase"/>.
+ </remarks>
+</member><member name="E:Arco.Client.DataPortal.OnDataPortalInvoke">
+	<summary>
+ Raised by DataPortal prior to calling the 
+ requested server-side DataPortal method.
+ </summary>
+</member><member name="E:Arco.Client.DataPortal.OnDataPortalInvokeComplete">
+	<summary>
+ Raised by DataPortal after the requested 
+ server-side DataPortal method call is complete.
+ </summary>
+</member><member name="M:Arco.Client.DataPortal.Create(System.Object)">
+	<summary>
+ Called by a factory method in a business class to create 
+ a new object, which is loaded with default
+ values from the database.
+ </summary>
+	<param name="Criteria">Object-specific criteria.</param>
+	<returns>A new object, populated with default values.</returns>
+</member><member name="M:Arco.Client.DataPortal.Fetch(System.Object)">
+	<summary>
+ Called by a factory method in a business class to retrieve
+ an object, which is loaded with values from the database.
+ </summary>
+	<param name="Criteria">Object-specific criteria.</param>
+	<returns>An object populated with values from the database.</returns>
+</member><member name="M:Arco.Client.DataPortal.Update(System.Object)">
+	<summary>
+ Called by the <see cref="M:BusinessBase.Save"/> method to
+ insert, update or delete an object in the database.
+ </summary>
+	<remarks>
+ Note that this method returns a reference to the updated business object.
+ If the server-side DataPortal is running remotely, this will be a new and
+ different object from the original, and all object references MUST be updated
+ to use this new object.
+ </remarks>
+	<param name="obj">A reference to the business object to be updated.</param>
+	<returns>A reference to the updated business object.</returns>
+</member><member name="M:Arco.Client.DataPortal.Delete(System.Object)">
+	<summary>
+ Called by a <c>Shared</c> method in the business class to cause
+ immediate deletion of a specific object from the database.
+ </summary>
+	<param name="Criteria">Object-specific criteria.</param>
+</member><member name="F:Arco.Server.DataPortalEventArgs.DataPortalContext">
+	<summary>
+ The DataPortalContext object passed to the
+ server-side DataPortal.
+ </summary>
+</member><member name="M:Arco.Serialization.ISerializationNotification.Serializing">
+	<summary>
+ This method is called before an object is serialized.
+ </summary>
+</member><member name="M:Arco.Serialization.ISerializationNotification.Serialized">
+	<summary>
+ This method is called on the original instance of the
+ object after it has been serialized.
+ </summary>
+</member><member name="M:Arco.Serialization.ISerializationNotification.Deserialized">
+	<summary>
+ This method is called on a newly deserialized object
+ after deserialization is complete.
+ </summary>
+</member><member name="T:Arco.Serialization.ISerializationNotification">
+	<summary>
+ Objects can implement this interface if they wish to be
+ notified of serialization events.
+ </summary>
+	<remarks>
+		<para>
+ Note that .NET serialization does NOT call these methods. Only
+ code that checks for the ISerializationNotification interface
+ when serializating and deserializing objects will invoke these
+ methods.
+ </para>
+	</remarks>
+</member><member name="M:Arco.Serialization.SerializationNotification.OnSerializing(System.Object)">
+	<summary>
+ Invokes the Serializing method on the target object
+ if it has implemented ISerializationNotification.
+ </summary>
+	<param name="target">Object on which the method should be invoked.</param>
+</member><member name="M:Arco.Serialization.SerializationNotification.OnSerialized(System.Object)">
+	<summary>
+ Invokes the Serialized method on the target object
+ if it has implemented ISerializationNotification.
+ </summary>
+	<param name="target">Object on which the method should be invoked.</param>
+</member><member name="M:Arco.Serialization.SerializationNotification.OnDeserialized(System.Object)">
+	<summary>
+ Invokes the Deserialized method on the target object
+ if it has implemented ISerializationNotification.
+ </summary>
+	<param name="target">Object on which the method should be invoked.</param>
+</member><member name="T:Arco.Serialization.SerializationNotification">
+	<summary>
+ Helper methods for invoking the ISerializatoinNotification
+ methods.
+ </summary>
+</member><member name="P:Arco.Batch.BatchEntry.Info">
+	<summary>
+ Returns a reference to the object containing information
+ about this batch entry.
+ </summary>
+</member><member name="P:Arco.Batch.BatchEntry.Principal">
+	<summary>
+ Returns a reference to the 
+ <see cref="T:Security.BusinessPrincipal"/>
+ object for the user that submitted this entry.
+ </summary>
+</member><member name="P:Arco.Batch.BatchEntry.Entry">
+	<summary>
+ Returns a reference to the worker object that
+ contains the code which is to be executed as
+ a batch process.
+ </summary>
+</member><member name="P:Arco.Batch.BatchEntry.State">
+	<summary>
+ Returns a reference to the optional state object.
+ </summary>
+	<returns></returns>
+</member><member name="T:Arco.Batch.BatchEntry">
+	<summary>
+ A batch queue entry.
+ </summary>
+	<remarks>
+ Each batch queue entry consists of basic information about
+ the entry, a Principal object (if you are using ARCO .NET
+ security), the actual worker object containing the code
+ to be run and an optional state object containing arbitrary
+ state data.
+ </remarks>
+</member><member name="M:Arco.Server.DataPortal.Create(System.Object,Arco.Server.DataPortalContext)">
+	<summary>
+ Called by the client-side DataPortal to create a new object.
+ </summary>
+	<param name="Criteria">Object-specific criteria.</param>
+	<returns>A populated business object.</returns>
+</member><member name="M:Arco.Server.DataPortal.Fetch(System.Object,Arco.Server.DataPortalContext)">
+	<summary>
+ Called by the client-side DataProtal to retrieve an object.
+ </summary>
+	<param name="Criteria">Object-specific criteria.</param>
+	<returns>A populated business object.</returns>
+</member><member name="M:Arco.Server.DataPortal.Update(System.Object,Arco.Server.DataPortalContext)">
+	<summary>
+ Called by the client-side DataPortal to update an object.
+ </summary>
+	<param name="obj">A reference to the object being updated.</param>
+	<returns>A reference to the newly updated object.</returns>
+</member><member name="M:Arco.Server.DataPortal.Delete(System.Object,Arco.Server.DataPortalContext)">
+	<summary>
+ Called by the client-side DataPortal to delete an object.
+ </summary>
+	<param name="Criteria">Object-specific criteria.</param>
+</member><member name="T:Arco.Utils.Registry">
+	<summary>
+ Reads and writes registry keys to the HKEY_LOCAL_MACHINE\Software section
+ </summary>
+</member><member name="T:Arco.Server.DataPortalResult">
+	<summary>
+ Returns data from the server-side DataPortal to the 
+ client-side DataPortal. Intended for internal use only.
+ </summary>
+</member><member name="M:Arco.Batch.BatchQueue.#ctor">
+	<summary>
+ Creates an instance of the object that allows interaction
+ with the default batch queue server as specified in the
+ application configuration file.
+ </summary>
+</member><member name="M:Arco.Batch.BatchQueue.#ctor(System.String)">
+	<summary>
+ Creates an instance of the object that allows interaction
+ with a specific batch queue server as specified by
+ the URL passed as a parameter.
+ </summary>
+	<param name="QueuePath">A URL referencing the batch queue server.</param>
+</member><member name="M:Arco.Batch.BatchQueue.Submit(Arco.Batch.IBatchEntry,System.String)">
+	<summary>
+ Submits an entry to the batch queue.
+ </summary>
+	<param name="Entry">A reference to your worker object.</param>
+</member><member name="M:Arco.Batch.BatchQueue.Submit(Arco.Batch.IBatchEntry,System.Object,System.String)">
+	<summary>
+ Submits an entry to the batch queue with extra state data.
+ </summary>
+	<param name="Entry">A reference to your worker object.</param>
+	<param name="State">A reference to a serializable object containing state data.</param>
+</member><member name="M:Arco.Batch.BatchQueue.Submit(Arco.Batch.IBatchEntry,System.Messaging.MessagePriority,System.String)">
+	<summary>
+ Submits an entry to the batch queue with a specific priority.
+ </summary>
+	<param name="Entry">A reference to your worker object.</param>
+	<param name="Priority">The priority of the entry.</param>
+</member><member name="M:Arco.Batch.BatchQueue.Submit(Arco.Batch.IBatchEntry,System.Object,System.Messaging.MessagePriority,System.String)">
+	<summary>
+ Submits an entry to the batch queue with extra state data and
+ a specific priority.
+ </summary>
+	<param name="Entry">A reference to your worker object.</param>
+	<param name="State">A reference to a serializable object containing state data.</param>
+	<param name="Priority">The priority of the entry.</param>
+</member><member name="M:Arco.Batch.BatchQueue.Submit(Arco.Batch.IBatchEntry,System.DateTime,System.String)">
+	<summary>
+ Submits an entry to the batch queue to be held until a specific date/time.
+ </summary>
+	<param name="Entry">A reference to your worker object.</param>
+	<param name="HoldUntil">The date/time until which the entry should be held.</param>
+</member><member name="M:Arco.Batch.BatchQueue.Submit(Arco.Batch.IBatchEntry,System.Object,System.DateTime,System.String)">
+	<summary>
+ Submits an entry to the batch queue with extra state data
+ and to be held until a specific date/time.
+ </summary>
+	<param name="Entry">A reference to your worker object.</param>
+	<param name="State">A reference to a serializable object containing state data.</param>
+	<param name="HoldUntil">The date/time until which the entry should be held.</param>
+</member><member name="M:Arco.Batch.BatchQueue.Submit(Arco.Batch.IBatchEntry,System.DateTime,System.Messaging.MessagePriority,System.String)">
+	<summary>
+ Submits an entry to the batch queue to be held until 
+ a specific date/time and at a specific priority.
+ </summary>
+	<param name="Entry">A reference to your worker object.</param>
+	<param name="HoldUntil">The date/time until which the entry should be held.</param>
+	<param name="Priority">The priority of the entry.</param>
+</member><member name="M:Arco.Batch.BatchQueue.Submit(Arco.Batch.IBatchEntry,System.Object,System.DateTime,System.Messaging.MessagePriority,System.String)">
+	<summary>
+ Submits an entry to the batch queue specifying all details.
+ </summary>
+	<param name="Entry">A reference to your worker object.</param>
+	<param name="State">A reference to a serializable object containing state data.</param>
+	<param name="HoldUntil">The date/time until which the entry should be held.</param>
+	<param name="Priority">The priority of the entry.</param>
+</member><member name="M:Arco.Batch.BatchQueue.Remove(Arco.Batch.BatchEntryInfo)">
+	<summary>
+ Removes a holding or pending entry from the
+ batch queue.
+ </summary>
+	<param name="Entry">A reference to the entry to be removed.</param>
+</member><member name="P:Arco.Batch.BatchQueue.BatchQueuePath">
+	<summary>
+ Returns the URL which identifies the batch
+ queue server to which this object is attached.
+ </summary>
+</member><member name="P:Arco.Batch.BatchQueue.Entries">
+	<summary>
+ Returns a collection of the batch entries currently
+ in the batch queue.
+ </summary>
+</member><member name="M:Arco.Server.CommandBase.DataPortal_Update">
+	<summary>
+ Override this method to allow insert, update or deletion of a business
+ object.
+ </summary>
+</member><member name="M:Arco.Server.CommandBase.DataPortal_OnDataPortalInvoke(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal prior to calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="M:Arco.Server.CommandBase.DataPortal_OnDataPortalInvokeComplete(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal after calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="P:Arco.Settings.FrameWorkSettings.Authentication">
+	<summary>
+ returns the authenticationmethod, possible values are : Windows, ARCO
+</summary>
+	<returns>A string Describing the Authentication Method.</returns>
+</member><member name="P:Arco.Settings.FrameWorkSettings.DBMajorVersion">
+	<summary>
+ Gets a the major version of the database connection
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>The application will need to have connected at least once</remarks>
+</member><member name="P:Arco.Settings.FrameWorkSettings.DB">
+	<summary>
+ Returns the specified database connection string from the application
+ configuration file.
+ </summary>
+	<remarks>
+ The database connection string must be in the <c>appSettings</c> section
+ of the application configuration file under the node DATABASE
+ </remarks>
+	<returns>A database connection string.</returns>
+</member><member name="P:Arco.Settings.FrameWorkSettings.PollingQueueName">
+	<summary>
+ returns the queue the service polls
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Settings.FrameWorkSettings.WritingQueueName">
+	<summary>
+ returns the default queue to write msmq messages to
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Arco.Settings.FrameWorkSettings.ReplaceGlobalVars(System.String,System.Boolean)">
+	<summary>
+ Replaces the [VAR] tags with values from within the GlobalVars file
+ When vbIncludeDynamicVars is turned on, the following tags are also replaced : [DATE],[DRIVE],[BASEDIR]
+ </summary>
+	<param name="vsString"></param>
+	<param name="vbIncludeDynamicVars"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Arco.Business.SerializableBase.Deserialized">
+	<summary>
+ This method is called on a newly deserialized object
+ after deserialization is complete.
+ </summary>
+</member><member name="M:Arco.Business.SerializableBase.Serialized">
+	<summary>
+ This method is called on the original instance of the
+ object after it has been serialized.
+ </summary>
+</member><member name="M:Arco.Business.SerializableBase.Serializing">
+	<summary>
+ This method is called before an object is serialized.
+ </summary>
+</member><member name="M:Arco.Batch.BatchJobRequest.#ctor(System.String,System.String)">
+	<summary>
+ Creates a new object, specifying the type and assembly
+ of the actual worker object.
+ </summary>
+	<param name="Type">The class name of the actual worker object.</param>
+	<param name="Assembly">The name of the assembly containing the actual worker class.</param>
+</member><member name="P:Arco.Batch.BatchJobRequest.Type">
+	<summary>
+ The class name of the worker object.
+ </summary>
+</member><member name="P:Arco.Batch.BatchJobRequest.Assembly">
+	<summary>
+ The name of the assembly containing the actual worker class.
+ </summary>
+</member><member name="M:Arco.Batch.BatchJobRequest.Execute(System.Object)">
+	<summary>
+ Executes the batch job on the server.
+ </summary>
+	<remarks>
+ This method runs on the server - it is called
+ by <see cref="T:BatchEntry"/>,
+ which is called by 
+ <see cref="T:BatchQueueService"/>.
+ </remarks>
+	<param name="State"></param>
+</member><member name="M:Arco.Business.ValidationException.#ctor">
+	<summary>
+ Initializes a new instance of the 
+ <see cref="T:ValidationException"/> class.
+ </summary>
+</member><member name="M:Arco.Business.ValidationException.#ctor(System.String)">
+	<summary>
+ Initializes a new instance of the 
+ <see cref="T:ValidationException"/> class
+ with a specified error message.
+ </summary>
+</member><member name="M:Arco.Business.ValidationException.#ctor(System.String,System.Exception)">
+	<summary>
+ Initializes a new instance of the 
+ <see cref="T:ValidationException"/> class
+ with a specified error message and a reference to the 
+ inner exception that is the cause of this exception.
+ </summary>
+</member><member name="M:Arco.Business.ValidationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+	<summary>
+ Initializes a new instance of the 
+ <see cref="T:ValidationException"/> class
+ with serialized data.
+ </summary>
+</member><member name="T:Arco.Batch.BatchEntryStatus">
+	<summary>
+ Values indicating the status of a batch queue entry.
+ </summary>
+</member><member name="P:Arco.Batch.BatchEntryInfo.ID">
+	<summary>
+ Returns the unique ID value for this batch entry.
+ </summary>
+</member><member name="P:Arco.Batch.BatchEntryInfo.Submitted">
+	<summary>
+ Returns the date and time that the batch entry
+ was submitted.
+ </summary>
+</member><member name="P:Arco.Batch.BatchEntryInfo.User">
+	<summary>
+ Returns the Windows user id of the user that
+ was logged into the workstation when the job
+ was submitted.
+ </summary>
+</member><member name="P:Arco.Batch.BatchEntryInfo.Machine">
+	<summary>
+ Returns the name of the workstation from
+ which this job was submitted.
+ </summary>
+</member><member name="P:Arco.Batch.BatchEntryInfo.Priority">
+	<summary>
+ Returns the priority of this batch entry.
+ </summary>
+	<remarks>
+ The priority values flow from System.Messaging and
+ the priority is used by MSMQ to order the entries
+ in the queue.
+ </remarks>
+</member><member name="P:Arco.Batch.BatchEntryInfo.MessageID">
+	<summary>
+ Returns the MSMQ message ID of the batch entry.
+ </summary>
+	<remarks>
+ This value is only valid after the batch entry
+ has been submitted to the queue.
+ </remarks>
+</member><member name="P:Arco.Batch.BatchEntryInfo.HoldUntil">
+	<summary>
+ Returns the date and time until which the
+ batch entry will be held before it can be run.
+ </summary>
+	<remarks>
+ This value is optional. If it was provided, the batch
+ entry will be held until this date/time. At this date/time,
+ the entry will switch from Holding status to Pending
+ status and will be queued based on its priority along
+ with all other Pending entries.
+ </remarks>
+</member><member name="P:Arco.Batch.BatchEntryInfo.Status">
+	<summary>
+ Returns the status of the batch entry.
+ </summary>
+	<remarks>
+		<para>
+ If the job is Holding, it means that the job
+ won't run until the data/time specified by
+ <see cref="P:BatchQueue.BatchEntryInfo.HoldUntil"/>.
+ </para><para>
+ If the job is Pending, it means that the job
+ will run as soon as possible, but that the queue
+ is busy. Pending entries are run in priority order based
+ on <see cref="P:BatchQueue.BatchEntryInfo.Priority"/>.
+ </para><para>
+ If the job is Active, it means that the job is
+ currently being executed on the server.
+ </para>
+	</remarks>
+</member><member name="T:Arco.Batch.BatchEntryInfo">
+	<summary>
+ Contains information about a batch queue entry.
+ </summary>
+	<remarks>
+ This object contains information about batch entry including
+ when it was submitted, the user that submitted the job and
+ which machine the user was using at the time. It also contains
+ the job's priority, status and the optional date/time until
+ which the job should be held until it is run.
+ </remarks>
+</member><member name="P:Arco.Business.BrokenRules.Rule.Rule">
+	<summary>
+ Provides access to the name of the broken rule.
+ </summary>
+	<remarks>
+ This value is actually readonly, not readwrite. Any new
+ value set into this property is ignored. The property is only
+ readwrite because that is required to support data binding
+ within Web Forms.
+ </remarks>
+	<value>The name of the rule.</value>
+</member><member name="P:Arco.Business.BrokenRules.Rule.Description">
+	<summary>
+ Provides access to the description of the broken rule.
+ </summary>
+	<remarks>
+ This value is actually readonly, not readwrite. Any new
+ value set into this property is ignored. The property is only
+ readwrite because that is required to support data binding
+ within Web Forms.
+ </remarks>
+	<value>The description of the rule.</value>
+</member><member name="P:Arco.Business.BrokenRules.Rule.Property">
+	<summary>
+ Provides access to the property affected by the broken rule.
+ </summary>
+	<remarks>
+ This value is actually readonly, not readwrite. Any new
+ value set into this property is ignored. The property is only
+ readwrite because that is required to support data binding
+ within Web Forms.
+ </remarks>
+	<value>The property affected by the rule.</value>
+</member><member name="T:Arco.Business.BrokenRules.Rule">
+	<summary>
+ Stores details about a specific broken business rule.
+ </summary>
+</member><member name="P:Arco.Business.BrokenRules.RulesCollection.Item(System.Int32)">
+	<summary>
+ Returns a <see cref="T:Arco.BrokenRules.Rule"/> object
+ containing details about a specific broken business rule.
+ </summary>
+	<param name="Index"></param>
+	<returns></returns>
+</member><member name="P:Arco.Business.BrokenRules.RulesCollection.RuleForProperty(System.String)">
+	<summary>
+ Returns the first <see cref="T:Arco.BrokenRules.Rule"/> object
+ corresponding to the specified property.
+ </summary>
+	<remarks>
+		<para>
+ When a rule is marked as broken, the business developer can provide
+ an optional Property parameter. This parameter is the name of the
+ Property on the object that is most affected by the rule. Data binding
+ may later use the IDataErrorInfo interface to query the object for
+ details about errors corresponding to specific properties, and this
+ value will be returned as a result of that query.
+ </para><para>
+ Code in a business object or UI can also use this value to retrieve
+ the first broken rule in <see cref="T:Arco.BrokenRules"/> that corresponds
+ to a specfic Property on the object.
+ </para>
+	</remarks>
+	<param name="Property">The name of the property affected by the rule.</param>
+</member><member name="M:Arco.Business.BrokenRules.RulesCollection.OnClear">
+	<summary>
+ Prevents clearing the collection.
+ </summary>
+</member><member name="M:Arco.Business.BrokenRules.RulesCollection.OnInsert(System.Int32,System.Object)">
+	<summary>
+ Prevents insertion of items into the collection.
+ </summary>
+</member><member name="M:Arco.Business.BrokenRules.RulesCollection.OnRemove(System.Int32,System.Object)">
+	<summary>
+ Prevents removal of items from the collection.
+ </summary>
+</member><member name="M:Arco.Business.BrokenRules.RulesCollection.OnSet(System.Int32,System.Object,System.Object)">
+	<summary>
+ Prevents changing items in the collection.
+ </summary>
+</member><member name="T:Arco.Business.BrokenRules.RulesCollection">
+	<summary>
+ A collection of currently broken rules.
+ </summary>
+	<remarks>
+ This collection is readonly and can be safely made available
+ to code outside the business object such as the UI. This allows
+ external code, such as a UI, to display the list of broken rules
+ to the user.
+ </remarks>
+</member><member name="M:Arco.Business.BrokenRules.SetTargetObject(System.Object)">
+	<summary>
+ Sets the target object so the Rules Manager functionality
+ has a reference to the object containing the data to
+ be validated.
+ </summary>
+	<remarks>
+ The object here is typically your business object. In your
+ business class you'll implement a method to set up your
+ business rules. As you do so, you need to call this method
+ to give BrokenRules a reference to your business object
+ so it has access to your object's data.
+ </remarks>
+	<param name="target">A reference to the object containing
+ the data to be validated.</param>
+</member><member name="T:Arco.Business.BrokenRules.RuleHandler">
+	<summary>
+ Delegate that defines the method signature for all rule handler methods.
+ </summary>
+	<remarks>
+		<para>
+ When implementing a rule handler, you must conform to the method signature
+ defined by this delegate. You should also apply the Description attribute
+ to your method to provide a meaningful description for your rule.
+ </para><para>
+ The method implementing the rule must return True if the data is valid and
+ return False if the data is invalid.
+ </para>
+	</remarks>
+</member><member name="P:Arco.Business.BrokenRules.RuleArgs.PropertyName">
+	<summary>
+ The (optional) name of the property to be validated.
+ </summary>
+</member><member name="P:Arco.Business.BrokenRules.RuleArgs.Description">
+	<summary>
+ Set by the rule handler method to describe the broken
+ rule.
+ </summary>
+	<remarks>
+		<para>
+ If the rule handler sets this property, this value will override
+ any description attribute value associated with the rule handler
+ method.
+ </para><para>
+ The description string returned via this property 
+ is provided to the UI or other consumer
+ about which rules are broken. These descriptions are intended
+ for end-user display.
+ </para><para>
+ The description value is a .NET format string, and it can include
+ the following tokens in addition to literal text:
+ </para><para>
+ {0} - the RuleName value
+ </para><para>
+ {1} - the PropertyName value
+ </para><para>
+ {2} - the full type name of the target object
+ </para><para>
+ {3} - the ToString value of the target object
+ </para><para>
+ You can use these tokens in your description string and the
+ appropriate values will be substituted for the tokens at
+ runtime.
+ </para>
+	</remarks>
+</member><member name="M:Arco.Business.BrokenRules.RuleArgs.#ctor">
+	<summary>
+ Creates an instance of RuleArgs.
+ </summary>
+</member><member name="M:Arco.Business.BrokenRules.RuleArgs.#ctor(System.String)">
+	<summary>
+ Creates an instance of RuleArgs.
+ </summary>
+	<param name="propertyName">The name of the property to be validated.</param>
+</member><member name="P:Arco.Business.BrokenRules.RuleArgs.Empty">
+	<summary>
+ Returns an empty RuleArgs object.
+ </summary>
+</member><member name="T:Arco.Business.BrokenRules.RuleArgs">
+	<summary>
+ Object providing extra information to methods that
+ implement business rules.
+ </summary>
+</member><member name="M:Arco.Business.BrokenRules.DescriptionAttribute.#ctor(System.String)">
+	<summary>
+ Initializes the attribute with a description.
+ </summary>
+</member><member name="M:Arco.Business.BrokenRules.DescriptionAttribute.ToString">
+	<summary>
+ Returns the description value of the attribute.
+ </summary>
+</member><member name="T:Arco.Business.BrokenRules.DescriptionAttribute">
+	<summary>
+ Defines the description of a business rule.
+ </summary>
+	<remarks>
+		<para>
+ The description in this attribute is used by BusinessRules
+ as information that is provided to the UI or other consumer
+ about which rules are broken. These descriptions are intended
+ for end-user display.
+ </para><para>
+ The description value is a .NET format string, and it can include
+ the following tokens in addition to literal text:
+ </para><para>
+ {0} - the RuleName value
+ </para><para>
+ {1} - the PropertyName value
+ </para><para>
+ {2} - the full type name of the target object
+ </para><para>
+ {3} - the ToString value of the target object
+ </para><para>
+ You can use these tokens in your description string and the
+ appropriate values will be substituted for the tokens at
+ runtime.
+ </para><para>
+ Instead of using this attribute, a rule handler method can
+ set the Description property of the RuleArgs parameter to
+ a description string. That approach can provide a more dynamic
+ way to generate descriptions of broken rules.
+ </para>
+	</remarks>
+</member><member name="M:Arco.Business.BrokenRules.RuleMethod.ToString">
+	<summary>
+ Returns the name of the method implementing the rule
+ and the property, field or column name to which the
+ rule applies.
+ </summary>
+</member><member name="P:Arco.Business.BrokenRules.RuleMethod.Handler">
+	<summary>
+ Returns the delegate to the method implementing the rule.
+ </summary>
+</member><member name="P:Arco.Business.BrokenRules.RuleMethod.RuleName">
+	<summary>
+ Returns the user-friendly name of the rule.
+ </summary>
+</member><member name="P:Arco.Business.BrokenRules.RuleMethod.RuleArgs">
+	<summary>
+ Returns the name of the field, property or column
+ to which the rule applies.
+ </summary>
+</member><member name="P:Arco.Business.BrokenRules.RuleMethod.Description">
+	<summary>
+ Returns the formatted description of the rule.
+ </summary>
+</member><member name="M:Arco.Business.BrokenRules.RuleMethod.GetDescription(Arco.Business.BrokenRules.RuleHandler)">
+	<summary>
+ Retrieves the description text from the Description
+ attribute on a RuleHandler method.
+ </summary>
+</member><member name="M:Arco.Business.BrokenRules.RuleMethod.#ctor(System.Object,Arco.Business.BrokenRules.RuleHandler,System.String,Arco.Business.BrokenRules.RuleArgs)">
+	<summary>
+ Creates and initializes the rule.
+ </summary>
+	<param name="target">Reference to the object containing the data to validate.</param>
+	<param name="handler">The address of the method implementing the rule.</param>
+	<param name="ruleName">The user-friendly name of the rule.</param>
+	<param name="ruleArgs">A RuleArgs object containing data related to the rule.</param>
+</member><member name="M:Arco.Business.BrokenRules.RuleMethod.#ctor(System.Object,Arco.Business.BrokenRules.RuleHandler,System.String,System.String)">
+	<summary>
+ Creates and initializes the rule.
+ </summary>
+	<param name="target">Reference to the object containing the data to validate.</param>
+	<param name="handler">The address of the method implementing the rule.</param>
+	<param name="ruleName">The user-friendly name of the rule.</param>
+	<param name="propertyName">The field, property or column to which the rule applies.</param>
+</member><member name="M:Arco.Business.BrokenRules.RuleMethod.Invoke">
+	<summary>
+ Invokes the rule to validate the data.
+ </summary>
+	<returns>True if the data is valid, False if the data is invalid.</returns>
+</member><member name="T:Arco.Business.BrokenRules.RuleMethod">
+	<summary>
+ Tracks all information for a rule.
+ </summary>
+</member><member name="M:Arco.Business.BrokenRules.GetRulesForName(System.String)">
+	<summary>
+ Returns the ArrayList containing rules for a rule name. If
+ no ArrayList exists one is created and returned.
+ </summary>
+</member><member name="M:Arco.Business.BrokenRules.AddRule(Arco.Business.BrokenRules.RuleHandler,System.String)">
+	<summary>
+ Adds a rule to the list of rules to be enforced.
+ </summary>
+	<remarks>
+		<para>
+ A rule is implemented by a method which conforms to the 
+ method signature defined by the RuleHandler delegate.
+ </para><para>
+ The ruleName is used to group all the rules that apply
+ to a specific field, property or concept. All rules applying
+ to the field or property should have the same rule name. When
+ rules are checked, they can be checked globally or for a 
+ specific ruleName.
+ </para><para>
+ The propertyName may be used by the method that implements the rule
+ in order to retrieve the value to be validated. If the rule
+ implementation is inside the target object then it probably has
+ direct access to all data. However, if the rule implementation
+ is outside the target object then it will need to use reflection
+ or CallByName to dynamically invoke this property to retrieve
+ the value to be validated.
+ </para>
+	</remarks>
+	<param name="handler">The method that implements the rule.</param>
+	<param name="ruleName">
+ A user-friendly identifier for the field/property 
+ to which the rule applies.
+ </param>
+</member><member name="M:Arco.Business.BrokenRules.AddRule(Arco.Business.BrokenRules.RuleHandler,System.String,Arco.Business.BrokenRules.RuleArgs)">
+	<summary>
+ Adds a rule to the list of rules to be enforced.
+ </summary>
+	<remarks>
+		<para>
+ A rule is implemented by a method which conforms to the 
+ method signature defined by the RuleHandler delegate.
+ </para><para>
+ The ruleName is used to group all the rules that apply
+ to a specific field, property or concept. All rules applying
+ to the field or property should have the same rule name. When
+ rules are checked, they can be checked globally or for a 
+ specific ruleName.
+ </para>
+	</remarks>
+	<param name="handler">The method that implements the rule.</param>
+	<param name="ruleName">
+ A user-friendly identifier for the field/property 
+ to which the rule applies.
+ </param>
+	<param name="ruleArgs">A RuleArgs object containing data
+ to be passed to the method implementing the rule.</param>
+</member><member name="M:Arco.Business.BrokenRules.AddRule(Arco.Business.BrokenRules.RuleHandler,System.String,System.String)">
+	<summary>
+ Adds a rule to the list of rules to be enforced.
+ </summary>
+	<remarks>
+		<para>
+ A rule is implemented by a method which conforms to the 
+ method signature defined by the RuleHandler delegate.
+ </para><para>
+ The ruleName is used to group all the rules that apply
+ to a specific field, property or concept. All rules applying
+ to the field or property should have the same rule name. When
+ rules are checked, they can be checked globally or for a 
+ specific ruleName.
+ </para><para>
+ The propertyName may be used by the method that implements the rule
+ in order to retrieve the value to be validated. If the rule
+ implementation is inside the target object then it probably has
+ direct access to all data. However, if the rule implementation
+ is outside the target object then it will need to use reflection
+ or CallByName to dynamically invoke this property to retrieve
+ the value to be validated.
+ </para>
+	</remarks>
+	<param name="handler">The method that implements the rule.</param>
+	<param name="ruleName">
+ A user-friendly identifier for the field/property 
+ to which the rule applies.
+ </param>
+	<param name="propertyName">
+ The property name on the target object where the rule implementation can retrieve
+ the value to be validated.
+ </param>
+</member><member name="M:Arco.Business.BrokenRules.CheckRules(System.String)">
+	<summary>
+ Checks all the rules for a specific ruleName.
+ </summary>
+	<param name="ruleName">The ruleName to be validated.</param>
+</member><member name="M:Arco.Business.BrokenRules.CheckRules">
+	<summary>
+ Checks all the rules for a target object.
+ </summary>
+</member><member name="M:Arco.Business.BrokenRules.Assert(System.String,System.String,System.Boolean)">
+	<summary>
+ This method is called by business logic within a business class to
+ indicate whether a business rule is broken.
+ </summary>
+	<remarks>
+ Rules are identified by their names. The description field is merely a 
+ comment that is used for display to the end user. When a rule is marked as
+ broken, it is recorded under the rule name value. To mark the rule as not
+ broken, the same rule name must be used.
+ </remarks>
+	<param name="Rule">The name of the business rule.</param>
+	<param name="Description">The description of the business rule.</param>
+	<param name="IsBroken">True if the value is broken, False if it is not broken.</param>
+</member><member name="M:Arco.Business.BrokenRules.Assert(System.String,System.String,System.String,System.Boolean)">
+	<summary>
+ This method is called by business logic within a business class to
+ indicate whether a business rule is broken.
+ </summary>
+	<remarks>
+ Rules are identified by their names. The description field is merely a 
+ comment that is used for display to the end user. When a rule is marked as
+ broken, it is recorded under the rule name value. To mark the rule as not
+ broken, the same rule name must be used.
+ </remarks>
+	<param name="Rule">The name of the business rule.</param>
+	<param name="Description">The description of the business rule.</param>
+	<param name="Property">The property affected by the business rule.</param>
+	<param name="IsBroken">True if the value is broken, False if it is not broken.</param>
+</member><member name="P:Arco.Business.BrokenRules.IsValid">
+	<summary>
+ Returns a value indicating whether there are any broken rules
+ at this time. If there are broken rules, the business object
+ is assumed to be invalid and False is returned. If there are no
+ broken business rules True is returned.
+ </summary>
+	<returns>A value indicating whether any rules are broken.</returns>
+</member><member name="M:Arco.Business.BrokenRules.IsBroken(System.String)">
+	<summary>
+ Returns a value indicating whether a particular business rule
+ is currently broken.
+ </summary>
+	<param name="Rule">The name of the rule to check.</param>
+	<returns>A value indicating whether the rule is currently broken.</returns>
+</member><member name="M:Arco.Business.BrokenRules.GetBrokenRules">
+	<summary>
+ Returns a reference to the readonly collection of broken
+ business rules.
+ </summary>
+	<remarks>
+ The reference returned points to the actual collection object.
+ This means that as rules are marked broken or unbroken over time,
+ the underlying data will change. Because of this, the UI developer
+ can bind a display directly to this collection to get a dynamic
+ display of the broken rules at all times.
+ </remarks>
+	<returns>A reference to the collection of broken rules.</returns>
+</member><member name="M:Arco.Business.BrokenRules.ToString">
+	<summary>
+ Returns the text of all broken rule descriptions, each
+ separated by cr/lf.
+ </summary>
+	<returns>The text of all broken rule descriptions.</returns>
+</member><member name="T:Arco.Business.BrokenRules">
+	<summary>
+ Tracks the business rules broken within a business object.
+ </summary>
+</member><member name="P:Arco.Business.BusinessBase.IsNew">
+	<summary>
+ Returns True if this is a new object, False if it is a pre-existing object.
+ </summary>
+	<remarks>
+ An object is considered to be new if its data doesn't correspond to
+ data in the database. In other words, if the data values in this particular
+ object have not yet been saved to the database the object is considered to
+ be new. Likewise, if the object's data has been deleted from the database
+ then the object is considered to be new.
+ </remarks>
+	<returns>A value indicating if this object is new.</returns>
+</member><member name="P:Arco.Business.BusinessBase.IsDeleted">
+	<summary>
+ Returns True if this object is marked for deletion.
+ </summary>
+	<remarks>
+ Both immediate and deferred deletion of objects are supported. This
+ property is part of the support for deferred deletion, where an object
+ can be marked for deletion, but isn't actually deleted until the object
+ is saved to the database. This property indicates whether or not the
+ current object has been marked for deletion. If it is True, the object will
+ be deleted when it is saved to the database, otherwise it will be inserted
+ or updated by the save operation.
+ </remarks>
+	<returns>A value indicating if this object is marked for deletion.</returns>
+</member><member name="P:Arco.Business.BusinessBase.IsDirty">
+	<summary>
+ Returns True if this object's data has been changed.
+ </summary>
+	<remarks>
+		<para>
+ When an object's data is changed, the framework makes note of that change
+ and considers the object to be 'dirty' or changed. This value is used to
+ optimize data updates, since an unchanged object does not need to be
+ updated into the database. All new objects are considered dirty. All objects
+ marked for deletion are considered dirty.
+ </para><para>
+ Once an object's data has been saved to the database (inserted or updated)
+ the dirty flag is cleared and the object is considered unchanged. Objects
+ newly loaded from the database are also considered unchanged.
+ </para>
+	</remarks>
+	<returns>A value indicating if this object's data has been changed.</returns>
+</member><member name="M:Arco.Business.BusinessBase.MarkNew">
+	<summary>
+ Marks the object as being a new object. This also marks the object
+ as being dirty and ensures that it is not marked for deletion.
+ </summary>
+	<remarks>
+ Newly created objects are marked new by default. You should call
+ this method in the implementation of DataPortal_Update when the
+ object is deleted (due to being marked for deletion) to indicate
+ that the object no longer reflects data in the database.
+ </remarks>
+</member><member name="M:Arco.Business.BusinessBase.MarkOld">
+	<summary>
+ Marks the object as being an old (not new) object. This also
+ marks the object as being unchanged (not dirty).
+ </summary>
+	<remarks>
+		<para>
+ You should call this method in the implementation of
+ DataPortal_Fetch to indicate that an existing object has been
+ successfully retrieved from the database.
+ </para><para>
+ You should call this method in the implementation of 
+ DataPortal_Update to indicate that a new object has been successfully
+ inserted into the database.
+ </para>
+	</remarks>
+</member><member name="M:Arco.Business.BusinessBase.MarkDeleted">
+	<summary>
+ Marks an object for deletion. This also marks the object
+ as being dirty.
+ </summary>
+	<remarks>
+ You should call this method in your business logic in the
+ case that you want to have the object deleted when it is
+ saved to the database.
+ </remarks>
+</member><member name="M:Arco.Business.BusinessBase.MarkDirty">
+	<summary>
+ Marks an object as being dirty, or changed.
+ </summary>
+	<remarks>
+		<para>
+ You should call this method in your business logic any time
+ the object's internal data changes. Any time any instance
+ variable changes within the object, this method should be called
+ to tell that the object's data has been changed.
+ </para><para>
+ Marking an object as dirty does two things. First it ensures
+ that the framework will properly save the object as appropriate. Second,
+ it causes the framework to tell Windows Forms data binding that the
+ object's data has changed so any bound controls will update to
+ reflect the new values.
+ </para>
+	</remarks>
+</member><member name="P:Arco.Business.BusinessBase.IsSavable">
+	<summary>
+ Returns True if this object is both dirty and valid.
+ </summary>
+	<remarks>
+ An object is considered dirty (changed) if 
+ <see cref="P:CSLA.BusinessBase.IsDirty"/> returns True. It is
+ considered valid if <see cref="P:CSLA.BusinessBase.IsValid"/> 
+ returns True. The IsSavable property is
+ a combination of these two properties. It is provided specifically to
+ enable easy binding to a Save or OK button on a form so that button
+ can automatically enable/disable as the object's state changes between
+ being savable and not savable. 
+ </remarks>
+	<returns>A value indicating if this object is new.</returns>
+</member><member name="M:Arco.Business.BusinessBase.SetParent(Arco.Business.BusinessCollectionBase)">
+	<summary>
+ Used by <see cref="T:BusinessCollectionBase"/> as a
+ child object is created to tell the child object about its
+ parent.
+ </summary>
+	<param name="parent">A reference to the parent collection object.</param>
+</member><member name="M:Arco.Business.BusinessBase.IEditableObject_BeginEdit">
+	<summary>
+ Allow data binding to start a nested edit on the object.
+ </summary>
+	<remarks>
+ Data binding may call this method many times. Only the first
+ call should be honored, so we have extra code to detect this
+ and do nothing for subsquent calls.
+ </remarks>
+</member><member name="M:Arco.Business.BusinessBase.IEditableObject_CancelEdit">
+	<summary>
+ Allow data binding to cancel the current edit.
+ </summary>
+	<remarks>
+ Data binding may call this method many times. Only the first
+ call to either IEditableObject.CancelEdit or 
+ <see cref="M:BusinessBase.IEditableObject_EndEdit">IEditableObject.EndEdit</see>
+ should be honored. We include extra code to detect this and do
+ nothing for subsequent calls.
+ </remarks>
+</member><member name="M:Arco.Business.BusinessBase.IEditableObject_EndEdit">
+	<summary>
+ Allow data binding to apply the current edit.
+ </summary>
+	<remarks>
+ Data binding may call this method many times. Only the first
+ call to either IEditableObject.EndEdit or 
+ <see cref="M:BusinessBase.IEditableObject_CancelEdit">IEditableObject.CancelEdit</see>
+ should be honored. We include extra code to detect this and do
+ nothing for subsequent calls.
+ </remarks>
+</member><member name="M:Arco.Business.BusinessBase.BeginEdit">
+	<summary>
+ Starts a nested edit on the object.
+ </summary>
+	<remarks>
+		<para>
+ When this method is called the object takes a snapshot of
+ its current state (the values of its variables). This snapshot
+ can be restored by calling <see cref="M:BusinessBase.CancelEdit"/>
+ or committed by calling <see cref="M:BusinessBase.ApplyEdit"/>.
+ </para><para>
+ This is a nested operation. Each call to BeginEdit adds a new
+ snapshot of the object's state to a stack. You should ensure that 
+ for each call to BeginEdit there is a corresponding call to either 
+ CancelEdit or ApplyEdit to remove that snapshot from the stack.
+ </para><para>
+ See Chapters 2 and 4 for details on n-level undo and state stacking.
+ </para>
+	</remarks>
+</member><member name="M:Arco.Business.BusinessBase.CancelEdit">
+	<summary>
+ Cancels the current edit process, restoring the object's state to
+ its previous values.
+ </summary>
+	<remarks>
+ Calling this method causes the most recently taken snapshot of the 
+ object's state to be restored. This resets the object's values
+ to the point of the last <see cref="M:BusinessBase.BeginEdit"/>
+ call.
+ </remarks>
+</member><member name="M:Arco.Business.BusinessBase.ApplyEdit">
+	<summary>
+ Commits the current edit process.
+ </summary>
+	<remarks>
+ Calling this method causes the most recently taken snapshot of the 
+ object's state to be discarded, thus committing any changes made
+ to the object's state since the last <see cref="M:BusinessBase.BeginEdit"/>
+ call.
+ </remarks>
+</member><member name="M:Arco.Business.BusinessBase.MarkAsChild">
+	<summary>
+ Marks the object as being a child object.
+ </summary>
+	<remarks>
+		<para>
+ By default all business objects are 'parent' objects. This means
+ that they can be directly retrieved and updated into the database.
+ </para><para>
+ We often also need child objects. These are objects which are contained
+ within other objects. For instance, a parent Invoice object will contain
+ child LineItem objects.
+ </para><para>
+ To create a child object, the MarkAsChild method must be called as the
+ object is created.
+ </para>
+	</remarks>
+</member><member name="M:Arco.Business.BusinessBase.Delete">
+	<summary>
+ Marks the object for deletion. The object will be deleted as part of the
+ next save operation.
+ </summary>
+	<remarks>
+		<para>
+  .NET supports both immediate and deferred deletion of objects. This
+ method is part of the support for deferred deletion, where an object
+ can be marked for deletion, but isn't actually deleted until the object
+ is saved to the database. This method is called by the UI developer to
+ mark the object for deletion.
+ </para><para>
+ To 'undelete' an object, use <see cref="M:CSLA.BusinessBase.BeginEdit"/> before
+ calling the Delete method. You can then use <see cref="M:CSLA.BusinessBase.CancelEdit"/>
+ later to reset the object's state to its original values. This will include resetting
+ the deleted flag to False.
+ </para>
+	</remarks>
+</member><member name="M:Arco.Business.BusinessBase.Clone">
+	<summary>
+ Creates a clone of the object.
+ </summary>
+	<returns>A new object containing the exact data of the original object.</returns>
+</member><member name="M:Arco.Business.BusinessBase.AddBusinessRules">
+	<summary>
+ Override this method in your business class to
+ be notified when you need to set up business
+ rules.
+ </summary>
+	<remarks>
+ You should call AddBusinessRules from your object's
+ constructor methods so the rules are set up when
+ your object is created. This method will be automatically
+ called, if needed, when your object is serialized by
+ the DataPortal or by the Clone method.
+ </remarks>
+</member><member name="P:Arco.Business.BusinessBase.IsValid">
+	<summary>
+ Returns True if the object is currently valid, False if the
+ object has broken rules or is otherwise invalid.
+ </summary>
+	<remarks>
+		<para>
+ By default this property relies on the underling <see cref="T:BrokenRules"/>
+ object to track whether any business rules are currently broken for this object.
+ </para><para>
+ You can override this property to provide more sophisticated
+ implementations of the behavior. For instance, you should always override
+ this method if your object has child objects, since the validity of this object
+ is affected by the validity of all child objects.
+ </para>
+	</remarks>
+	<returns>A value indicating if the object is currently valid.</returns>
+</member><member name="M:Arco.Business.BusinessBase.GetBrokenRulesCollection">
+	<summary>
+ Provides access to the readonly collection of broken business rules
+ for this object.
+ </summary>
+	<returns>A <see cref="T:BrokenRules.RulesCollection"/> object.</returns>
+</member><member name="P:Arco.Business.BusinessBase.BrokenRulesCollection">
+	<summary>
+ Provides access to the readonly collection of broken business rules
+ for this object.
+ </summary>
+	<returns>A <see cref="T:BrokenRules.RulesCollection"/> object.</returns>
+</member><member name="M:Arco.Business.BusinessBase.GetBrokenRulesString">
+	<summary>
+ Provides access to a text representation of all the descriptions of
+ the currently broken business rules for this object.
+ </summary>
+	<returns>Text containing the descriptions of the broken business rules.</returns>
+</member><member name="P:Arco.Business.BusinessBase.BrokenRulesString">
+	<summary>
+ Provides access to a text representation of all the descriptions of
+ the currently broken business rules for this object.
+ </summary>
+	<returns>Text containing the descriptions of the broken business rules.</returns>
+</member><member name="P:Arco.Business.BusinessBase.BrokenRules">
+	<summary>
+ Provides access to the broken rules functionality.
+ </summary>
+	<remarks>
+ This property is used within your business logic so you can
+ easily call the <see cref="M:BrokenRules.Assert(System.String,System.String,System.Boolean)"/> 
+ method to mark rules as broken and unbroken.
+ </remarks>
+</member><member name="M:Arco.Business.BusinessBase.Save">
+	<summary>
+ Saves the object to the database.
+ </summary>
+	<remarks>
+		<para>
+ Calling this method starts the save operation, causing the object
+ to be inserted, updated or deleted within the database based on the
+ object's current state.
+ </para><para>
+ If <see cref="P:BusinessBase.IsDeleted"/> is True the object
+ will be deleted. Otherwise, if <see cref="P:BusinessBase.IsNew"/> 
+ is True the object will be inserted. Otherwise the object's data will 
+ be updated in the database.
+ </para><para>
+ All this is contingent on <see cref="P:BusinessBase.IsDirty"/>. If
+ this value is False, no data operation occurs. It is also contingent on
+ <see cref="P:BusinessBase.IsValid"/>. If this value is False an
+ exception will be thrown to indicate that the UI attempted to save an
+ invalid object.
+ </para><para>
+ It is important to note that this method returns a new version of the
+ business object that contains any data updated during the save operation.
+ You MUST update all object references to use this new version of the
+ business object in order to have access to the correct object data.
+ </para><para>
+ You can override this method to add your own custom behaviors to the save
+ operation. For instance, you may add some security checks to make sure
+ the user can save the object. If all security checks pass, you would then
+ invoke the base Save method via <c>MyBase.Save()</c>.
+ </para>
+	</remarks>
+	<returns>A new object containing the saved values.</returns>
+</member><member name="M:Arco.Business.BusinessBase.DataPortal_Create(System.Object)">
+	<summary>
+ Override this method to load a new business object with default
+ values from the database.
+ </summary>
+	<param name="Criteria">An object containing criteria values.</param>
+</member><member name="M:Arco.Business.BusinessBase.DataPortal_Fetch(System.Object)">
+	<summary>
+ Override this method to allow retrieval of an existing business
+ object based on data in the database.
+ </summary>
+	<param name="Criteria">An object containing criteria values to identify the object.</param>
+</member><member name="M:Arco.Business.BusinessBase.DataPortal_Update">
+	<summary>
+ Override this method to allow insert, update or deletion of a business
+ object.
+ </summary>
+</member><member name="M:Arco.Business.BusinessBase.DataPortal_Delete(System.Object)">
+	<summary>
+ Override this method to allow immediate deletion of a business object.
+ </summary>
+	<param name="Criteria">An object containing criteria values to identify the object.</param>
+</member><member name="M:Arco.Business.BusinessBase.DataPortal_OnDataPortalInvoke(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal prior to calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="M:Arco.Business.BusinessBase.DataPortal_OnDataPortalInvokeComplete(Arco.Server.DataPortalEventArgs)">
+	<summary>
+ Called by the server-side DataPortal after calling the 
+ requested DataPortal_xyz method.
+ </summary>
+	<param name="e">The DataPortalContext object passed to the DataPortal.</param>
+</member><member name="M:Arco.Business.BusinessBase.DB">
+	<summary>
+ Returns the specified database connection string from the application
+ configuration file.
+ </summary>
+	<returns>A database connection string.</returns>
+</member><member name="M:Arco.Business.BusinessBase.Deserialized">
+	<summary>
+ This method is called on a newly deserialized object
+ after deserialization is complete.
+ </summary>
+</member><member name="M:Arco.Business.BusinessBase.Serialized">
+	<summary>
+ This method is called on the original instance of the
+ object after it has been serialized.
+ </summary>
+</member><member name="M:Arco.Business.BusinessBase.Serializing">
+	<summary>
+ This method is called before an object is serialized.
+ </summary>
+</member><member name="P:Arco.Server.DataPortalContext.Principal">
+	<summary>
+ The current <see cref="T:Security.BusinessPrincipal"/>
+ if ARCO security is being used.
+ </summary>
+</member><member name="P:Arco.Server.DataPortalContext.IsRemotePortal">
+	<summary>
+ Returns True if the server-side DataPortal is running
+ on a remote server via remoting.
+ </summary>
+</member><member name="M:Arco.Server.DataPortalContext.#ctor(System.Boolean)">
+	<summary>
+ Creates a new DataPortalContext object.
+ </summary>
+	<param name="isRemotePortal">Indicates whether the DataPortal is remote.</param>
+</member><member name="M:Arco.Server.DataPortalContext.#ctor(System.Security.Principal.IPrincipal,System.Boolean)">
+	<summary>
+ Creates a new DataPortalContext object.
+ </summary>
+	<param name="principal">The current Principal object.</param>
+	<param name="isRemotePortal">Indicates whether the DataPortal is remote.</param>
+</member><member name="T:Arco.Server.DataPortalContext">
+	<summary>
+ Provides consistent context information between the client
+ and server DataPortal objects. 
+ </summary>
+	<remarks>
+ The context includes the current 
+ <see cref="T:Security.BusinessPrincipal"/>
+ object if ARCO security is being used. It also includes a
+ flag indicating whether the server-side DataPortal is running
+ locally or remotely.
+ </remarks>
+</member><member name="M:Arco.Utils.Logging.Out(System.String)">
+	<summary>
+ Puts output in the console if verbose is turned on
+ </summary>
+	<param name="vsText">Text to output</param>
+	<remarks></remarks>
+</member><member name="M:Arco.Utils.Logging.Out(System.String,System.ConsoleColor)">
+	<summary>
+ Puts output in the console if verbose is turned on
+ </summary>
+	<param name="vsText">Text to output</param>
+	<param name="vColor">Color of the text</param>
+	<remarks></remarks>
+</member><member name="M:Arco.DataTypes.SmartDate.#ctor">
+	<summary>
+ Creates a new SmartDate object.
+ </summary>
+	<remarks>
+ The SmartDate created will use the min possible
+ date to represent an empty date.
+ </remarks>
+</member><member name="M:Arco.DataTypes.SmartDate.#ctor(System.Boolean)">
+	<summary>
+ Creates a new SmartDate object.
+ </summary>
+	<param name="EmptyIsMin">Indicates whether an empty date is the min or max date value.</param>
+</member><member name="M:Arco.DataTypes.SmartDate.#ctor(System.DateTime)">
+	<summary>
+ Creates a new SmartDate object.
+ </summary>
+	<remarks>
+ The SmartDate created will use the min possible
+ date to represent an empty date.
+ </remarks>
+	<param name="Value">The initial value of the object.</param>
+</member><member name="M:Arco.DataTypes.SmartDate.#ctor(System.DateTime,System.Boolean)">
+	<summary>
+ Creates a new SmartDate object.
+ </summary>
+	<param name="Value">The initial value of the object.</param>
+	<param name="EmptyIsMin">Indicates whether an empty date is the min or max date value.</param>
+</member><member name="M:Arco.DataTypes.SmartDate.#ctor(System.String)">
+	<summary>
+ Creates a new SmartDate object.
+ </summary>
+	<remarks>
+ The SmartDate created will use the min possible
+ date to represent an empty date.
+ </remarks>
+	<param name="Value">The initial value of the object (as text).</param>
+</member><member name="M:Arco.DataTypes.SmartDate.#ctor(System.String,System.Boolean)">
+	<summary>
+ Creates a new SmartDate object.
+ </summary>
+	<param name="Value">The initial value of the object (as text).</param>
+	<param name="EmptyIsMin">Indicates whether an empty date is the min or max date value.</param>
+</member><member name="P:Arco.DataTypes.SmartDate.FormatString">
+	<summary>
+ Gets or sets the format string used to format a date
+ value when it is returned as text.
+ </summary>
+	<remarks>
+ The format string should follow the requirements for the
+ Visual Basic .NET Format() statement.
+ </remarks>
+	<value>A format string.</value>
+</member><member name="P:Arco.DataTypes.SmartDate.Text">
+	<summary>
+ Gets or sets the date value.
+ </summary>
+	<remarks>
+		<para>
+ This property can be used to set the date value by passing a
+ text representation of the date. Any text date representation
+ that can be parsed by the .NET runtime is valid.
+ </para><para>
+ When the date value is retrieved via this property, the text
+ is formatted by using the format specified by the 
+ <see cref="P:SmartDate.FormatString"/> property. The default is the
+ "Short Date" format.
+ </para>
+	</remarks>
+	<returns></returns>
+</member><member name="P:Arco.DataTypes.SmartDate.Date">
+	<summary>
+ Gets or sets the date value.
+ </summary>
+</member><member name="M:Arco.DataTypes.SmartDate.ToString">
+	<summary>
+ Returns a text representation of the date value.
+ </summary>
+</member><member name="M:Arco.DataTypes.SmartDate.Equals(System.Object,System.Object)">
+	<summary>
+ Returns True if the objects are equal.
+ </summary>
+</member><member name="M:Arco.DataTypes.SmartDate.Equals(System.Object)">
+	<summary>
+ Returns True if the object is equal to this SmartDate.
+ </summary>
+</member><member name="M:Arco.DataTypes.SmartDate.Equals(Arco.DataTypes.SmartDate)">
+	<summary>
+ Returns True if the SmartDate is equal to this SmartDate.
+ </summary>
+</member><member name="M:Arco.DataTypes.SmartDate.Equals(System.DateTime)">
+	<summary>
+ Returns True if the date is equal to this SmartDate.
+ </summary>
+</member><member name="M:Arco.DataTypes.SmartDate.Equals(System.String)">
+	<summary>
+ Returns True if the text (as a date) is equal to this SmartDate.
+ </summary>
+</member><member name="M:Arco.DataTypes.SmartDate.GetHashCode">
+	<summary>
+ Returns a hash code for this object.
+ </summary>
+</member><member name="P:Arco.DataTypes.SmartDate.DBValue">
+	<summary>
+ Gets a database-friendly version of the date value.
+ </summary>
+	<remarks>
+		<para>
+ If the SmartDate contains an empty date, this returns DBNull. Otherwise
+ the actual date value is returned as type Date.
+ </para><para>
+ This property is very useful when setting parameter values for
+ a Command object, since it automatically stores null values into
+ the database for empty date values.
+ </para><para>
+ When you also use the SafeDataReader and its GetSmartDate method,
+ you can easily read a null value from the database back into a
+ SmartDate object so it remains considered as an empty date value.
+ </para>
+	</remarks>
+</member><member name="P:Arco.DataTypes.SmartDate.IsEmpty">
+	<summary>
+ Indicates whether this object contains an empty date.
+ </summary>
+	<returns>True if the date is empty.</returns>
+</member><member name="P:Arco.DataTypes.SmartDate.EmptyIsMin">
+	<summary>
+ Indicates whether an empty date is the min or max possible date value.
+ </summary>
+	<remarks>
+ Whether an empty date is considered to be the smallest or largest possible
+ date is only important for comparison operations. This allows you to
+ compare an empty date with a real date and get a meaningful result.
+ </remarks>
+	<returns>True if an empty date is the smallest date, False if it is the largest.</returns>
+</member><member name="M:Arco.DataTypes.SmartDate.StringToDate(System.String)">
+	<summary>
+ Converts a text date representation into a Date value.
+ </summary>
+	<remarks>
+ An empty string is assumed to represent an empty date. An empty date
+ is returned as the MinValue of the Date datatype.
+ </remarks>
+	<param name="Value">The text representation of the date.</param>
+	<returns>A Date value.</returns>
+</member><member name="M:Arco.DataTypes.SmartDate.StringToDate(System.String,System.Boolean)">
+	<summary>
+ Converts a text date representation into a Date value.
+ </summary>
+	<remarks>
+ An empty string is assumed to represent an empty date. An empty date
+ is returned as the MinValue or MaxValue of the Date datatype depending
+ on the EmptyIsMin parameter.
+ </remarks>
+	<param name="Value">The text representation of the date.</param>
+	<param name="EmptyIsMin">Indicates whether an empty date is the min or max date value.</param>
+	<returns>A Date value.</returns>
+</member><member name="M:Arco.DataTypes.SmartDate.DateToString(System.DateTime,System.String)">
+	<summary>
+ Converts a date value into a text representation.
+ </summary>
+	<remarks>
+ The date is considered empty if it matches the min value for
+ the Date datatype. If the date is empty, this
+ method returns an empty string. Otherwise it returns the date
+ value formatted based on the FormatString parameter.
+ </remarks>
+	<param name="Value">The date value to convert.</param>
+	<param name="FormatString">The format string used to format the date into text.</param>
+	<returns>Text representation of the date value.</returns>
+</member><member name="M:Arco.DataTypes.SmartDate.DateToString(System.DateTime,System.String,System.Boolean)">
+	<summary>
+ Converts a date value into a text representation.
+ </summary>
+	<remarks>
+ Whether the date value is considered empty is determined by
+ the EmptyIsMin parameter value. If the date is empty, this
+ method returns an empty string. Otherwise it returns the date
+ value formatted based on the FormatString parameter.
+ </remarks>
+	<param name="Value">The date value to convert.</param>
+	<param name="FormatString">The format string used to format the date into text.</param>
+	<param name="EmptyIsMin">Indicates whether an empty date is the min or max date value.</param>
+	<returns>Text representation of the date value.</returns>
+</member><member name="M:Arco.DataTypes.SmartDate.CompareTo(Arco.DataTypes.SmartDate)">
+	<summary>
+ Compares one SmartDate to another.
+ </summary>
+	<remarks>
+ This method works the same as the CompareTo method
+ on the Date datetype, with the exception that it
+ understands the concept of empty date values.
+ </remarks>
+	<param name="Value">The date to which we are being compared.</param>
+	<returns>A value indicating if the comparison date is less than, equal to or greater than this date.</returns>
+</member><member name="M:Arco.DataTypes.SmartDate.CompareTo(System.Object)">
+	<summary>
+ Compares one SmartDate to another.
+ </summary>
+	<remarks>
+ This method works the same as the CompareTo method
+ on the Date datetype, with the exception that it
+ understands the concept of empty date values.
+ </remarks>
+	<param name="Value">The date to which we are being compared.</param>
+	<returns>A value indicating if the comparison date is less than, equal to or greater than this date.</returns>
+</member><member name="M:Arco.DataTypes.SmartDate.CompareTo(System.String)">
+	<summary>
+ Compares a SmartDate to a text date value.
+ </summary>
+	<param name="Value">The date to which we are being compared.</param>
+	<returns>A value indicating if the comparison date is less than, equal to or greater than this date.</returns>
+</member><member name="M:Arco.DataTypes.SmartDate.CompareTo(System.DateTime)">
+	<summary>
+ Compares a SmartDate to a date value.
+ </summary>
+	<param name="Value">The date to which we are being compared.</param>
+	<returns>A value indicating if the comparison date is less than, equal to or greater than this date.</returns>
+</member><member name="M:Arco.DataTypes.SmartDate.Add(System.TimeSpan)">
+	<summary>
+ Adds a TimeSpan onto the object.
+ </summary>
+</member><member name="M:Arco.DataTypes.SmartDate.Subtract(System.TimeSpan)">
+	<summary>
+ Subtracts a TimeSpan from the object.
+ </summary>
+</member><member name="M:Arco.DataTypes.SmartDate.Subtract(System.DateTime)">
+	<summary>
+ Subtracts a Date from the object.
+ </summary>
+</member>
+</members>
+</doc>

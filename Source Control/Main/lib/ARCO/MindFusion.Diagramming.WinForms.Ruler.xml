@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MindFusion.Diagramming.WinForms.Ruler</name>
+    </assembly>
+    <members>
+        <member name="T:MindFusion.Diagramming.WinForms.Alignment">
+            <summary>
+            Generalized alignment enum.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Diagramming.WinForms.Alignment.Near">
+            <summary>
+            Specifies that alignment is towards the origin of the layout rectangle.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Diagramming.WinForms.Alignment.Far">
+            <summary>
+            Specifies that alignment is to the far extent of the layout rectangle.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Diagramming.WinForms.RulerUnit">
+            <summary>
+            Specifies a measurement unit for the Ruler.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Diagramming.WinForms.RulerUnit.Point">
+            <summary>
+            Indicates a point.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Diagramming.WinForms.RulerUnit.Pixel">
+            <summary>
+            Indicates a pixel.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Diagramming.WinForms.RulerUnit.Millimeter">
+            <summary>
+            Indicates a millimeter.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Diagramming.WinForms.RulerUnit.Inch">
+            <summary>
+            Indicates an inch.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Diagramming.WinForms.RulerUnit.Percent">
+            <summary>
+            Indicates percent.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Diagramming.WinForms.Ruler">
+            <summary>
+            The Ruler control provides horizontal and vertical scales
+            that helps users measure diagram items.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.#ctor">
+            <summary>
+            Initializes a new instance of the Ruler class.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Dispose(System.Boolean)">
+            <summary>
+            Control.Dispose override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Set(MindFusion.Diagramming.WinForms.DiagramView)">
+            <summary>
+            Sets the document from the OnControlAdded event handler.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Unset">
+            <summary>
+            Unsets the document, (i.e. set it to null)
+            from the OnControlAdded event handler.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Control.OnPaint override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnBackgroundImageChanged(System.EventArgs)">
+            <summary>
+            Control.OnBackgroundImageChanged override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnFontChanged(System.EventArgs)">
+            <summary>
+            Control.OnFontChanged override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Handles the MouseUp event on both scales.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnTimer(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Tick event of the main timer.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnControlAdded(System.Object,System.Windows.Forms.ControlEventArgs)">
+            <summary>
+            Handles the Control.ControlAdded event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnControlRemoved(System.Object,System.Windows.Forms.ControlEventArgs)">
+            <summary>
+            Handles the Control.ControlRemoved event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnDocumentPaint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Handles the DiagramView.Paint event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnDocumentNodeActivated(System.Object,MindFusion.Diagramming.NodeEventArgs)">
+            <summary>
+            Handles the Diagram.NodeActivated event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnDocumentNodeDeactivated(System.Object,MindFusion.Diagramming.NodeEventArgs)">
+            <summary>
+            Handles the Diagram.NodeDeactivated event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnDocumentNodeDeleted(System.Object,MindFusion.Diagramming.NodeEventArgs)">
+            <summary>
+            Handles the Diagram.NodeDeleted event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnDocumentScrollChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the DiagramView.ScrollChanged event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnDocumentZoomFactorChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the DiagramView.ZoomFactorChanged event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnDocumentDocExtentsChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the DiagramView.BoundsChanged event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnDocumentMeasureUnitChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the DiagramView.MeasureUnitChanged event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnDocumentMouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            Handles the DiagramView.MouseEnter event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnDocumentMouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Handles the DiagramView.MouseMove event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.OnDocumentMouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Handles the DiagramView.MouseLeave event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.RefreshScales(System.Boolean)">
+            <summary>
+            Refreshes the scales of the ruler either
+            unconditionally (if always is set to true)
+            or only if the document is being modified
+            by the user (if set to false).
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.RefreshScales">
+            <summary>
+            Refreshes the scales of the ruler unconditionally.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Diagramming.WinForms.Ruler._timer">
+            <summary>
+            This timer is intended to perform update operations
+            on regular intervals of time, thus fixing repaint
+            issues when diagram is modified programmatically.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.DiagramView">
+            <summary>
+            Gets or sets the DiagramView document this
+            ruler is associated with.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.Controls">
+            <summary>
+            Hide the property from the public.
+            It is not meant to be used with the Ruler.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.HorizontalScaleAlignment">
+            <summary>
+            Gets or sets the alignment of the horizontal scale of the ruler.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.VerticalScaleAlignment">
+            <summary>
+            Gets or sets the alignment of the vertical scale of the ruler.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.VerticalScaleVisible">
+            <summary>
+            Specifies whether the vertical ruler scale is visible.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.HorizontalScaleVisible">
+            <summary>
+            Specifies whether the horizontal ruler scale is visible.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.ContextMenu">
+            <summary>
+            Specifies the context menu associated with the ruler.
+            We supply our own implementation of the context menu to
+            avoid popping it up when the right button is pressed over
+            the document area.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.Text">
+            <summary>
+            Gets or sets the text displayed in the ruler.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.Unit">
+            <summary>
+            Gets or sets the measure unit used by the ruler.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.ProjectionColor">
+            <summary>
+            Gets or sets the color used to paint
+            the projection of the active node.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.EnableGuides">
+            <summary>
+            Gets or sets a value indicating whether
+            alignment guides are active.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.GuideColor">
+            <summary>
+            Gets or sets the color used to paint guides.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.ForeColor">
+            <summary>
+            Gets or sets the color of the ruler marks.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.ShowIcon">
+            <summary>
+            Gets or sets a value indicating whether to show the icon
+            between the horizontal and vertical scales.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.TextColor">
+            <summary>
+            Gets or sets the color used to paint texts in the ruler.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.PointerColor">
+            <summary>
+            Gets or sets the color used to paint cursor projections.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Diagramming.WinForms.Ruler.Scale">
+            <summary>
+            Represents either horizontal or vertical scale in a ruler control.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.#ctor(MindFusion.Diagramming.WinForms.Ruler,MindFusion.Diagramming.Orientation)">
+            <summary>
+            Scales are instantiated only by the ruler.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Control.OnPaint override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Control.OnPaintBackground override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseDown override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseMove override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseUp override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.OnDocumentPaint(System.Drawing.Graphics)">
+            <summary>
+            Invoked by the container when the document raises its Paint event.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.Draw(System.Drawing.Graphics)">
+            <summary>
+            Draws the scale in the specified target.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.DrawProjection(System.Drawing.Graphics)">
+            <summary>
+            Draws the projection of the active node (if any).
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.DrawMarks(System.Drawing.Graphics)">
+            <summary>
+            Draws the division marks and numbers.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.DrawCursorProjection(System.Drawing.Graphics)">
+            <summary>
+            Draws the projection of the cursor over this scale.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.GetGraphics">
+            <summary>
+            Gets setup graphics.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.CalcPixelsPerUnit">
+            <summary>
+            Computes a value representing how many pixels
+            are needed to display single unit of the current
+            units of measure of the scale (i.e. when the scale
+            unit is inches, returns how many pixels equal
+            1 Inch).
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.CalcUnitInterval(System.Single)">
+            <summary>
+            Calculates the interval (in units) between
+            two consecutively displayed numbers on the scale,
+            ensuring perspicuity.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Ruler.Scale.GetThresh">
+            <summary>
+            Gets a threshold value.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.Scale.Alignment">
+            <summary>
+            Gets or sets the alignment of the scale.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.Scale.Unit">
+            <summary>
+            Gets or sets the measure unit used by the scale.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.Scale.ProjectionColor">
+            <summary>
+            Gets or sets the color used to paint
+            the projection of the active node.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.Scale.EnableGuides">
+            <summary>
+            Gets or sets a value indicating whether
+            alignment guides are active.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.Scale.GuideColor">
+            <summary>
+            Gets or sets the color used to paint guides.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.Scale.TextColor">
+            <summary>
+            Gets or sets the color used to paint texts.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Ruler.Scale.CursorColor">
+            <summary>
+            Gets or sets the color used to paint cursor projections.
+            </summary>
+        </member>
+    </members>
+</doc>

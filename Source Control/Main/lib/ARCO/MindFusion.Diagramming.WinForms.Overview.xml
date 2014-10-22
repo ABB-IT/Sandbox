@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MindFusion.Diagramming.WinForms.Overview</name>
+    </assembly>
+    <members>
+        <member name="T:MindFusion.Diagramming.WinForms.Overview">
+            <summary>
+            Provides a scaled-down view of a DiagramView contents and allows
+            scrolling and zooming the diagram with the mouse.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.#ctor">
+            <summary>
+            Initializes a new instance of the Overview class.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.Dispose(System.Boolean)">
+            <summary>
+            Control.Dispose override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.Update">
+            <summary>
+            Causes the control to recalculate all internals
+            and repaint its client area.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.ScrollTo(System.Int32,System.Int32)">
+            <summary>
+            Scrolls the view to the specified point.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseDown override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseUp override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.OnMouseWheel(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseWheel override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseMove override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Control.OnPaint override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Control.OnPaintBackground override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.OnResize(System.EventArgs)">
+            <summary>
+            Control.OnResize override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.OnHScroll(System.Object,System.Windows.Forms.ScrollEventArgs)">
+            <summary>
+            Handles the Scroll event of the horizontal scrollbar.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.OnVScroll(System.Object,System.Windows.Forms.ScrollEventArgs)">
+            <summary>
+            Handles the Scroll event of the vertical scrollbar.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.LayoutScrollbars">
+            <summary>
+            Updates the position and size of the scrollbars.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.SetScrollbars">
+            <summary>
+            Updates scrollbars' ranges and positions.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.DrawContents(MindFusion.Drawing.IGraphics,System.Drawing.Rectangle)">
+            <summary>
+            Renders the overviewed document.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.CalcViewport">
+            <summary>
+            Calculates the current document viewport.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.CalcCenteringOffsets">
+            <summary>
+            Calculates the offsets which would center the overview
+            within the client area if the client area is bigger
+            than the diagram.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.SetTransforms(MindFusion.Drawing.IGraphics)">
+            <summary>
+            Setup graphics transformations.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.DocToScreen(System.Drawing.RectangleF)">
+            <summary>
+            Converts overview's document's coordinates to screen coordinates.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.DocToScreen(System.Drawing.Graphics,System.Drawing.PointF)">
+            <summary>
+            Converts overview's document's coordinates to screen coordinates.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.Overview.ScreenToDoc(System.Drawing.Rectangle)">
+            <summary>
+            Converts screen coordinates to overview's document's coordinates.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Diagramming.WinForms.Overview.diagramView">
+            <summary>
+            The viewed document.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.DiagramView">
+            <summary>
+            Gets or sets the DiagramView instance whose contents
+            to display in the overview control.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.FitAll">
+            <summary>
+            Gets or sets a value indicating whether to fit the whole
+            diagram inside the overview window control.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.ScaleFactor">
+            <summary>
+            Gets or sets a fixed scale factor to be used when FitAll is disabled.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.SmoothingMode">
+            <summary>
+            Gets or sets the current anti-alias mode.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.DisplayShadows">
+            <summary>
+            Gets or sets whether to paint the shadows of items in the overview control.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.DisplayImages">
+            <summary>
+            Gets or sets whether to paint node Images in the overview control.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.DisplayInterior">
+            <summary>
+            Gets or sets whether to fill interior of nodes with their FillColor.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.DisplayBackground">
+            <summary>
+            Gets or sets whether to paint the diagram background
+            with the diagram’s BackBrush.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.DisplayBackgroundImage">
+            <summary>
+            Gets or sets whether to paint diagram's BackgroundImage
+            in the overview control.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.DisplayText">
+            <summary>
+            Gets or sets a value indicating whether to paint the text
+            of items in the overview control.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.BackColor">
+            <summary>
+            Gets or sets the background color of the overview control.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.ShowScrollbars">
+            <summary>
+            Shows or hides the scrollbars of the overview control.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.DimColor">
+            <summary>
+            Gets or sets a color used to blend with the part of the diagram
+            that is not visible in the DiagramView‘s client rectangle.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.Overview.Viewport">
+            <summary>
+            Gets or sets the viewport rectangle.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Diagramming.WinForms.IDragTool">
+            <summary>
+            Base for all drag tools.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.IDragTool.Update(System.Int32,System.Int32)">
+            <summary>
+            Invoked to notify the drag tool of any mouse changes.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.IDragTool.Complete(System.Int32,System.Int32)">
+            <summary>
+            Invoked when the drag operation is about to be completed.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Diagramming.WinForms.IDragTool.Cancel">
+            <summary>
+            Causes the drag operation to be cancelled.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Diagramming.WinForms.IDragTool.Cursor">
+            <summary>
+            Gets the mouse cursor to be displayed while the dragging.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Diagramming.WinForms.ViewDrag">
+            <summary>
+            Handles the dragging of the viewport rectangle within the control.
+            </summary>
+        </member>
+    </members>
+</doc>

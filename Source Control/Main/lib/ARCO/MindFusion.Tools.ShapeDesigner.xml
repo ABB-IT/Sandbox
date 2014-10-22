@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MindFusion.Tools.ShapeDesigner</name>
+    </assembly>
+    <members>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.LineSegment">
+            <summary>
+            Represents a straight line segment.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.Segment">
+            <summary>
+            Represents a segment of shape's outline or decorations.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.SegmentOrOutline">
+            <summary>
+            Implementation of common members of Segments and Outlines
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.ISegmentOrOutline">
+            <summary>
+            A common interface for segments and outlines
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.ISegment">
+            <summary>
+            Adds methods specific to Segments
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ISegment.ShapeToInternal(MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner)">
+            <summary>
+            Convert from shape coordinate to internal coordinates
+            </summary>
+            <param name="transformer"></param>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.Segment.ShapeToInternal(MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner)">
+            <summary>
+            Convert from shape coordinate to client coordinates
+            </summary>
+            <param name="transformer"></param>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.Segment.PrevSegmentActual(System.Collections.ArrayList,System.Int32)">
+            <summary>
+            Returns the previous segment only if its EndHandle points to the startHandle of segment i
+            </summary>
+            <param name="segments"></param>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.Segment.Create(System.Type,System.Drawing.PointF,System.Drawing.PointF,MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner)">
+            <summary>
+            Create a default (not all point are specified) instance of a given concrete ISegment implementation
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.ILTRBSupport">
+            <summary>
+            Something that has Left, Top, Right, Bottom properties
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.Handle">
+            <summary>
+            Represent a graphics handle that allows the user to
+            interactively manipulate objects positioning.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.Handle.isBounded">
+            <summary>
+            Is this handle constrained to the designer area [0,100]
+            Some handles are constrained, but bezier inner handles are not.
+            
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.Handle.SnapsToGrid">
+            <summary>
+            Should this handle snap to grid. Most handles do, but Elipse angle handles do not.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.Handle.DependencePriority">
+            <summary>
+            The lower the DependencePriority the more likely this handle to become dependant in SelectDependentHandle
+            This is needed, because Ellipse startAngle handle can be placed only at the ellipse boundary, so
+            it must be prefered as master handle so it can apply its constraints to the dependent. This helps 
+            that the handles will be moved together
+            The more constrained the handle the greater its DependencePriority should be.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.BezierHandle">
+            <summary>
+            Represents a handle that allows the user to edit Bezier segments.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.Ellipse">
+            <summary>
+            Represents an elliptical shape.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.Ellipse.ShapeToInternal(MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner)">
+            <summary>
+            Convert from shape coordinate to internal coordinates
+            </summary>
+            <param name="transformer"></param>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.Ellipse.solve(System.Double,System.Double,System.Double,System.Double@,System.Double@)">
+            <summary>
+            Solves a*x^2 + b * x + c = 0
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.SegmentMenuItem">
+            <summary>
+            A MenuItem that keeps a segment type 
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.Outline">
+            <summary>
+            Represents the outline of a shape.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.RoundRectangle">
+            <summary>
+            Summary description for RoundRectangle.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.RoundRectangle.ShapeToInternal(MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner)">
+            <summary>
+            Convert from shape coordinate to internal coordinates
+            </summary>
+            <param name="transformer"></param>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.PolyLine">
+            <summary>
+            Represents a decoration that consists of a number of segments.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.Contour">
+            <summary>
+            Represents an outline that consists of a number of segments.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.OutlineChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.ImageOutline">
+            <summary>
+            Allows positioning an image within the shape definition.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.ShapeChanged">
+            <summary>
+            Defines the prototype for ShapeChanged event handlers.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner">
+            <summary>
+            Provides a design surface for creation or modification of Shape objects.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the ShapeDesigner class.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.OnResize(System.EventArgs)">
+            <summary>
+            Control.OnResize override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.ExportTemplateCode(MindFusion.Tools.ShapeDesignerCtrl.SourceCodeLanguage)">
+            <summary>
+            Generates source code for the Shape definition.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.SaveLayoutToFile(System.String)">
+            <summary>
+            Saves the shape layout to a file.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.ReadLayoutFromFile(System.String)">
+            <summary>
+            Loads the shape layout from a file.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.snapToGridX(System.Single)">
+            <summary>
+            Snap to gridline X internal coordinate
+            </summary>
+            <param name="x">internal coordinate</param>
+            <returns>snapped internal coordinate</returns>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Control.OnPaint override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseDown override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseMove override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Control.OnMouseUp override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.OnCreateControl">
+            <summary>
+            Control.OnCreateControl override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Control.OnPaintBackground override.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.FromInternal">
+            <summary>
+            Updates the current Shape with the internal structures 
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.ToInternal">
+            <summary>
+            Updates the internal structures with data from Shape
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.ClientToShapeX(System.Single)">
+            <summary>
+            Converts from client to shape coordinates.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.ClientToShapeY(System.Single)">
+            <summary>
+            Converts from client to shape coordinates.
+            </summary>
+        </member>
+        <member name="M:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.InternalToShape(System.Single)">
+            <summary>
+            Converts from internal coordinates to shape coordinates.
+            The internal coordinates are used in the internal Segments and Outline
+            objects.
+            Client coordinates are used by event handling (e.g. mouse move)
+            Shape coordinates are used in *Template objects and persisted files
+            The differences between internal and client coordinates is that the
+            client coordinates are relative to sroll offset.
+            TODO: replace internal coordinates with shape coordinates by using
+            graphics transformation matrix
+            </summary>
+            <param name="internalXY"></param>
+            <returns></returns>
+        </member>
+        <member name="E:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.ShapeChanged">
+            <summary>
+            Raised when a Shape definition has been changed.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.BackColor">
+            <summary>
+            Control.BackColor override.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.GridStyle">
+            <summary>
+            Gets or sets whether the grid is drawn as lines or dots.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.GridColor">
+            <summary>
+            Gets or sets the grid color.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.GridSpacing">
+            <summary>
+            Gets or sets the grid spacing.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.OutlineColor">
+            <summary>
+            Gets or sets the shape outline color.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.DecorationColor">
+            <summary>
+            Gets or sets the shape decoration color.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.TextAreaContourColor">
+            <summary>
+            Gets or sets the text area outline color.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.MainContourColor">
+            <summary>
+            Gets or sets the main outline color.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.SelectionColor">
+            <summary>
+            Gets or sets the selection color.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.ShowScrollbars">
+            <summary>
+            Gets or sets whether scrollbars shoud be displayed.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.ShapeSize">
+            <summary>
+            Gets or sets the shape editing area size.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.RoundRectRadius">
+            <summary>
+            Gets or sets the default radius for corners of rounded rectangles.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.Shape">
+            <summary>
+            Gets or sets the currently edited shape.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.ShowGrid">
+            <summary>
+            Gets or sets whether to dislpay alignment grid.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.ImageLocation">
+            <summary>
+            Gets or sets the location of the image to be attached to the currently edited Shape.
+            </summary>
+        </member>
+        <member name="P:MindFusion.Tools.ShapeDesignerCtrl.ShapeDesigner.Image">
+            <summary>
+            Gets or sets the image to be attached to the currently edited Shape.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.GridStyle">
+            <summary>
+            Specifies how to draw the grid - as lines or dots
+            </summary>
+        </member>
+        <member name="F:MindFusion.Tools.ShapeDesignerCtrl.GridStyle.Lines">
+            <summary>
+            Draw grid lines.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Tools.ShapeDesignerCtrl.GridStyle.Dots">
+            <summary>
+            Draw grid dots.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.SourceCodeLanguage">
+            <summary>
+            Specifies the desired source code language - C# or Visual Basic
+            </summary>
+        </member>
+        <member name="F:MindFusion.Tools.ShapeDesignerCtrl.SourceCodeLanguage.CSharp">
+            <summary>
+            Generate C# code.
+            </summary>
+        </member>
+        <member name="F:MindFusion.Tools.ShapeDesignerCtrl.SourceCodeLanguage.VB">
+            <summary>
+            Generate VB.NET code.
+            </summary>
+        </member>
+        <member name="T:MindFusion.Tools.ShapeDesignerCtrl.BezierSegment">
+            <summary>
+            Represents a Bezier curve segment.
+            </summary>
+        </member>
+    </members>
+</doc>
