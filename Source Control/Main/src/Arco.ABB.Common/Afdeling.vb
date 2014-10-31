@@ -16,19 +16,19 @@ Public Class Afdeling
     Private Sub SetExtraData()
         Select Case Me.Naam
             Case "Afdeling Antwerpen"
-                NaamAfdelingshoofd = "Guy Peeters"
+                NaamAfdelingshoofd = "Carolina Stevens"
                 AanspreekTitel = "Mijnheer"
                 NaamGouverneur = "Cathy Berx"
                 CentraleAfdeling = False
             Case "Afdeling Financiën en Personeel"
                 NaamAfdelingshoofd = "Johan Ide"
                 AanspreekTitel = "Mijnheer"
-                NaamGouverneur = "Geert Bourgeois"
+                NaamGouverneur = "Liesbeth Homans"
                 CentraleAfdeling = True
             Case "Afdeling Beleid Binnenland Steden en Inburgering"
                 NaamAfdelingshoofd = "Sami Souguir"
                 AanspreekTitel = "Algemeen directeur"
-                NaamGouverneur = "Geert Bourgeois"
+                NaamGouverneur = "Liesbeth Homans"
                 CentraleAfdeling = True
             Case "Afdeling Limburg"
                 NaamAfdelingshoofd = "Sandra Beckers"
@@ -45,12 +45,12 @@ Public Class Afdeling
             Case "Afdeling Organisatie en Beheer"
                 NaamAfdelingshoofd = "Piet Van Der Plas"
                 AanspreekTitel = "Mijnheer"
-                NaamGouverneur = "Geert Bourgeois"
+                NaamGouverneur = "Liesbeth Homans"
                 CentraleAfdeling = True
             Case "Afdeling Regelgeving en Werking"
-                NaamAfdelingshoofd = "Rudy Janssens" 'todo : bugfixed, here was naamgouverneur
+                NaamAfdelingshoofd = "Jo Craeghs" 'todo : bugfixed, here was naamgouverneur
                 AanspreekTitel = "Mijnheer"
-                NaamGouverneur = "Geert Bourgeois"
+                NaamGouverneur = "Liesbeth Homans"
                 CentraleAfdeling = True
             Case "Afdeling Vlaams-Brabant"
                 NaamAfdelingshoofd = "Nicole Pijpops"
@@ -60,7 +60,7 @@ Public Class Afdeling
             Case "Afdeling West-Vlaanderen"
                 NaamAfdelingshoofd = "Bruno Vanmarcke"
                 AanspreekTitel = "Mijnheer"
-                NaamGouverneur = "Paul Breyne"
+                NaamGouverneur = "Carl Decaluwé"
                 CentraleAfdeling = False
         End Select
     End Sub

@@ -1,0 +1,44 @@
+﻿Installing assembly 'D:\Projects\Doma60\src\core\Arco.ApplicationServer.Service\bin\Debug\Arco.ApplicationServer.Service.exe'. 
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Projects\Doma60\src\core\Arco.ApplicationServer.Service\bin\Debug\Arco.ApplicationServer.Service.exe
+   i = 
+   logfile = D:\Projects\Doma60\src\core\Arco.ApplicationServer.Service\bin\Debug\Arco.ApplicationServer.Service.InstallLog
+Installing service Arco Application Server...
+Service Arco Application Server has been successfully installed.
+Creating EventLog source Arco Application Server in log Application...
+Committing assembly 'D:\Projects\Doma60\src\core\Arco.ApplicationServer.Service\bin\Debug\Arco.ApplicationServer.Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Projects\Doma60\src\core\Arco.ApplicationServer.Service\bin\Debug\Arco.ApplicationServer.Service.exe
+   i = 
+   logfile = D:\Projects\Doma60\src\core\Arco.ApplicationServer.Service\bin\Debug\Arco.ApplicationServer.Service.InstallLog
+Installing assembly 'D:\Arco\bin\Arco.ApplicationServer.Service.exe'.
+Affected parameters are:
+   assemblypath = D:\Arco\bin\Arco.ApplicationServer.Service.exe
+   logfile = D:\Arco\bin\Arco.ApplicationServer.Service.InstallLog
+Installing service Arco Application Server...
+Service Arco Application Server has been successfully installed.
+Creating EventLog source Arco Application Server in log Application...
+See the contents of the log file for the D:\Arco\bin\Arco.ApplicationServer.Service.exe assembly's progress.
+The file is located at D:\Arco\bin\Arco.ApplicationServer.Service.InstallLog.
+Committing assembly 'D:\Arco\bin\Arco.ApplicationServer.Service.exe'.
+Affected parameters are:
+   assemblypath = D:\Arco\bin\Arco.ApplicationServer.Service.exe
+   logfile = D:\Arco\bin\Arco.ApplicationServer.Service.InstallLog
+   logtoconsole = 
+Installing assembly 'D:\Arco\bin\Arco.ApplicationServer.Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arco\bin\Arco.ApplicationServer.Service.exe
+   i = 
+   logfile = D:\Arco\bin\Arco.ApplicationServer.Service.InstallLog
+Installing service Arco Application Server...
+Creating EventLog source Arco Application Server in log Application...
+Rolling back assembly 'D:\Arco\bin\Arco.ApplicationServer.Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arco\bin\Arco.ApplicationServer.Service.exe
+   i = 
+   logfile = D:\Arco\bin\Arco.ApplicationServer.Service.InstallLog
+Restoring event log to previous state for source Arco Application Server.

@@ -53,6 +53,14 @@
     <Reference Include="Arco">
       <HintPath>..\..\..\..\..\_Includes\Doma 6.7.1\bin\Arco.dll</HintPath>
     </Reference>
+    <Reference Include="Arco.ABB.AlgemeenToezicht, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Arco\bin\Arco.ABB.AlgemeenToezicht.dll</HintPath>
+    </Reference>
+    <Reference Include="Arco.ABB.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Arco\bin\Arco.ABB.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Arco.ApplicationServer.Library">
       <HintPath>..\..\..\..\..\_Includes\Doma 6.7.1\bin\Arco.ApplicationServer.Library.dll</HintPath>
     </Reference>
@@ -129,16 +137,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Main\src\Arco.ABB.AlgemeenToezicht\Arco.ABB.AlgemeenToezicht.vbproj">
-      <Project>{52BCDD1A-D527-4B31-981A-070102ABBAEB}</Project>
-      <Name>Arco.ABB.AlgemeenToezicht</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Arco.ABB.Common\Arco.ABB.Common.vbproj">
-      <Project>{99F2ABDE-6E38-4107-944A-52F0FA07C7AD}</Project>
-      <Name>Arco.ABB.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

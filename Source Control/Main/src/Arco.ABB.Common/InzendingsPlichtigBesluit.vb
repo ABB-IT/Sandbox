@@ -284,5 +284,30 @@
     Public Overloads Function Save() As InzendingsPlichtigBesluit
         Return CType(MyBase.Save, InzendingsPlichtigBesluit)
     End Function
+
+    Private Function IsDeleted() As Boolean
+        Throw New NotImplementedException
+    End Function
+
+    Private Sub MarkOld()
+        Throw New NotImplementedException
+    End Sub
+
+    Private Sub MarkDirty()
+        Throw New NotImplementedException
+    End Sub
+
+    Private Function IsNew() As Boolean
+        Throw New NotImplementedException
+    End Function
+
+    Private Sub MarkNew()
+        Throw New NotImplementedException
+    End Sub
+
+    Private Shared Function Client() As Object
+        Throw New NotImplementedException
+    End Function
+
 End Class
 

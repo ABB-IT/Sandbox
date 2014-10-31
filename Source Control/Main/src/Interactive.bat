@@ -1,0 +1,1 @@
+Arco.ApplicationServer.Service.exe INTERACTIVE

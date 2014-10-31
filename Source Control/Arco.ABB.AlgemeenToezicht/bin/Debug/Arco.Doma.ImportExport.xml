@@ -1,0 +1,2587 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Arco.Doma.ImportExport
+</name>
+</assembly>
+<members>
+<member name="M:Arco.Doma.ImportExport.Importers.BaseImporter.onBeforeImportNodes">
+	<summary>
+ Gets called when nodes are found, but before the import takes place
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Importers.BaseImporter.onAfterImportNodes">
+	<summary>
+ Gets called when nodes are found, after import takes place
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Importers.BaseImporter.onInitImportNodes">
+	<summary>
+ gets called when importnodes is called, regardless if nodes are found
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Importers.BaseImporter.onAfterImport">
+	<summary>
+ Gets called when all importers have run
+ </summary>
+</member><member name="M:Arco.Doma.ImportExport.Importers.FakeSaveExtensions.FakeSave(Arco.Doma.Library.baseObjects.DM_PROPERTY)">
+	<summary>
+ This function will fill in the PK with a new value, when the save would perform an insert, otherwise it will set FFD to 0.
+ Used to simulate Inserts in the ImportExport
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Importers.FakeSaveExtensions.FakeSave(Arco.Doma.Library.Customization.DMCategoryHandler)">
+	<summary>
+ This function will fill in the PK with a new value, when the save would perform an insert, otherwise it will set FFD to 0.
+ Used to simulate Inserts in the ImportExport
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Importers.FakeSaveExtensions.FakeSave(Arco.Doma.Library.Customization.EventHandler)">
+	<summary>
+ This function will set FFD to 0.
+ Used to simulate saves in the ImportExport
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Importers.FakeSaveExtensions.FakeSave(Arco.Doma.Library.Globalisation.Label)">
+	<summary>
+ This function will set FFD to 0.
+ Used to simulate saves in the ImportExport
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Importers.FakeSaveExtensions.FakeSave(Arco.Doma.Library.Lists.List)">
+	<summary>
+ This function will fill in the PK with a new value, when the save would perform an insert, otherwise it will set FFD to 0.
+ Used to simulate Inserts in the ImportExport
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.ID">
+	<summary>
+ Property ID. This property reflects the value of column IC_ID in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of ID property.</value>
+	<returns>Returns the value of ID property.</returns>
+	<remarks>IC_ID is the PK of table DM_INPUTCONNECTOR.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.Name">
+	<summary>
+ Property Name. This property reflects the value of column IC_NAME in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of Name property.</value>
+	<returns>Returns the value of Name property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.Type">
+	<summary>
+ Property Type. This property reflects the value of column IC_TYPE in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of Type property.</value>
+	<returns>Returns the value of Type property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.FeedbackSuccessMethod">
+	<summary>
+ Property FeedbackSuccessMethod. This property reflects the value of column IC_FBS_OP1 in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of FeedbackSuccessMethod property.</value>
+	<returns>Returns the value of FeedbackSuccessMethod property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.FeedbackSuccessValue">
+	<summary>
+ Property FeedbackSuccessValue. This property reflects the value of column IC_FBS_OP2 in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of FeedbackSuccessValue property.</value>
+	<returns>Returns the value of FeedbackSuccessValue property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.FeedbackFailedMethod">
+	<summary>
+ Property FeedbackFailedMethod. This property reflects the value of column IC_FBF_OP1 in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of FeedbackFailedMethod property.</value>
+	<returns>Returns the value of FeedbackFailedMethod property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.FeedbackFailedValue">
+	<summary>
+ Property FeedbackFailedValue. This property reflects the value of column IC_FBF_OP2 in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of FeedbackFailedValue property.</value>
+	<returns>Returns the value of FeedbackFailedValue property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.PathISFeed">
+	<summary>
+ Property PathISFeed. This property reflects the value of column IC_ISFEEDLOCATION in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of PathISFeed property.</value>
+	<returns>Returns the value of PathISFeed property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.PathDrumIn">
+	<summary>
+ Property PathDrumIn. This property reflects the value of column IC_DRUMIN in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of PathDrumIn property.</value>
+	<returns>Returns the value of PathDrumIn property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.PathDrumOut">
+	<summary>
+ Property PathDrumOut. This property reflects the value of column IC_DRUMOUT in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of PathDrumOut property.</value>
+	<returns>Returns the value of PathDrumOut property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.PathDrumError">
+	<summary>
+ Property PathDrumError. This property reflects the value of column IC_DRUMERROR in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of PathDrumError property.</value>
+	<returns>Returns the value of PathDrumError property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.LogFile">
+	<summary>
+ Property LogFile. This property reflects the value of column IC_LOGFILE in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of LogFile property.</value>
+	<returns>Returns the value of LogFile property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.DeleteUploadFile">
+	<summary>
+ Property DeleteUploadFile. This property reflects the value of column IC_DELETEFILE in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of DeleteUploadFile property.</value>
+	<returns>Returns the value of DeleteUploadFile property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.DeleteTempXMLFiles">
+	<summary>
+ Property DeleteTempXMLFiles. This property reflects the value of column IC_DELETETEMPFILES in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of DeleteTempXMLFiles property.</value>
+	<returns>Returns the value of DeleteTempXMLFiles property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.ModifiedBy">
+	<summary>
+ Property ModifiedBy. This property reflects the value of column IC_MODIFBY in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of ModifiedBy property.</value>
+	<returns>Returns the value of ModifiedBy property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.ModifiedOn">
+	<summary>
+ Property ModifiedOn. This property reflects the value of column IC_MODIFDATE in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of ModifiedOn property.</value>
+	<returns>Returns the value of ModifiedOn property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.Status">
+	<summary>
+ Property Status. This property reflects the value of column IC_STATUS in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of Status property.</value>
+	<returns>Returns the value of Status property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.LockedBy">
+	<summary>
+ Property LockedBy. This property reflects the value of column IC_LOCKEDBY in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of LockedBy property.</value>
+	<returns>Returns the value of LockedBy property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.LockedOn">
+	<summary>
+ Property LockedOn. This property reflects the value of column IC_LOCKEDDATE in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of LockedOn property.</value>
+	<returns>Returns the value of LockedOn property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.GUID">
+	<summary>
+ Property GUID. This property reflects the value of column GUID in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of GUID property.</value>
+	<returns>Returns the value of GUID property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.OBJECT_ID">
+	<summary>
+ Property OBJECT_ID. This property reflects the value of column OBJECT_ID in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of OBJECT_ID property.</value>
+	<returns>Returns the value of OBJECT_ID property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.OBJECT_TYPE">
+	<summary>
+ Property OBJECT_TYPE. This property reflects the value of column OBJECT_TYPE in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of OBJECT_TYPE property.</value>
+	<returns>Returns the value of OBJECT_TYPE property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.ClassName">
+	<summary>
+ Property ClassName. This property reflects the value of column IC_CLASS in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of ClassName property.</value>
+	<returns>Returns the value of ClassName property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo.AssemblyName">
+	<summary>
+ Property AssemblyName. This property reflects the value of column IC_ASSEMBLY in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of AssemblyName property.</value>
+	<returns>Returns the value of AssemblyName property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputConnectorList.ICInfo">
+	<summary>
+ This structure reflects a row of table DM_INPUTCONNECTOR. 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputConnectorList.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.InputConnectorList"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputConnectorList.GetICs">
+	<summary>
+ GetICs. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputConnectorList"></see> with all rows of DM_INPUTCONNECTOR.
+ </summary>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputConnectorList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As InputConnectorList = InputConnectorList.GetICs()
+ </code></example></para>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputConnectorList">
+	<summary>
+ This class reflects multiple rows of table DM_INPUTCONNECTOR.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.V2.DrumLogging.eValidationStatus">
+	<summary>
+ Validation status.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.V2.DrumLogging.NewDrumLogging">
+	<summary>
+ NewDrumLogging. Creates new object of type <see cref="T:Arco.Doma.ImportExport.Drum.V2.DrumLogging"></see>.
+ </summary>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.V2.DrumLogging"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loLog As DrumLogging
+ loLog = DrumLogging.NewDrumLogging()
+ </code></example></para>
+	</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.DrumLoggingDetailInfo.ID">
+	<summary>
+ Property ID. This property reflects the value of column ID in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of ID property.</value>
+	<returns>Returns the value of ID property.</returns>
+	<remarks>ID is the PK of table DM_DRUM_LOGGING_DETAIL.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.DrumLoggingDetailInfo.LogID">
+	<summary>
+ Property LogID. This property reflects the value of column LOG_ID in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of LogID property.</value>
+	<returns>Returns the value of LogID property.</returns>
+	<remarks>LOG_ID is the PK of table DM_DRUM_LOGGING.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.DrumLoggingDetailInfo.LogTimeUpload">
+	<summary>
+ Property LogTimeUpload. This property reflects the value of column LOG_TIME_UPLOAD in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of LogTimeUpload property.</value>
+	<returns>Returns the value of LogTimeUpload property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.DrumLoggingDetailInfo.Scenario">
+	<summary>
+ Property Scenario. This property reflects the value of column SCENARIO in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of Scenario property.</value>
+	<returns>Returns the value of Scenario property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.DrumLoggingDetailInfo.ObjID">
+	<summary>
+ Property ObjID. This property reflects the value of column OBJECT_ID in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of ObjID property.</value>
+	<returns>Returns the value of ObjID property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.DrumLoggingDetailInfo.ObjDIN">
+	<summary>
+ Property ObjDIN. This property reflects the value of column OBJECT_DIN in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of ObjDIN property.</value>
+	<returns>Returns the value of ObjDIN property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.DrumLoggingDetailInfo.FileID">
+	<summary>
+ Property FileID. This property reflects the value of column FILE_ID in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of FileID property.</value>
+	<returns>Returns the value of FileID property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.DrumLoggingDetailInfo.FileFIN">
+	<summary>
+ Property FileFIN. This property reflects the value of column FILE_FIN in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of FileFIN property.</value>
+	<returns>Returns the value of FileFIN property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.DrumLoggingDetailInfo.ObjType">
+	<summary>
+ Property ObjType. This property reflects the value of column OBJECT_TYPE in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of ObjType property.</value>
+	<returns>Returns the value of ObjType property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.DrumLoggingDetailInfo.ErrCode">
+	<summary>
+ Property ErrCode. This property reflects the value of column ERR_CODE in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of ErrCode property.</value>
+	<returns>Returns the value of ErrCode property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.DrumLoggingDetailInfo.ErrMessage">
+	<summary>
+ Property ErrMessage. This property reflects the value of column ERR_MESSAGE in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of ErrMessage property.</value>
+	<returns>Returns the value of ErrMessage property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.DrumLoggingDetailInfo">
+	<summary>
+ This structure reflects a row of table DM_DRUM_LOGGING_DETAIL. 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList.GetDrumLoggingDetails(System.Int32)">
+	<summary>
+ GetDrumLoggingDetails. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList"></see> with rows of DM_DRUM_LOGGING_DETAIL filtered by FK LOG_ID.
+ </summary>
+	<param name="LogID">PK of table DM_DRUM_LOGGING.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As DrumLoggingDetailList = DrumLoggingDetailList.GetDrumLoggingDetails(123)
+ </code></example></para>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DrumLoggingDetailList">
+	<summary>
+ This class reflects multiple rows of table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As DrumLoggingDetailList = DrumLoggingDetailList.GetDrumLoggingDetailList(123)
+ For Each loLog As DrumLoggingDetailList.DrumLoggingDetailInfo In loList
+     Debug.WriteLine(loLog.ErrMessage)
+ Next
+ loList = Nothing
+ </code></example></para>
+	</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.ID">
+	<summary>
+ Property ID. This property reflects the value of column ID in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ID property.</value>
+	<returns>Returns the value of ID property.</returns>
+	<remarks>ID is the PK of table DM_DRUM_LOGGING.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.LogTimePreprocess">
+	<summary>
+ Property LogTimePreprocess. This property reflects the value of column LOG_TIME_PREPROCESS in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogTimePreprocess property.</value>
+	<returns>Returns the value of LogTimePreprocess property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.LogTimeUpload">
+	<summary>
+ Property LogTimeUpload. This property reflects the value of column LOG_TIME_UPLOAD in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogTimeUpload property.</value>
+	<returns>Returns the value of LogTimeUpload property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.LogTimeFeedback">
+	<summary>
+ Property LogTimeFeedback. This property reflects the value of column LOG_TIME_FEEDBACK in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogTimeFeedback property.</value>
+	<returns>Returns the value of LogTimeFeedback property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.LogMachine">
+	<summary>
+ Property LogMachine. This property reflects the value of column LOG_MACHINE in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogMachine property.</value>
+	<returns>Returns the value of LogMachine property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.LogProgram">
+	<summary>
+ Property LogProgram. This property reflects the value of column LOG_PROGRAM in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogProgram property.</value>
+	<returns>Returns the value of LogProgram property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.LogUser">
+	<summary>
+ Property LogUser. This property reflects the value of column LOG_USER in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogUser property.</value>
+	<returns>Returns the value of LogUser property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.LogType">
+	<summary>
+ Property LogType. This property reflects the value of column LOG_TYPE in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogType property.</value>
+	<returns>Returns the value of LogType property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.BatchID">
+	<summary>
+ Property BatchID. This property reflects the value of column BATCH_ID in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of BatchID property.</value>
+	<returns>Returns the value of BatchID property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.BatchName">
+	<summary>
+ Property BatchName. This property reflects the value of column BATCH_NAME in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of BatchName property.</value>
+	<returns>Returns the value of BatchName property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.Identifier">
+	<summary>
+ Property Identifier. This property reflects the value of column IDENTIFIER in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of Identifier property.</value>
+	<returns>Returns the value of Identifier property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.Scenario">
+	<summary>
+ Property Scenario. This property reflects the value of column SCENARIO in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of Scenario property.</value>
+	<returns>Returns the value of Scenario property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.ErrCode">
+	<summary>
+ Property ErrCode. This property reflects the value of column ERR_CODE in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ErrCode property.</value>
+	<returns>Returns the value of ErrCode property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.ErrMessage">
+	<summary>
+ Property ErrMessage. This property reflects the value of column ERR_MESSAGE in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ErrMessage property.</value>
+	<returns>Returns the value of ErrMessage property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.ValidationStatus">
+	<summary>
+ Property ValidationStatus. This property reflects the value of column VALIDATION_STATUS in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ValidationStatus property.</value>
+	<returns>Returns the value of ValidationStatus property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.ValidatedOn">
+	<summary>
+ Property ValidatedOn. This property reflects the value of column VALIDATED_ON in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ValidatedOn property.</value>
+	<returns>Returns the value of ValidatedOn property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.ValidatedBy">
+	<summary>
+ Property ValidatedBy. This property reflects the value of column VALIDATED_BY in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ValidatedBy property.</value>
+	<returns>Returns the value of ValidatedBy property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.ValidationComment">
+	<summary>
+ Property ValidationComment. This property reflects the value of column VALIDATION_COMMENT in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ValidationComment property.</value>
+	<returns>Returns the value of ValidationComment property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo.GUID">
+	<summary>
+ Property GUID. This property reflects the value of column GUID in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of GUID property.</value>
+	<returns>Returns the value of GUID property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DrumLoggingList.DrumLoggingInfo">
+	<summary>
+ This structure reflects a row of table DM_DRUM_LOGGING. 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DrumLoggingList.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.DrumLoggingList"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.DrumLoggingList.GetDrumLoggings(Arco.Doma.ImportExport.Drum.DrumLoggingList.Criteria)">
+	<summary>
+ GetDrumLoggings. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLoggingList"></see> with rows of DM_DRUM_LOGGING filtered with search criteria.
+ </summary>
+	<param name="SearchCriteria">Search Criteria.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLoggingList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As DrumLoggingList
+ Dim loCrit As DrumLoggingList.Criteria
+ loCrit = New DrumLoggingList.Criteria
+ loCrit.BatchID = 123
+ loList = DrumLoggingList.GetDrumLoggings(loCrit)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.DrumLoggingList.GetDrumLoggings">
+	<summary>
+ GetDrumLoggings. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLoggingList"></see> with all rows of DM_DRUM_LOGGING.
+ </summary>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLoggingList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As DrumLoggingList
+ loList = DrumLoggingList.GetDrumLoggings()
+ </code></example></para>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DrumLoggingList">
+	<summary>
+ This class reflects multiple rows of table DM_DRUM_LOGGING.
+ </summary>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As DrumLoggingList
+ Dim loCrit As DrumLoggingList.Criteria
+ Dim loLog As DrumLoggingList.DrumLoggingInfo
+ loCrit = New DrumLoggingList.Criteria
+ loCrit.BatchID = 123
+ loList = DrumLoggingList.GetDrumLoggingList(loCrit)
+ For Each loLog In loList
+     Debug.WriteLine(loLog.ErrMessage)
+ Next
+ loList = Nothing
+ </code></example></para>
+	</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ScenarioList.ScenarioInfo.IS_INPUTSTREAM">
+	<summary>
+ Property IS_INPUTSTREAM. This property reflects the value of column IS_INPUTSTREAM in table DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<value>Sets the value of IS_INPUTSTREAM property.</value>
+	<returns>Returns the value of IS_INPUTSTREAM property.</returns>
+	<remarks>IS_INPUTSTREAM and IS_SEQ is the PK of table DM_INPUTSTREAM_SCENARIO.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ScenarioList.ScenarioInfo.IS_SEQ">
+	<summary>
+ Property IS_SEQ. This property reflects the value of column IS_SEQ in table DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<value>Sets the value of IS_SEQ property.</value>
+	<returns>Returns the value of IS_SEQ property.</returns>
+	<remarks>IS_INPUTSTREAM and IS_SEQ is the PK of table DM_INPUTSTREAM_SCENARIO.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ScenarioList.ScenarioInfo.IS_TYPE">
+	<summary>
+ Property IS_TYPE. This property reflects the value of column IS_TYPE in table DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<value>Sets the value of IS_TYPE property.</value>
+	<returns>Returns the value of IS_TYPE property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ScenarioList.ScenarioInfo.IS_MODIF_BY">
+	<summary>
+ Property IS_MODIF_BY. This property reflects the value of column IS_MODIFBY in table DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<value>Sets the value of IS_MODIF_BY property.</value>
+	<returns>Returns the value of IS_MODIF_BY property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ScenarioList.ScenarioInfo.IS_MODIF_ON">
+	<summary>
+ Property IS_MODIF_ON. This property reflects the value of column IS_MODIFDATE in table DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<value>Sets the value of IS_MODIF_ON property.</value>
+	<returns>Returns the value of IS_MODIF_ON property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ScenarioList.ScenarioInfo">
+	<summary>
+ This structure reflects a row of table DM_INPUTSTREAM_SCENARIO. 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ScenarioList.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioList"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ScenarioList.GetScenarios">
+	<summary>
+ GetScenarios. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioList"></see> with all rows of DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As ScenarioList = ScenarioList.GetScenarios()
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ScenarioList.GetScenarios(System.Int32)">
+	<summary>
+ GetScenarios. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioList"></see> with rows of DM_INPUTSTREAM_SCENARIO filtered with input stream.
+ </summary>
+	<param name="InputStream">IS_INPUTSTREAM. PK of table DM_INPUTSTREAM.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As ScenarioList = ScenarioList.GetScenarios(123)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ScenarioList.GetScenarios(System.Int32,Arco.Doma.ImportExport.Drum.Scenario.Type_IS)">
+	<summary>
+ GetScenarios. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioList"></see> with rows of DM_INPUTSTREAM_SCENARIO filtered with input stream and type.
+ </summary>
+	<param name="InputStream">IS_INPUTSTREAM. PK of table DM_INPUTSTREAM.</param>
+	<param name="Type">IS_TYPE.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As ScenarioList = ScenarioList.GetScenarios(123)
+ </code></example></para>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ScenarioList">
+	<summary>
+ This class reflects multiple rows of table DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.Scenario.Type_IS">
+	<summary>
+ IS Type.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.Scenario.IS_INPUTSTREAM">
+	<summary>
+ Property IS_INPUTSTREAM. This property reflects the value of column IS_INPUTSTREAM in table DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<value>Sets the value of IS_INPUTSTREAM property.</value>
+	<returns>Returns the value of IS_INPUTSTREAM property.</returns>
+	<remarks>IS_INPUTSTREAM and IS_SEQ is the PK of table DM_INPUTSTREAM_SCENARIO.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.Scenario.IS_SEQ">
+	<summary>
+ Property IS_SEQ. This property reflects the value of column IS_SEQ in table DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<value>Sets the value of IS_SEQ property.</value>
+	<returns>Returns the value of IS_SEQ property.</returns>
+	<remarks>IS_INPUTSTREAM and IS_SEQ is the PK of table DM_INPUTSTREAM_SCENARIO.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.Scenario.IS_TYPE">
+	<summary>
+ Property IS_TYPE. This property reflects the value of column IS_TYPE in table DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<value>Sets the value of IS_TYPE property.</value>
+	<returns>Returns the value of IS_TYPE property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.Scenario.IS_MODIF_BY">
+	<summary>
+ Property IS_MODIF_BY. This property reflects the value of column IS_MODIFBY in table DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<value>Sets the value of IS_MODIF_BY property.</value>
+	<returns>Returns the value of IS_MODIF_BY property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.Scenario.IS_MODIF_ON">
+	<summary>
+ Property IS_MODIF_ON. This property reflects the value of column IS_MODIFDATE in table DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<value>Sets the value of IS_MODIF_ON property.</value>
+	<returns>Returns the value of IS_MODIF_ON property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.Scenario.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.Scenario"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.Scenario.NewScenario(System.Int32,System.Int32)">
+	<summary>
+ NewScenario. Creates new object of type <see cref="T:Arco.Doma.ImportExport.Drum.Scenario"></see>.
+ </summary>
+	<param name="InputStream">IS_INPUTSTREAM. Primary Key of table DM_INPUTSTREAM_SCENARIO.</param>
+	<param name="Seq">IS_SEQ. Primary Key of table DM_INPUTSTREAM_SCENARIO.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.Scenario"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loScenario As Scenario = Scenario.NewScenario(123,1)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.Scenario.GetScenario(System.Int32,System.Int32)">
+	<summary>
+ GetScenario. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.Scenario"></see> using Primary Key.
+ </summary>
+	<param name="InputStream">IS_INPUTSTREAM. Primary Key of table DM_INPUTSTREAM_SCENARIO.</param>
+	<param name="Seq">IS_SEQ. Primary Key of table DM_INPUTSTREAM_SCENARIO.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.Scenario"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loScenario As Scenario = Scenario.GetScenario(123, 1)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.Scenario.DeleteScenario(System.Int32,System.Int32)">
+	<summary>
+ DeleteScenario. Deletes record from DM_INPUTSTREAM_SCENARIO using Primary Key.
+ </summary>
+	<param name="InputStream">IS_INPUTSTREAM. Primary Key of table DM_INPUTSTREAM_SCENARIO.</param>
+	<param name="Seq">IS_SEQ. Primary Key of table DM_INPUTSTREAM_SCENARIO.</param>
+	<remarks>
+		<para><example>Example:<code>
+ Scenario.DeleteScenario(123, 1)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.Scenario.Save">
+	<summary>
+ Save. Inserts or updates one record in table DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.Scenario"></see>.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.Scenario">
+	<summary>
+ This class reflects a row of table DM_INPUTSTREAM_SCENARIO.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DrumLogging.eValidationStatus">
+	<summary>
+ Validation status.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.ID">
+	<summary>
+ Property ID. This property reflects the value of column ID in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ID property.</value>
+	<returns>Returns the value of ID property.</returns>
+	<remarks>ID is the PK of table DM_DRUM_LOGGING.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.LogTimePreprocess">
+	<summary>
+ Property LogTimePreprocess. This property reflects the value of column LOG_TIME_PREPROCESS in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogTimePreprocess property.</value>
+	<returns>Returns the value of LogTimePreprocess property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.LogTimeUpload">
+	<summary>
+ Property LogTimeUpload. This property reflects the value of column LOG_TIME_UPLOAD in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogTimeUpload property.</value>
+	<returns>Returns the value of LogTimeUpload property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.LogTimeFeedback">
+	<summary>
+ Property LogTimeFeedback. This property reflects the value of column LOG_TIME_FEEDBACK in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogTimeFeedback property.</value>
+	<returns>Returns the value of LogTimeFeedback property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.LogMachine">
+	<summary>
+ Property LogMachine. This property reflects the value of column LOG_MACHINE in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogMachine property.</value>
+	<returns>Returns the value of LogMachine property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.LogProgram">
+	<summary>
+ Property LogProgram. This property reflects the value of column LOG_PROGRAM in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogProgram property.</value>
+	<returns>Returns the value of LogProgram property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.LogUser">
+	<summary>
+ Property LogUser. This property reflects the value of column LOG_USER in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogUser property.</value>
+	<returns>Returns the value of LogUser property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.LogType">
+	<summary>
+ Property LogType. This property reflects the value of column LOG_TYPE in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of LogType property.</value>
+	<returns>Returns the value of LogType property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.BatchID">
+	<summary>
+ Property BatchID. This property reflects the value of column BATCH_ID in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of BatchID property.</value>
+	<returns>Returns the value of BatchID property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.BatchName">
+	<summary>
+ Property BatchName. This property reflects the value of column BATCH_NAME in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of BatchName property.</value>
+	<returns>Returns the value of BatchName property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.Identifier">
+	<summary>
+ Property Identifier. This property reflects the value of column IDENTIFIER in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of Identifier property.</value>
+	<returns>Returns the value of Identifier property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.Scenario">
+	<summary>
+ Property Scenario. This property reflects the value of column SCENARIO in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of Scenario property.</value>
+	<returns>Returns the value of Scenario property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.ErrCode">
+	<summary>
+ Property ErrCode. This property reflects the value of column ERR_CODE in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ErrCode property.</value>
+	<returns>Returns the value of ErrCode property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.ErrMessage">
+	<summary>
+ Property ErrMessage. This property reflects the value of column ERR_MESSAGE in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ErrMessage property.</value>
+	<returns>Returns the value of ErrMessage property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.ValidationStatus">
+	<summary>
+ Property ValidationStatus. This property reflects the value of column VALIDATION_STATUS in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ValidationStatus property.</value>
+	<returns>Returns the value of ValidationStatus property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.ValidatedOn">
+	<summary>
+ Property ValidatedOn. This property reflects the value of column VALIDATED_ON in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ValidatedOn property.</value>
+	<returns>Returns the value of ValidatedOn property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.ValidatedBy">
+	<summary>
+ Property ValidatedBy. This property reflects the value of column VALIDATED_BY in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ValidatedBy property.</value>
+	<returns>Returns the value of ValidatedBy property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.ValidationComment">
+	<summary>
+ Property ValidationComment. This property reflects the value of column VALIDATION_COMMENT in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of ValidationComment property.</value>
+	<returns>Returns the value of ValidationComment property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLogging.GUID">
+	<summary>
+ Property GUID. This property reflects the value of column GUID in table DM_DRUM_LOGGING.
+ </summary>
+	<value>Sets the value of GUID property.</value>
+	<returns>Returns the value of GUID property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DrumLogging.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.DrumLogging"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.DrumLogging.NewDrumLogging">
+	<summary>
+ NewDrumLogging. Creates new object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLogging"></see>.
+ </summary>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLogging"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loLog As DrumLogging
+ loLog = DrumLogging.NewDrumLogging()
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.DrumLogging.GetDrumLogging(System.Int32)">
+	<summary>
+ GetDrumLogging. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLogging"></see> using Primary Key.
+ </summary>
+	<param name="ID">ID. Primary Key of table DM_DRUM_LOGGING.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLogging"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loLog As DrumLogging = DrumLogging.GetDrumLogging(123)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.DrumLogging.GetDrumLoggingByGUID(System.String)">
+	<summary>
+ GetDrumLoggingByGUID. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLogging"></see> using GUID.
+ </summary>
+	<param name="GUID">Column GUID.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLogging"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loLog As DrumLogging = DrumLogging.GetDrumLoggingByGUID("GUIDX")
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.DrumLogging.DeleteDrumLogging(System.Int32)">
+	<summary>
+ DeleteDrumLogging. Deletes record from DM_DRUM_LOGGING using Primary Key.
+ </summary>
+	<param name="ID">ID. Primary Key of table DM_DRUM_LOGGING.</param>
+	<remarks>
+		<para><example>Example:<c>DrumLogging.DeleteDrumLogging(123)</c></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.DrumLogging.Save">
+	<summary>
+ Save. Inserts or updates one record in table DM_DRUM_LOGGING.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DrumLogging">
+	<summary>
+ This class reflects a row of table DM_DRUM_LOGGING.
+ </summary>
+	<remarks>
+		<para><example>Example Insert:<code>
+ Dim loLog As DrumLogging
+ loLog = DrumLogging.NewDrumLogging
+ loLog.LogTimePreprocess = Now
+ loLog.BatchID = 123
+ loLog.Save()
+ loLog.Dispose()
+ loLog = Nothing
+ </code></example></para>
+		<para><example>Example Update:<code>
+ Dim loLog As DrumLogging
+ loLog = DrumLogging.GetDrumLogging(123)
+ loLog.ObjID = 123
+ loLog.Save()
+ loLog.Dispose()
+ loLog = Nothing
+ </code></example></para>
+		<para><example>Example Delete:<code>
+ DrumLogging.DeleteDrumLogging(123)
+ </code></example></para>
+	</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.ID">
+	<summary>
+ Property ID. This property reflects the value of column ID in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of ID property.</value>
+	<returns>Returns the value of ID property.</returns>
+	<remarks>ID is the PK of table DM_DRUM_LOGGING_DETAIL.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.LogID">
+	<summary>
+ Property LogID. This property reflects the value of column LOG_ID in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of LogID property.</value>
+	<returns>Returns the value of LogID property.</returns>
+	<remarks>LOG_ID is the PK of table DM_DRUM_LOGGING.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.LogTimeUpload">
+	<summary>
+ Property LogTimeUpload. This property reflects the value of column LOG_TIME_UPLOAD in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of LogTimeUpload property.</value>
+	<returns>Returns the value of LogTimeUpload property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.Scenario">
+	<summary>
+ Property Scenario. This property reflects the value of column SCENARIO in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of Scenario property.</value>
+	<returns>Returns the value of Scenario property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.ObjID">
+	<summary>
+ Property ObjID. This property reflects the value of column OBJECT_ID in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of ObjID property.</value>
+	<returns>Returns the value of ObjID property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.ObjDIN">
+	<summary>
+ Property ObjDIN. This property reflects the value of column OBJECT_DIN in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of ObjDIN property.</value>
+	<returns>Returns the value of ObjDIN property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.FileID">
+	<summary>
+ Property FileID. This property reflects the value of column FILE_ID in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of FileID property.</value>
+	<returns>Returns the value of FileID property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.FileFIN">
+	<summary>
+ Property FileFIN. This property reflects the value of column FILE_FIN in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of FileFIN property.</value>
+	<returns>Returns the value of FileFIN property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.ObjType">
+	<summary>
+ Property ObjType. This property reflects the value of column OBJECT_TYPE in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of ObjType property.</value>
+	<returns>Returns the value of ObjType property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.ErrCode">
+	<summary>
+ Property ErrCode. This property reflects the value of column ERR_CODE in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of ErrCode property.</value>
+	<returns>Returns the value of ErrCode property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.ErrMessage">
+	<summary>
+ Property ErrMessage. This property reflects the value of column ERR_MESSAGE in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<value>Sets the value of ErrMessage property.</value>
+	<returns>Returns the value of ErrMessage property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.DrumLoggingDetail"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.NewDrumLoggingDetail(System.Int32)">
+	<summary>
+ NewDrumLoggingDetail. Creates new object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLoggingDetail"></see>.
+ </summary>
+	<param name="LogID">LOG_ID. Primary Key of table DM_DRUM_LOGGING.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLoggingDetail"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loLog As DrumLoggingDetail = DrumLoggingDetail.NewDrumLoggingDetail(123)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.GetDrumLoggingDetail(System.Int32)">
+	<summary>
+ GetDrumLoggingDetail. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLoggingDetail"></see> using Primary Key.
+ </summary>
+	<param name="ID">ID. Primary Key of table DM_DRUM_LOGGING_DETAIL.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.DrumLoggingDetail"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loLog As DrumLoggingDetail = DrumLoggingDetail.GetDrumLoggingDetail(123)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.DeleteDrumLoggingDetail(System.Int32)">
+	<summary>
+ DeleteDrumLoggingDetail. Deletes record from DM_DRUM_LOGGING_DETAIL using Primary Key.
+ </summary>
+	<param name="ID">ID. Primary Key of table DM_DRUM_LOGGING_DETAIL.</param>
+	<remarks>
+		<para><example>Example:<c>DrumLoggingDetail.DeleteDrumLoggingDetail(123)</c></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.DrumLoggingDetail.Save">
+	<summary>
+ Save. Inserts or updates one record in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DrumLoggingDetail">
+	<summary>
+ This class reflects a row of table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<remarks>
+		<para><example>Example Insert:<code>
+ Dim loLog As DrumLoggingDetail
+ loLog = DrumLoggingDetail.NewDrumLoggingDetail(123)
+ loLog.LogTimeUpload = Now
+ loLog.ObjID = 123
+ loLog.Save()
+ loLog.Dispose()
+ loLog = Nothing
+ </code></example></para>
+		<para><example>Example Update:<code>
+ Dim loLog As DrumLoggingDetail
+ loLog = DrumLoggingDetail.GetDrumLoggingDetail(123)
+ loLog.ObjID = 123
+ loLog.Save()
+ loLog.Dispose()
+ loLog = Nothing
+ </code></example></para>
+		<para><example>Example Delete:<code>
+ DrumLoggingDetail.DeleteDrumLoggingDetail(123)
+ </code></example></para>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.V2.DrumLoggingList.DrumLoggingInfo">
+	<summary>
+ This structure reflects a row of table DM_DRUM_LOGGING. 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.V2.DrumLoggingList.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.V2.DrumLoggingList"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.V2.DrumLoggingList">
+	<summary>
+ This class reflects multiple rows of table DM_DRUM_LOGGING.
+ </summary>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As DrumLoggingList
+ Dim loCrit As DrumLoggingList.Criteria
+ Dim loLog As DrumLoggingList.DrumLoggingInfo
+ loCrit = New DrumLoggingList.Criteria
+ loCrit.BatchID = 123
+ loList = DrumLoggingList.GetDrumLoggingList(loCrit)
+ For Each loLog In loList
+     Debug.WriteLine(loLog.ErrMessage)
+ Next
+ loList = Nothing
+ </code></example></para>
+	</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.InputConnectors.IInputConnector.SupportsBatchMode">
+	<summary>
+ Returns true if this InputConnector can run in batch mode to upload multiple items
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.InputConnectors.IInputConnector.SupportsFeedback">
+	<summary>
+ returns true if this InputConnector supports writing of feedback
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.V2.InputConnectors.IInputConnector.SetInProgress(System.Collections.Generic.List{Arco.Doma.ImportExport.Drum.V2.InputObject})">
+	<summary>
+ Marks the list of InputObjects as In Progress
+ </summary>
+	<param name="voIS"></param>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.V2.InputConnectors.IInputConnector.SetCompleted(Arco.Doma.ImportExport.Drum.V2.InputObject)">
+	<summary>
+ Marks the Inputobject as completed
+ </summary>
+	<param name="voIS"></param>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.V2.InputConnectors.IInputConnector.SetError(Arco.Doma.ImportExport.Drum.V2.InputObject)">
+	<summary>
+ Marks the Inputobject as in error
+ </summary>
+	<param name="voIS"></param>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.InputConnectors.IInputConnector.Fields">
+	<summary>
+ Returns the list of available fields from the input
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.InputConnectors.IInputConnector.Files">
+	<summary>
+ Returns the list of available files from the input
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.InputConnectors.IInputConnector.IncludesOutputScenario">
+	<summary>
+ Returns true if this input provides its own output scenario
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.V2.InputConnectors.IInputConnector.DownLoadFile(Arco.Doma.ImportExport.Drum.V2.OutputScenarios.ScenarioFile,Arco.Doma.ImportExport.Drum.V2.InputObject,Arco.Doma.ImportExport.Drum.V2.InputObject.ISFile)">
+	<summary>
+ Downloads a file from the Input to Disk
+ </summary>
+	<param name="voScen"></param>
+	<param name="voIP"></param>
+	<param name="voFile"></param>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.V2.InputObject">
+	<summary>
+ This class contains the internal representation of an object being transformed by the Drum Engine
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICParameterList.ICParamInfo.IC_ID">
+	<summary>
+ Property IC_ID. This property reflects the value of column IC_ID in table DM_INPUTCONNECTOR_PARAMS.
+ </summary>
+	<value>Sets the value of IC_ID property.</value>
+	<returns>Returns the value of IC_ID property.</returns>
+	<remarks>IC_ID is the PK of table DM_INPUTCONNECTOR_PARAMS.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICParameterList.ICParamInfo.IC_INPUTCONNECTOR">
+	<summary>
+ Property IC_INPUTCONNECTOR. This property reflects the value of column IC_INPUTCONNECTOR in table DM_INPUTCONNECTOR_PARAMS.
+ </summary>
+	<value>Sets the value of IC_INPUTCONNECTOR property.</value>
+	<returns>Returns the value of IC_INPUTCONNECTOR property.</returns>
+	<remarks>IC_INPUTCONNECTOR is the PK of table DM_INPUTCONNECTOR.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICParameterList.ICParamInfo.IC_PARAM_NAME">
+	<summary>
+ Property IC_PARAM_NAME. This property reflects the value of column IC_PARAM_NAME in table DM_INPUTCONNECTOR_PARAMS.
+ </summary>
+	<value>Sets the value of IC_PARAM_NAME property.</value>
+	<returns>Returns the value of IC_PARAM_NAME property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICParameterList.ICParamInfo.IC_PARAM_VALUE">
+	<summary>
+ Property IC_PARAM_VALUE. This property reflects the value of column IC_PARAM_VALUE in table DM_INPUTCONNECTOR_PARAMS.
+ </summary>
+	<value>Sets the value of IC_PARAM_VALUE property.</value>
+	<returns>Returns the value of IC_PARAM_VALUE property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ICParameterList.ICParamInfo">
+	<summary>
+ This structure reflects a row of table DM_INPUTCONNECTOR_PARAMS. 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ICParameterList.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.ICParameterList"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ICParameterList.GetICParameters(System.Int32)">
+	<summary>
+ GetICParameters. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICParameterList"></see> with rows of DM_INPUTCONNECTOR_PARAMS filtered with input connector id.
+ </summary>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICParameterList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As ICParameterList = ICParameterList.GetICParameters(123)
+ </code></example></para>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ICParameterList">
+	<summary>
+ This class reflects multiple rows of table DM_INPUTCONNECTOR_PARAMS.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICProperty.IC_ID">
+	<summary>
+ Property IC_ID. This property reflects the value of column IC_ID in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_ID property.</value>
+	<returns>Returns the value of IC_ID property.</returns>
+	<remarks>IC_ID is the PK of table DM_INPUTCONNECTOR_PROPS.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICProperty.IC_INPUTCONNECTOR">
+	<summary>
+ Property IC_INPUTCONNECTOR. This property reflects the value of column IC_INPUTCONNECTOR in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_INPUTCONNECTOR property.</value>
+	<returns>Returns the value of IC_INPUTCONNECTOR property.</returns>
+	<remarks>IC_INPUTCONNECTOR is the PK of table DM_INPUTCONNECTOR.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICProperty.IC_PROP_NAME">
+	<summary>
+ Property IC_PROP_NAME. This property reflects the value of column IC_PROP_NAME in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_NAME property.</value>
+	<returns>Returns the value of IC_PROP_NAME property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICProperty.IC_PROP_TYPE">
+	<summary>
+ Property IC_PROP_TYPE. This property reflects the value of column IC_PROP_TYPE in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_TYPE property.</value>
+	<returns>Returns the value of IC_PROP_TYPE property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICProperty.IC_PROP_PREFIX">
+	<summary>
+ Property IC_PROP_PREFIX. This property reflects the value of column IC_PROP_PREFIX in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_PREFIX property.</value>
+	<returns>Returns the value of IC_PROP_PREFIX property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICProperty.IC_PROP_FORMAT">
+	<summary>
+ Property IC_PROP_FORMAT. This property reflects the value of column IC_PROP_FORMAT in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_FORMAT property.</value>
+	<returns>Returns the value of IC_PROP_FORMAT property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICProperty.IC_PROP_DIGITGROUPER">
+	<summary>
+ Property IC_PROP_DIGITGROUPER. This property reflects the value of column IC_PROP_DIGITGROUPER in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_DIGITGROUPER property.</value>
+	<returns>Returns the value of IC_PROP_DIGITGROUPER property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICProperty.IC_PROP_DECIMALSYMBOL">
+	<summary>
+ Property IC_PROP_DECIMALSYMBOL. This property reflects the value of column IC_PROP_DECIMALSYMBOL in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_DECIMALSYMBOL property.</value>
+	<returns>Returns the value of IC_PROP_DECIMALSYMBOL property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICProperty.IC_PROP_REPLACE">
+	<summary>
+ Property IC_PROP_REPLACE. This property reflects the value of column IC_PROP_REPLACE in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_REPLACE property.</value>
+	<returns>Returns the value of IC_PROP_REPLACE property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICProperty.IC_PROP_REPLACEINTO">
+	<summary>
+ Property IC_PROP_REPLACEINTO. This property reflects the value of column IC_PROP_REPLACEINTO in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_REPLACEINTO property.</value>
+	<returns>Returns the value of IC_PROP_REPLACEINTO property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICProperty.IC_MODIF_BY">
+	<summary>
+ Property IC_MODIF_BY. This property reflects the value of column IC_MODIFBY in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_MODIF_BY property.</value>
+	<returns>Returns the value of IC_MODIF_BY property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICProperty.IC_MODIF_ON">
+	<summary>
+ Property IC_MODIF_ON. This property reflects the value of column IC_MODIFDATE in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_MODIF_ON property.</value>
+	<returns>Returns the value of IC_MODIF_ON property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ICProperty.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.ICProperty"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ICProperty.NewICProperty(System.Int32,System.String)">
+	<summary>
+ NewICProperty. Creates new object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICProperty"></see>.
+ </summary>
+	<param name="IC">IC_INPUTCONNECTOR.</param>
+	<param name="Name">IC_PROP_NAME.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICProperty"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loProperty As ICProperty = ICProperty.NewICProperty("BASEPATH")
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ICProperty.GetICProperty(System.Int32)">
+	<summary>
+ GetICProperty. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICProperty"></see> using Primary Key.
+ </summary>
+	<param name="ID">IC_ID. Primary Key of table DM_INPUTCONNECTOR_PROPS.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICProperty"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loProperty As ICProperty = v.GetICProperty(123)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ICProperty.GetICProperty(System.Int32,System.String)">
+	<summary>
+ GetICProperty. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICProperty"></see> using property name.
+ </summary>
+	<param name="IC">IC_INPUTCONNECTOR.</param>
+	<param name="Name">IC_PROP_NAME.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICProperty"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loProperty As ICProperty = ICProperty.GetICProperty("AUTHOR")
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ICProperty.DeleteICProperty(System.Int32)">
+	<summary>
+ DeleteICProperty. Deletes record from DM_INPUTCONNECTOR_PROPS using Primary Key.
+ </summary>
+	<param name="ID">IC_ID. Primary Key of table DM_INPUTCONNECTOR_PROPS.</param>
+	<remarks>
+		<para><example>Example:<code>
+ ICProperty.DeleteICProperty(123)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ICProperty.Save">
+	<summary>
+ Save. Inserts or updates one record in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ICProperty">
+	<summary>
+ This class reflects a row of table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.DrumImport.ExportICs(System.String,System.String)">
+	<summary>
+ Export Input Connectors.
+ </summary>
+	<param name="ICs">List of ICs, separated by comma.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputConnector.Type_IC">
+	<summary>
+ IC Type.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputConnector.Status_IC">
+	<summary>
+ IC Status.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.ID">
+	<summary>
+ Property ID. This property reflects the value of column IC_ID in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of ID property.</value>
+	<returns>Returns the value of ID property.</returns>
+	<remarks>IC_ID is the PK of table DM_INPUTCONNECTOR.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.Name">
+	<summary>
+ Property Name. This property reflects the value of column IC_NAME in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of Name property.</value>
+	<returns>Returns the value of Name property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.Type">
+	<summary>
+ Property Type. This property reflects the value of column IC_TYPE in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of Type property.</value>
+	<returns>Returns the value of Type property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.FeedbackSuccessMethod">
+	<summary>
+ Property FeedbackSuccessMethod. This property reflects the value of column IC_FBS_OP1 in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of FeedbackSuccessMethod property.</value>
+	<returns>Returns the value of FeedbackSuccessMethod property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.FeedbackSuccessValue">
+	<summary>
+ Property FeedbackSuccessValue. This property reflects the value of column IC_FBS_OP2 in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of FeedbackSuccessValue property.</value>
+	<returns>Returns the value of FeedbackSuccessValue property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.FeedbackFailedMethod">
+	<summary>
+ Property FeedbackFailedMethod. This property reflects the value of column IC_FBF_OP1 in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of FeedbackFailedMethod property.</value>
+	<returns>Returns the value of FeedbackFailedMethod property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.FeedbackFailedValue">
+	<summary>
+ Property FeedbackFailedValue. This property reflects the value of column IC_FBF_OP2 in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of FeedbackFailedValue property.</value>
+	<returns>Returns the value of FeedbackFailedValue property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.PathISFeed">
+	<summary>
+ Property PathISFeed. This property reflects the value of column IC_ISFEEDLOCATION in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of PathISFeed property.</value>
+	<returns>Returns the value of PathISFeed property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.PathDrumIn">
+	<summary>
+ Property PathDrumIn. This property reflects the value of column IC_DRUMIN in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of PathDrumIn property.</value>
+	<returns>Returns the value of PathDrumIn property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.PathDrumOut">
+	<summary>
+ Property PathDrumOut. This property reflects the value of column IC_DRUMOUT in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of PathDrumOut property.</value>
+	<returns>Returns the value of PathDrumOut property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.PathDrumError">
+	<summary>
+ Property PathDrumError. This property reflects the value of column IC_DRUMERROR in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of PathDrumError property.</value>
+	<returns>Returns the value of PathDrumError property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.LogFile">
+	<summary>
+ Property LogFile. This property reflects the value of column IC_LOGFILE in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of LogFile property.</value>
+	<returns>Returns the value of LogFile property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.DeleteUploadFile">
+	<summary>
+ Property DeleteUploadFile. This property reflects the value of column IC_DELETEFILE in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of DeleteUploadFile property.</value>
+	<returns>Returns the value of DeleteUploadFile property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.DeleteTempXMLFiles">
+	<summary>
+ Property DeleteTempXMLFiles. This property reflects the value of column IC_DELETETEMPFILES in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of DeleteTempXMLFiles property.</value>
+	<returns>Returns the value of DeleteTempXMLFiles property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.ModifiedBy">
+	<summary>
+ Property ModifiedBy. This property reflects the value of column IC_MODIFBY in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of ModifiedBy property.</value>
+	<returns>Returns the value of ModifiedBy property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.ModifiedOn">
+	<summary>
+ Property ModifiedOn. This property reflects the value of column IC_MODIFDATE in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of ModifiedOn property.</value>
+	<returns>Returns the value of ModifiedOn property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.Status">
+	<summary>
+ Property Status. This property reflects the value of column IC_STATUS in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of Status property.</value>
+	<returns>Returns the value of Status property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.LockedBy">
+	<summary>
+ Property LockedBy. This property reflects the value of column IC_LOCKEDBY in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of LockedBy property.</value>
+	<returns>Returns the value of LockedBy property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.LockedOn">
+	<summary>
+ Property LockedOn. This property reflects the value of column IC_LOCKEDDATE in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of LockedOn property.</value>
+	<returns>Returns the value of LockedOn property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.GUID">
+	<summary>
+ Property GUID. This property reflects the value of column GUID in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of GUID property.</value>
+	<returns>Returns the value of GUID property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.OBJECT_ID">
+	<summary>
+ Property OBJECT_ID. This property reflects the value of column OBJECT_ID in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of OBJECT_ID property.</value>
+	<returns>Returns the value of OBJECT_ID property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.OBJECT_TYPE">
+	<summary>
+ Property OBJECT_TYPE. This property reflects the value of column OBJECT_TYPE in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of OBJECT_TYPE property.</value>
+	<returns>Returns the value of OBJECT_TYPE property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.ClassName">
+	<summary>
+ Property ClassName. This property reflects the value of column IC_CLASS in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of ClassName property.</value>
+	<returns>Returns the value of ClassName property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputConnector.AssemblyName">
+	<summary>
+ Property AssemblyName. This property reflects the value of column IC_ASSEMBLY in table DM_INPUTCONNECTOR.
+ </summary>
+	<value>Sets the value of AssemblyName property.</value>
+	<returns>Returns the value of AssemblyName property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputConnector.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.InputConnector"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputConnector.NewIC(System.String)">
+	<summary>
+ NewIC. Creates new object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputConnector"></see>.
+ </summary>
+	<param name="Name">IC_NAME.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputConnector"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loIC As InputConnector = InputConnector.NewIC("IC_DB_INVOICES")
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputConnector.GetIC(System.Int32)">
+	<summary>
+ GetIC. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputConnector"></see> using Primary Key.
+ </summary>
+	<param name="ID">IC_ID. Primary Key of table DM_INPUTCONNECTOR.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputConnector"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loIC As InputConnector = InputConnector.GetIC(123)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputConnector.GetIC(System.String)">
+	<summary>
+ GetIC. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputConnector"></see> using input connector name.
+ </summary>
+	<param name="Name">IC_NAME.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputConnector"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loIC As InputConnector = InputConnector.GetIC("IC_DB_INVOICES")
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputConnector.GetICByGUID(System.String)">
+	<summary>
+ GetICByGUID. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputConnector"></see> using GUID.
+ </summary>
+	<param name="GUID">GUID.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputConnector"></see>.</returns>
+	<remarks>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputConnector.DeleteIC(System.Int32)">
+	<summary>
+ DeleteIC. Deletes record from DM_INPUTCONNECTOR using Primary Key.
+ </summary>
+	<param name="ID">IC_ID. Primary Key of table DM_INPUTCONNECTOR.</param>
+	<remarks>
+		<para><example>Example:<code>
+ InputConnector.DeleteIC(123)
+ </code></example></para>
+		<para>A clean up of child tables is performed automatically.</para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputConnector.Save">
+	<summary>
+ Save. Inserts or updates one record in table DM_INPUTCONNECTOR.
+ </summary>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputConnector"></see>.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputConnector">
+	<summary>
+ This class reflects a row of table DM_INPUTCONNECTOR.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="P:Arco.Doma.ImportExport.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Arco.Doma.ImportExport.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Arco.Doma.ImportExport.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ScenarioParameterList.ScenarioParamInfo.IS_INPUTSTREAM">
+	<summary>
+ Property IS_INPUTSTREAM. This property reflects the value of column IS_INPUTSTREAM in table DM_SCENARIO_PARAMS.
+ </summary>
+	<value>Sets the value of IS_INPUTSTREAM property.</value>
+	<returns>Returns the value of IS_INPUTSTREAM property.</returns>
+	<remarks>
+ IS_INPUTSTREAM and IS_SEQ is the PK of table DM_INPUTSTREAM_SCENARIO.
+ IS_INPUTSTREAM, IS_SEQ and IS_PARAM_NAME is the PK of table DM_SCENARIO_PARAMS.
+ </remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ScenarioParameterList.ScenarioParamInfo.IS_SEQ">
+	<summary>
+ Property IS_SEQ. This property reflects the value of column IS_SEQ in table DM_SCENARIO_PARAMS.
+ </summary>
+	<value>Sets the value of IS_SEQ property.</value>
+	<returns>Returns the value of IS_SEQ property.</returns>
+	<remarks>
+ IS_INPUTSTREAM and IS_SEQ is the PK of table DM_INPUTSTREAM_SCENARIO.
+ IS_INPUTSTREAM, IS_SEQ and IS_PARAM_NAME is the PK of table DM_SCENARIO_PARAMS.
+ </remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ScenarioParameterList.ScenarioParamInfo.IS_PARAM_NAME">
+	<summary>
+ Property IS_PARAM_NAME. This property reflects the value of column IS_PARAM_NAME in table DM_SCENARIO_PARAMS.
+ </summary>
+	<value>Sets the value of IS_PARAM_NAME property.</value>
+	<returns>Returns the value of IS_PARAM_NAME property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ScenarioParameterList.ScenarioParamInfo.IS_PARAM_VALUE">
+	<summary>
+ Property IS_PARAM_VALUE. This property reflects the value of column IS_PARAM_VALUE in table DM_SCENARIO_PARAMS.
+ </summary>
+	<value>Sets the value of IS_PARAM_VALUE property.</value>
+	<returns>Returns the value of IS_PARAM_VALUE property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ScenarioParameterList.ScenarioParamInfo">
+	<summary>
+ This structure reflects a row of table DM_SCENARIO_PARAMS. 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ScenarioParameterList.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioParameterList"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ScenarioParameterList.GetScenarioParameters(System.Int32,System.Int32)">
+	<summary>
+ GetScenarioParameters. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioParameterList"></see> with rows of DM_SCENARIO_PARAMS filtered with input stream id and sequence.
+ </summary>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioParameterList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As ScenarioParameterList = ScenarioParameterList.GetScenarioParameters(123, 1)
+ </code></example></para>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ScenarioParameterList">
+	<summary>
+ This class reflects multiple rows of table DM_SCENARIO_PARAMS.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.V2.DrumLoggingDetailList.DrumLoggingDetailInfo">
+	<summary>
+ This structure reflects a row of table DM_DRUM_LOGGING_DETAIL. 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.V2.DrumLoggingDetailList.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.V2.DrumLoggingDetailList"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStream.IS_ID">
+	<summary>
+ Property IS_ID. This property reflects the value of column IS_ID in table DM_INPUTSTREAM.
+ </summary>
+	<value>Sets the value of IS_ID property.</value>
+	<returns>Returns the value of IS_ID property.</returns>
+	<remarks>IS_ID is the PK of table DM_INPUTSTREAM.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStream.IC_INPUTCONNECTOR">
+	<summary>
+ Property IC_INPUTCONNECTOR. This property reflects the value of column IC_INPUTCONNECTOR in table DM_INPUTSTREAM.
+ </summary>
+	<value>Sets the value of IC_INPUTCONNECTOR property.</value>
+	<returns>Returns the value of IC_INPUTCONNECTOR property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStream.IS_NAME">
+	<summary>
+ Property IS_NAME. This property reflects the value of column IS_NAME in table DM_INPUTSTREAM.
+ </summary>
+	<value>Sets the value of IS_NAME property.</value>
+	<returns>Returns the value of IS_NAME property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStream.IS_MODIF_BY">
+	<summary>
+ Property IS_MODIF_BY. This property reflects the value of column IS_MODIFBY in table DM_INPUTSTREAM.
+ </summary>
+	<value>Sets the value of IS_MODIF_BY property.</value>
+	<returns>Returns the value of IS_MODIF_BY property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStream.IS_MODIF_ON">
+	<summary>
+ Property IS_MODIF_ON. This property reflects the value of column IS_MODIFDATE in table DM_INPUTSTREAM.
+ </summary>
+	<value>Sets the value of IS_MODIF_ON property.</value>
+	<returns>Returns the value of IS_MODIF_ON property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputStream.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.InputStream"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputStream.NewIS(System.String)">
+	<summary>
+ NewIS. Creates new object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStream"></see>.
+ </summary>
+	<param name="Name">IS_NAME.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStream"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loIS As InputStream = InputStream.NewIS("IC_DB_INVOICES")
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputStream.GetIS(System.Int32)">
+	<summary>
+ GetIS. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStream"></see> using Primary Key.
+ </summary>
+	<param name="ID">IS_ID. Primary Key of table DM_INPUTSTREAM.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStream"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loIS As InputStream = InputStream.GetIS(123)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputStream.GetIS(System.String)">
+	<summary>
+ GetIS. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStream"></see> using input stream name.
+ </summary>
+	<param name="Name">IS_NAME.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStream"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loIS As InputStream = InputStream.GetIS("IS_DB_INVOICES")
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputStream.DeleteIS(System.Int32)">
+	<summary>
+ DeleteIS. Deletes record from DM_INPUTSTREAM using Primary Key.
+ </summary>
+	<param name="ID">IS_ID. Primary Key of table DM_INPUTSTREAM.</param>
+	<remarks>
+		<para><example>Example:<code>
+ InputStream.DeleteIS(123)
+ </code></example></para>
+		<para>A clean up of child tables is performed automatically.</para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputStream.Save">
+	<summary>
+ Save. Inserts or updates one record in table DM_INPUTSTREAM.
+ </summary>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStream"></see>.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputStream">
+	<summary>
+ This class reflects a row of table DM_INPUTSTREAM.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICPropertyList.ICPropInfo.IC_ID">
+	<summary>
+ Property IC_ID. This property reflects the value of column IC_ID in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_ID property.</value>
+	<returns>Returns the value of IC_ID property.</returns>
+	<remarks>IC_ID is the PK of table DM_INPUTCONNECTOR_PROPS.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICPropertyList.ICPropInfo.IC_INPUTCONNECTOR">
+	<summary>
+ Property IC_INPUTCONNECTOR. This property reflects the value of column IC_INPUTCONNECTOR in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_INPUTCONNECTOR property.</value>
+	<returns>Returns the value of IC_INPUTCONNECTOR property.</returns>
+	<remarks>IC_INPUTCONNECTOR is the PK of table DM_INPUTCONNECTOR.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICPropertyList.ICPropInfo.IC_PROP_NAME">
+	<summary>
+ Property IC_PROP_NAME. This property reflects the value of column IC_PROP_NAME in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_NAME property.</value>
+	<returns>Returns the value of IC_PROP_NAME property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICPropertyList.ICPropInfo.IC_PROP_TYPE">
+	<summary>
+ Property IC_PROP_TYPE. This property reflects the value of column IC_PROP_TYPE in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_TYPE property.</value>
+	<returns>Returns the value of IC_PROP_TYPE property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICPropertyList.ICPropInfo.IC_PROP_PREFIX">
+	<summary>
+ Property IC_PROP_PREFIX. This property reflects the value of column IC_PROP_PREFIX in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_PREFIX property.</value>
+	<returns>Returns the value of IC_PROP_PREFIX property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICPropertyList.ICPropInfo.IC_PROP_FORMAT">
+	<summary>
+ Property IC_PROP_FORMAT. This property reflects the value of column IC_PROP_FORMAT in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_FORMAT property.</value>
+	<returns>Returns the value of IC_PROP_FORMAT property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICPropertyList.ICPropInfo.IC_PROP_DIGITGROUPER">
+	<summary>
+ Property IC_PROP_DIGITGROUPER. This property reflects the value of column IC_PROP_DIGITGROUPER in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_DIGITGROUPER property.</value>
+	<returns>Returns the value of IC_PROP_DIGITGROUPER property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICPropertyList.ICPropInfo.IC_PROP_DECIMALSYMBOL">
+	<summary>
+ Property IC_PROP_DECIMALSYMBOL. This property reflects the value of column IC_PROP_DECIMALSYMBOL in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_DECIMALSYMBOL property.</value>
+	<returns>Returns the value of IC_PROP_DECIMALSYMBOL property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICPropertyList.ICPropInfo.IC_PROP_REPLACE">
+	<summary>
+ Property IC_PROP_REPLACE. This property reflects the value of column IC_PROP_REPLACE in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_REPLACE property.</value>
+	<returns>Returns the value of IC_PROP_REPLACE property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICPropertyList.ICPropInfo.IC_PROP_REPLACEINTO">
+	<summary>
+ Property IC_PROP_REPLACEINTO. This property reflects the value of column IC_PROP_REPLACEINTO in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_PROP_REPLACEINTO property.</value>
+	<returns>Returns the value of IC_PROP_REPLACEINTO property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICPropertyList.ICPropInfo.IC_MODIF_BY">
+	<summary>
+ Property IC_MODIF_BY. This property reflects the value of column IC_MODIFBY in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_MODIF_BY property.</value>
+	<returns>Returns the value of IC_MODIF_BY property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICPropertyList.ICPropInfo.IC_MODIF_ON">
+	<summary>
+ Property IC_MODIF_ON. This property reflects the value of column IC_MODIFDATE in table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<value>Sets the value of IC_MODIF_ON property.</value>
+	<returns>Returns the value of IC_MODIF_ON property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ICPropertyList.ICPropInfo">
+	<summary>
+ This structure reflects a row of table DM_INPUTCONNECTOR_PROPS. 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ICPropertyList.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.ICPropertyList"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ICPropertyList.GetICProperties(System.Int32)">
+	<summary>
+ GetICProperties. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICPropertyList"></see> with rows of DM_INPUTCONNECTOR_PROPS filtered with input connector id.
+ </summary>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICPropertyList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As ICPropertyList = ICPropertyList.GetICProperties(123)
+ </code></example></para>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ICPropertyList">
+	<summary>
+ This class reflects multiple rows of table DM_INPUTCONNECTOR_PROPS.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJob.IS_ID">
+	<summary>
+ Property IS_ID. This property reflects the value of column IS_ID in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of IS_ID property.</value>
+	<returns>Returns the value of IS_ID property.</returns>
+	<remarks>IS_ID and JOB_ID is the PK of table DM_INPUTSTREAM_BATCHJOB.
+ IS_ID is the FK of table DM_INPUTSTREAM.
+ </remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJob.JOB_ID">
+	<summary>
+ Property JOB_ID. This property reflects the value of column JOB_ID in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of JOB_ID property.</value>
+	<returns>Returns the value of JOB_ID property.</returns>
+	<remarks>IS_ID and JOB_ID is the PK of table DM_INPUTSTREAM_BATCHJOB.
+ JOB_ID is the FK of table DM_JOB.
+ </remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJob.IS_LOG">
+	<summary>
+ Property IS_LOG. This property reflects the value of column IS_LOG in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of IS_LOG property.</value>
+	<returns>Returns the value of IS_LOG property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJob.IS_LOGFULL">
+	<summary>
+ Property IS_LOGFULL. This property reflects the value of column IS_LOGFULL in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of IS_LOGFULL property.</value>
+	<returns>Returns the value of IS_LOGFULL property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJob.IS_LOGFILE">
+	<summary>
+ Property IS_LOGFILE. This property reflects the value of column IS_LOGFILE in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of IS_LOGFILE property.</value>
+	<returns>Returns the value of IS_LOGFILE property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJob.IS_MAXCNT">
+	<summary>
+ Property IS_MAXCNT. This property reflects the value of column IS_MAXCNT in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of IS_MAXCNT property.</value>
+	<returns>Returns the value of IS_MAXCNT property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJob.IS_STOPBATCHJOB">
+	<summary>
+ Property IS_STOPBATCHJOB. This property reflects the value of column IS_STOPBATCHJOB in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of IS_STOPBATCHJOB property.</value>
+	<returns>Returns the value of IS_STOPBATCHJOB property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJob.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJob"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputStreamBatchJob.NewISBatchJob(System.Int32,System.Int32)">
+	<summary>
+ NewISBatchJob. Creates new object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJob"></see>.
+ </summary>
+	<param name="InputStream">IS_ID. Primary Key of table DM_INPUTSTREAM.</param>
+	<param name="BatchJob">JOB_ID. Primary Key of table DM_JOB.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJob"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loISBatchJob As InputStreamBatchJob = InputStreamBatchJob.NewISBatchJob(123, 124)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputStreamBatchJob.GetISBatchJob(System.Int32,System.Int32)">
+	<summary>
+ GetISBatchJob. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJob"></see> using Primary Key.
+ </summary>
+	<param name="InputStream">IS_ID. Primary Key of table DM_INPUTSTREAM.</param>
+	<param name="BatchJob">JOB_ID. Primary Key of table DM_JOB.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJob"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loISBatchJob As InputStreamBatchJob = InputStreamBatchJob.GetISBatchJob(123, 124)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputStreamBatchJob.DeleteISBatchJob(System.Int32,System.Int32)">
+	<summary>
+ DeleteISBatchJob. Deletes record from DM_INPUTSTREAM_BATCHJOB using Primary Key.
+ </summary>
+	<param name="InputStream">IS_ID. Primary Key of table DM_INPUTSTREAM.</param>
+	<param name="BatchJob">JOB_ID. Primary Key of table DM_JOB.</param>
+	<remarks>
+		<para><example>Example:<code>
+ InputStreamBatchJob.DeleteISBatchJob(123, 124)
+ </code></example></para>
+		<para>A clean up in DM_JOB is performed automatically.</para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputStreamBatchJob.Save">
+	<summary>
+ Save. Inserts or updates one record in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJob"></see>.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJob">
+	<summary>
+ This class reflects a row of table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.V2.Drummer">
+	<summary>
+ Drum Upload/Transformation Engine
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ScenarioParameter.IS_INPUTSTREAM">
+	<summary>
+ Property IS_INPUTSTREAM. This property reflects the value of column IS_INPUTSTREAM in table DM_SCENARIO_PARAMS.
+ </summary>
+	<value>Sets the value of IS_INPUTSTREAM property.</value>
+	<returns>Returns the value of IS_INPUTSTREAM property.</returns>
+	<remarks>
+ IS_INPUTSTREAM and IS_SEQ is the PK of table DM_INPUTSTREAM_SCENARIO.
+ IS_INPUTSTREAM, IS_SEQ and IS_PARAM_NAME is the PK of table DM_SCENARIO_PARAMS.
+ </remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ScenarioParameter.IS_SEQ">
+	<summary>
+ Property IS_SEQ. This property reflects the value of column IS_SEQ in table DM_SCENARIO_PARAMS.
+ </summary>
+	<value>Sets the value of IS_SEQ property.</value>
+	<returns>Returns the value of IS_SEQ property.</returns>
+	<remarks>
+ IS_INPUTSTREAM and IS_SEQ is the PK of table DM_INPUTSTREAM_SCENARIO.
+ IS_INPUTSTREAM, IS_SEQ and IS_PARAM_NAME is the PK of table DM_SCENARIO_PARAMS.
+ </remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ScenarioParameter.IS_PARAM_NAME">
+	<summary>
+ Property IS_PARAM_NAME. This property reflects the value of column IS_PARAM_NAME in table DM_SCENARIO_PARAMS.
+ </summary>
+	<value>Sets the value of IS_PARAM_NAME property.</value>
+	<returns>Returns the value of IS_PARAM_NAME property.</returns>
+	<remarks>IS_INPUTSTREAM, IS_SEQ and IS_PARAM_NAME is the PK of table DM_SCENARIO_PARAMS.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ScenarioParameter.IS_PARAM_VALUE">
+	<summary>
+ Property IS_PARAM_VALUE. This property reflects the value of column IS_PARAM_VALUE in table DM_SCENARIO_PARAMS.
+ </summary>
+	<value>Sets the value of IS_PARAM_VALUE property.</value>
+	<returns>Returns the value of IS_PARAM_VALUE property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ScenarioParameter.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioParameter"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ScenarioParameter.NewScenarioParameter(System.Int32,System.Int32,System.String)">
+	<summary>
+ NewScenarioParameter. Creates new object of type <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioParameter"></see>.
+ </summary>
+	<param name="vlIS">IS_INPUTSTREAM.</param>
+	<param name="vlSeq">IS_SEQ.</param>
+	<param name="vsName">IS_PARAM_NAME.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioParameter"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loParameter As ScenarioParameter = ScenarioParameter.NewScenarioParameter(123, 1, "NAME")
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ScenarioParameter.GetScenarioParameter(System.Int32,System.Int32,System.String)">
+	<summary>
+ GetScenarioParameter. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioParameter"></see> using Primary Key.
+ </summary>
+	<param name="vlIS">IS_INPUTSTREAM.</param>
+	<param name="vlSeq">IS_SEQ.</param>
+	<param name="vsName">IS_PARAM_NAME.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ScenarioParameter"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loParameter As ScenarioParameter = ScenarioParameter.GetScenarioParameter(123, 1, "NAME")
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ScenarioParameter.DeleteScenarioParameter(System.Int32,System.Int32,System.String)">
+	<summary>
+ DeleteScenarioParameter. Deletes record from DM_SCENARIO_PARAMS using Primary Key.
+ </summary>
+	<param name="vlIS">IS_INPUTSTREAM.</param>
+	<param name="vlSeq">IS_SEQ.</param>
+	<param name="vsName">IS_PARAM_NAME.</param>
+	<remarks>
+		<para><example>Example:<code>
+ ScenarioParameter.DeleteScenarioParameter(123, 1, "NAME")
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ScenarioParameter.Save">
+	<summary>
+ Save. Inserts or updates one record in table DM_SCENARIO_PARAMS.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ScenarioParameter">
+	<summary>
+ This class reflects a row of table DM_SCENARIO_PARAMS.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICParameter.IC_ID">
+	<summary>
+ Property IC_ID. This property reflects the value of column IC_ID in table DM_INPUTCONNECTOR_PARAMS.
+ </summary>
+	<value>Sets the value of IC_ID property.</value>
+	<returns>Returns the value of IC_ID property.</returns>
+	<remarks>IC_ID is the PK of table DM_INPUTCONNECTOR_PARAMS.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICParameter.IC_INPUTCONNECTOR">
+	<summary>
+ Property IC_INPUTCONNECTOR. This property reflects the value of column IC_INPUTCONNECTOR in table DM_INPUTCONNECTOR_PARAMS.
+ </summary>
+	<value>Sets the value of IC_INPUTCONNECTOR property.</value>
+	<returns>Returns the value of IC_INPUTCONNECTOR property.</returns>
+	<remarks>IC_INPUTCONNECTOR is the PK of table DM_INPUTCONNECTOR.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICParameter.IC_PARAM_NAME">
+	<summary>
+ Property IC_PARAM_NAME. This property reflects the value of column IC_PARAM_NAME in table DM_INPUTCONNECTOR_PARAMS.
+ </summary>
+	<value>Sets the value of IC_PARAM_NAME property.</value>
+	<returns>Returns the value of IC_PARAM_NAME property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.ICParameter.IC_PARAM_VALUE">
+	<summary>
+ Property IC_PARAM_VALUE. This property reflects the value of column IC_PARAM_VALUE in table DM_INPUTCONNECTOR_PARAMS.
+ </summary>
+	<value>Sets the value of IC_PARAM_VALUE property.</value>
+	<returns>Returns the value of IC_PARAM_VALUE property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ICParameter.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.ICParameter"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ICParameter.NewICParameter(System.Int32,System.String)">
+	<summary>
+ NewICParameter. Creates new object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICParameter"></see>.
+ </summary>
+	<param name="Name">IC_NAME.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICParameter"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loParameter As ICParameter = ICParameter.NewICParameter("BASEPATH")
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ICParameter.GetICParameter(System.Int32)">
+	<summary>
+ GetICParameter. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICParameter"></see> using Primary Key.
+ </summary>
+	<param name="ID">IC_ID. Primary Key of table DM_INPUTCONNECTOR_PARAMS.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICParameter"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loParameter As ICParameter = ICParameter.GetICParameter(123)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ICParameter.GetICParameter(System.Int32,System.String)">
+	<summary>
+ GetICParameter. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICParameter"></see> using parameter name.
+ </summary>
+	<param name="Name">IC_PARAM_NAME.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.ICParameter"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loParameter As ICParameter = ICParameter.GetICParameter("BASEPATH")
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ICParameter.DeleteICParameter(System.Int32)">
+	<summary>
+ DeleteICParameter. Deletes record from DM_INPUTCONNECTOR_PARAMS using Primary Key.
+ </summary>
+	<param name="ID">IC_ID. Primary Key of table DM_INPUTCONNECTOR_PARAMS.</param>
+	<remarks>
+		<para><example>Example:<code>
+ ICParameter.DeleteICParameter(123)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.ICParameter.Save">
+	<summary>
+ Save. Inserts or updates one record in table DM_INPUTCONNECTOR_PARAMS.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ICParameter">
+	<summary>
+ This class reflects a row of table DM_INPUTCONNECTOR_PARAMS.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamList.ISInfo.IS_ID">
+	<summary>
+ Property IS_ID. This property reflects the value of column IS_ID in table DM_INPUTSTREAM.
+ </summary>
+	<value>Sets the value of IS_ID property.</value>
+	<returns>Returns the value of IS_ID property.</returns>
+	<remarks>IS_ID is the PK of table DM_INPUTSTREAM.</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamList.ISInfo.IC_INPUTCONNECTOR">
+	<summary>
+ Property IC_INPUTCONNECTOR. This property reflects the value of column IC_INPUTCONNECTOR in table DM_INPUTSTREAM.
+ </summary>
+	<value>Sets the value of IC_INPUTCONNECTOR property.</value>
+	<returns>Returns the value of IC_INPUTCONNECTOR property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamList.ISInfo.IS_NAME">
+	<summary>
+ Property IS_NAME. This property reflects the value of column IS_NAME in table DM_INPUTSTREAM.
+ </summary>
+	<value>Sets the value of IS_NAME property.</value>
+	<returns>Returns the value of IS_NAME property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamList.ISInfo.IS_MODIF_BY">
+	<summary>
+ Property IS_MODIF_BY. This property reflects the value of column IS_MODIFBY in table DM_INPUTSTREAM.
+ </summary>
+	<value>Sets the value of IS_MODIF_BY property.</value>
+	<returns>Returns the value of IS_MODIF_BY property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamList.ISInfo.IS_MODIF_ON">
+	<summary>
+ Property IS_MODIF_ON. This property reflects the value of column IS_MODIFDATE in table DM_INPUTSTREAM.
+ </summary>
+	<value>Sets the value of IS_MODIF_ON property.</value>
+	<returns>Returns the value of IS_MODIF_ON property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputStreamList.ISInfo">
+	<summary>
+ This structure reflects a row of table DM_INPUTSTREAM. 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputStreamList.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamList"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputStreamList.GetISs">
+	<summary>
+ GetISs. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamList"></see> with all rows of DM_INPUTSTREAM.
+ </summary>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As InputStreamList = InputStreamList.GetISs()
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputStreamList.GetISs(System.Int32)">
+	<summary>
+ GetISs. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamList"></see> with rows of DM_INPUTSTREAM filtered with input connector.
+ </summary>
+	<param name="InputConnector">IC_INPUTCONNECTOR. PK of table DM_INPUTCONNECTOR.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As InputStreamList = InputStreamList.GetISs(123)
+ </code></example></para>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputStreamList">
+	<summary>
+ This class reflects multiple rows of table DM_INPUTSTREAM.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.OutputScenarios.IOutputScenario.Parameters">
+	<summary>
+ Returns the parameter values 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.OutputScenarios.IOutputScenario.Properties">
+	<summary>
+ Returns the list of property mappings
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.OutputScenarios.IOutputScenario.Files">
+	<summary>
+ Returns the list of file mappings
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.OutputScenarios.IOutputScenario.Dossiers">
+	<summary>
+ Returns the list of dossier mappings
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.OutputScenarios.IOutputScenario.ParameterDefinitions">
+	<summary>
+ Returns the list of available parametes
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.OutputScenarios.IOutputScenario.Feedback">
+	<summary>
+ Returns the list of feeback mappings
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.V2.OutputScenarios.IOutputScenario.GetParameter(Arco.Doma.ImportExport.Drum.V2.InputObject,System.String)">
+	<summary>
+ Returns the actual value of the parameter to be processed
+ </summary>
+	<param name="voIP"></param>
+	<param name="vsName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.V2.OutputScenarios.IOutputScenario.SetParameter(System.String,System.String)">
+	<summary>
+ Sets the parameter value
+ </summary>
+	<param name="vsName"></param>
+	<param name="vsValue"></param>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.OutputScenarios.IOutputScenario.SupportsFiles">
+	<summary>
+ Returns true if this scenario supports file upload
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.OutputScenarios.IOutputScenario.SupportsDossiers">
+	<summary>
+ Return true if this scenario supports dossier upload
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.OutputScenarios.IOutputScenario.SupportsProperties">
+	<summary>
+ Return true if this scenario supports properties
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.V2.OutputScenarios.IOutputScenario.Fields">
+	<summary>
+ Returns the list of available properties
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.BaseMultiLevelProgressBar.AdjustLevel">
+	<summary>
+ Gets called after an incrementlevel or decrease level
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.InvisibleProgressBar">
+	<summary>
+ This will just log the progress to the logger
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList.ISBatchJobInfo.IS_ID">
+	<summary>
+ Property IS_ID. This property reflects the value of column IS_ID in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of IS_ID property.</value>
+	<returns>Returns the value of IS_ID property.</returns>
+	<remarks>IS_ID and JOB_ID is the PK of table DM_INPUTSTREAM_BATCHJOB.
+ IS_ID is the FK of table DM_INPUTSTREAM.
+ </remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList.ISBatchJobInfo.JOB_ID">
+	<summary>
+ Property JOB_ID. This property reflects the value of column JOB_ID in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of JOB_ID property.</value>
+	<returns>Returns the value of JOB_ID property.</returns>
+	<remarks>IS_ID and JOB_ID is the PK of table DM_INPUTSTREAM_BATCHJOB.
+ JOB_ID is the FK of table DM_JOB.
+ </remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList.ISBatchJobInfo.IS_LOG">
+	<summary>
+ Property IS_LOG. This property reflects the value of column IS_LOG in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of IS_LOG property.</value>
+	<returns>Returns the value of IS_LOG property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList.ISBatchJobInfo.IS_LOGFULL">
+	<summary>
+ Property IS_LOGFULL. This property reflects the value of column IS_LOGFULL in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of IS_LOGFULL property.</value>
+	<returns>Returns the value of IS_LOGFULL property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList.ISBatchJobInfo.IS_LOGFILE">
+	<summary>
+ Property IS_LOGFILE. This property reflects the value of column IS_LOGFILE in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of IS_LOGFILE property.</value>
+	<returns>Returns the value of IS_LOGFILE property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList.ISBatchJobInfo.IS_MAXCNT">
+	<summary>
+ Property IS_MAXCNT. This property reflects the value of column IS_MAXCNT in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of IS_MAXCNT property.</value>
+	<returns>Returns the value of IS_MAXCNT property.</returns>
+	<remarks></remarks>
+</member><member name="P:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList.ISBatchJobInfo.IS_STOPBATCHJOB">
+	<summary>
+ Property IS_STOPBATCHJOB. This property reflects the value of column IS_STOPBATCHJOB in table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<value>Sets the value of IS_STOPBATCHJOB property.</value>
+	<returns>Returns the value of IS_STOPBATCHJOB property.</returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList.ISBatchJobInfo">
+	<summary>
+ This structure reflects a row of table DM_INPUTSTREAM_BATCHJOB. 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList.GetISBatchJobsByBatchJob(System.Int32)">
+	<summary>
+ GetISBatchJobsByBatchJob. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList"></see> with rows of DM_INPUTSTREAM_BATCHJOB filtered with batch job.
+ </summary>
+	<param name="BatchJob">JOB_ID. PK of table DM_JOB.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As InputStreamBatchJobList = InputStreamBatchJobList.GetISBatchJobsByBatchJob(123)
+ </code></example></para>
+	</remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList.GetISBatchJobsByIS(System.Int32)">
+	<summary>
+ GetISBatchJobsByIS. Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList"></see> with rows of DM_INPUTSTREAM_BATCHJOB filtered with input stream.
+ </summary>
+	<param name="InputStream">IS_ID. PK of table DM_INPUTSTREAM.</param>
+	<returns>Returns object of type <see cref="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList"></see>.</returns>
+	<remarks>
+		<para><example>Example:<code>
+ Dim loList As InputStreamBatchJobList = InputStreamBatchJobList.GetISBatchJobsByIS(123)
+ </code></example></para>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.InputStreamBatchJobList">
+	<summary>
+ This class reflects multiple rows of table DM_INPUTSTREAM_BATCHJOB.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.V2.DrumLoggingDetail.Criteria">
+	<summary>
+ This class contains the criteria of object <see cref="T:Arco.Doma.ImportExport.Drum.V2.DrumLoggingDetail"></see>.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.V2.DrumLoggingDetail.Save">
+	<summary>
+ Save. Inserts or updates one record in table DM_DRUM_LOGGING_DETAIL.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DrumErrorCode">
+	<summary>
+ List of error codes.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.BaseDrum.GetIS(System.Int32)">
+	<summary>
+ Loads IS and IC data.
+ </summary>
+	<param name="InputStreamID">PK of table DM_INPUTSTREAM.</param>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.BaseDrum.GetBatch(System.Int32)">
+	<summary>
+ Loads batch, IS and IC data.
+ </summary>
+	<param name="BatchID"></param>
+	<remarks></remarks>
+</member><member name="M:Arco.Doma.ImportExport.Drum.BaseDrum.GetIC(System.Int32)">
+	<summary>
+ Loads IC and IS data.
+ </summary>
+	<param name="InputConnectorID"></param>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.BaseDrum">
+	<summary>
+ Base input connector. 
+ </summary>
+	<remarks>
+ Please do not inherit from this class.
+ If you want to create a custom input connector, please use CustomInputConnector.
+ </remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.StandardDrum">
+	<summary>
+ Standard input connector. 
+ </summary>
+	<remarks>
+ Please do not inherit from this class, this is only allowed for standard IC's.
+ If you want to create a custom input connector, please use CustomInputConnector.
+ </remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.CustomDrum">
+	<summary>
+ Custom input connector. 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DatabaseInputConnector">
+	<summary>
+ Database input connector.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DatFileInputConnector">
+	<summary>
+ Data file input connector.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.FileUploadInputConnector">
+	<summary>
+ File upload input connector.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.MailInputConnector">
+	<summary>
+ Mail input connector.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.ISFeedInputConnector">
+	<summary>
+ ISFeed input connector.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.XMLFileInputConnector">
+	<summary>
+ XML file input connector.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.FlatFileInputConnector">
+	<summary>
+ Flat file input connector.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Arco.Doma.ImportExport.Drum.DomaObjectInputConnector">
+	<summary>
+ Doma object input connector.
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

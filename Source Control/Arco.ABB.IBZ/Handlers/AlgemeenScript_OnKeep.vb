@@ -180,7 +180,7 @@ Public Class AlgemeenScript_Onkeep
                                 ' GEEN rekening houden met alle weekends. Kalenderdagen bijtellen en het resultaat op eerstvolgende werkdag zetten
                                 'initdate = CStr(DateAdd("d", ldaantaldagen, CDate(lsontvangstdatum)))
                                 'If Weekday(CDate(initdate)) = 1 Or Weekday(CDate(initdate)) = 7 Then
-                                initdate = ABB.AlgemeenToezicht.TermijnBerekening.AddDays(lsontvangstdatum, ldaantaldagen)
+                                initdate = ABB.AlgemeenToezicht.TermijnBerekening.AddDays(lspostdatum, ldaantaldagen)
                                 'End If
                             End If
                             ' einde aanpassing
